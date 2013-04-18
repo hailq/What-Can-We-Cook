@@ -30,6 +30,17 @@
 		D5903B29171F81FE00ABC4B3 /* VideoEmbed.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B22171F81FE00ABC4B3 /* VideoEmbed.m */; };
 		D5903B2A171F81FE00ABC4B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B24171F81FE00ABC4B3 /* ViewController.m */; };
 		D5903B2B171F81FE00ABC4B3 /* WebView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5903B25171F81FE00ABC4B3 /* WebView-Info.plist */; };
+		D5903B3D171F88CC00ABC4B3 /* Giant_Burger_frei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B2D171F88CB00ABC4B3 /* Giant_Burger_frei.jpg */; };
+		D5903B3E171F88CC00ABC4B3 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B2E171F88CB00ABC4B3 /* green.jpg */; };
+		D5903B3F171F88CC00ABC4B3 /* New-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5903B2F171F88CB00ABC4B3 /* New-Info.plist */; };
+		D5903B40171F88CC00ABC4B3 /* omlette.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B31171F88CB00ABC4B3 /* omlette.jpg */; };
+		D5903B41171F88CC00ABC4B3 /* PFinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B33171F88CB00ABC4B3 /* PFinalViewController.m */; };
+		D5903B42171F88CC00ABC4B3 /* Precipe.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B35171F88CB00ABC4B3 /* Precipe.m */; };
+		D5903B43171F88CC00ABC4B3 /* Psample.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B37171F88CB00ABC4B3 /* Psample.m */; };
+		D5903B44171F88CC00ABC4B3 /* PViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B39171F88CB00ABC4B3 /* PViewController.m */; };
+		D5903B45171F88CC00ABC4B3 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B3A171F88CB00ABC4B3 /* red.jpg */; };
+		D5903B46171F88CC00ABC4B3 /* sbcrepe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B3B171F88CB00ABC4B3 /* sbcrepe.jpg */; };
+		D5903B47171F88CC00ABC4B3 /* yellow.gif in Resources */ = {isa = PBXBuildFile; fileRef = D5903B3C171F88CB00ABC4B3 /* yellow.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +79,22 @@
 		D5903B24171F81FE00ABC4B3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D5903B25171F81FE00ABC4B3 /* WebView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WebView-Info.plist"; sourceTree = "<group>"; };
 		D5903B26171F81FE00ABC4B3 /* WebView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView-Prefix.pch"; sourceTree = "<group>"; };
+		D5903B2D171F88CB00ABC4B3 /* Giant_Burger_frei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Giant_Burger_frei.jpg; sourceTree = "<group>"; };
+		D5903B2E171F88CB00ABC4B3 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
+		D5903B2F171F88CB00ABC4B3 /* New-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "New-Info.plist"; sourceTree = "<group>"; };
+		D5903B30171F88CB00ABC4B3 /* New-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "New-Prefix.pch"; sourceTree = "<group>"; };
+		D5903B31171F88CB00ABC4B3 /* omlette.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = omlette.jpg; sourceTree = "<group>"; };
+		D5903B32171F88CB00ABC4B3 /* PFinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFinalViewController.h; sourceTree = "<group>"; };
+		D5903B33171F88CB00ABC4B3 /* PFinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFinalViewController.m; sourceTree = "<group>"; };
+		D5903B34171F88CB00ABC4B3 /* Precipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Precipe.h; sourceTree = "<group>"; };
+		D5903B35171F88CB00ABC4B3 /* Precipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Precipe.m; sourceTree = "<group>"; };
+		D5903B36171F88CB00ABC4B3 /* Psample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Psample.h; sourceTree = "<group>"; };
+		D5903B37171F88CB00ABC4B3 /* Psample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Psample.m; sourceTree = "<group>"; };
+		D5903B38171F88CB00ABC4B3 /* PViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PViewController.h; sourceTree = "<group>"; };
+		D5903B39171F88CB00ABC4B3 /* PViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PViewController.m; sourceTree = "<group>"; };
+		D5903B3A171F88CB00ABC4B3 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
+		D5903B3B171F88CB00ABC4B3 /* sbcrepe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sbcrepe.jpg; sourceTree = "<group>"; };
+		D5903B3C171F88CB00ABC4B3 /* yellow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = yellow.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +164,22 @@
 		87F9909A171023C0002F38C2 /* WhatCanWeCook */ = {
 			isa = PBXGroup;
 			children = (
+				D5903B2D171F88CB00ABC4B3 /* Giant_Burger_frei.jpg */,
+				D5903B2E171F88CB00ABC4B3 /* green.jpg */,
+				D5903B2F171F88CB00ABC4B3 /* New-Info.plist */,
+				D5903B30171F88CB00ABC4B3 /* New-Prefix.pch */,
+				D5903B31171F88CB00ABC4B3 /* omlette.jpg */,
+				D5903B32171F88CB00ABC4B3 /* PFinalViewController.h */,
+				D5903B33171F88CB00ABC4B3 /* PFinalViewController.m */,
+				D5903B34171F88CB00ABC4B3 /* Precipe.h */,
+				D5903B35171F88CB00ABC4B3 /* Precipe.m */,
+				D5903B36171F88CB00ABC4B3 /* Psample.h */,
+				D5903B37171F88CB00ABC4B3 /* Psample.m */,
+				D5903B38171F88CB00ABC4B3 /* PViewController.h */,
+				D5903B39171F88CB00ABC4B3 /* PViewController.m */,
+				D5903B3A171F88CB00ABC4B3 /* red.jpg */,
+				D5903B3B171F88CB00ABC4B3 /* sbcrepe.jpg */,
+				D5903B3C171F88CB00ABC4B3 /* yellow.gif */,
 				D5903B1E171F81FE00ABC4B3 /* CustomButton.h */,
 				D5903B1F171F81FE00ABC4B3 /* CustomButton.m */,
 				D5903B20171F81FE00ABC4B3 /* video_icon.png */,
@@ -244,6 +287,13 @@
 				878F8CE2171321310033A1BA /* star_half_left.png in Resources */,
 				D5903B28171F81FE00ABC4B3 /* video_icon.png in Resources */,
 				D5903B2B171F81FE00ABC4B3 /* WebView-Info.plist in Resources */,
+				D5903B3D171F88CC00ABC4B3 /* Giant_Burger_frei.jpg in Resources */,
+				D5903B3E171F88CC00ABC4B3 /* green.jpg in Resources */,
+				D5903B3F171F88CC00ABC4B3 /* New-Info.plist in Resources */,
+				D5903B40171F88CC00ABC4B3 /* omlette.jpg in Resources */,
+				D5903B45171F88CC00ABC4B3 /* red.jpg in Resources */,
+				D5903B46171F88CC00ABC4B3 /* sbcrepe.jpg in Resources */,
+				D5903B47171F88CC00ABC4B3 /* yellow.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +313,10 @@
 				D5903B27171F81FE00ABC4B3 /* CustomButton.m in Sources */,
 				D5903B29171F81FE00ABC4B3 /* VideoEmbed.m in Sources */,
 				D5903B2A171F81FE00ABC4B3 /* ViewController.m in Sources */,
+				D5903B41171F88CC00ABC4B3 /* PFinalViewController.m in Sources */,
+				D5903B42171F88CC00ABC4B3 /* Precipe.m in Sources */,
+				D5903B43171F88CC00ABC4B3 /* Psample.m in Sources */,
+				D5903B44171F88CC00ABC4B3 /* PViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
