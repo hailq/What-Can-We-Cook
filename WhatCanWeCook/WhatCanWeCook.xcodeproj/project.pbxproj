@@ -25,6 +25,10 @@
 		87F990AE171023C1002F38C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F990AC171023C1002F38C2 /* MainStoryboard.storyboard */; };
 		87F990B1171023C1002F38C2 /* UISTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F990B0171023C1002F38C2 /* UISTViewController.m */; };
 		87F990BB1710247E002F38C2 /* EnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F990BA1710247E002F38C2 /* EnterViewController.m */; };
+		A5F4812F171FF4890004264E /* HavingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F48128171FF4890004264E /* HavingTableViewCell.m */; };
+		A5F48130171FF4890004264E /* HavingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812A171FF4890004264E /* HavingViewController.m */; };
+		A5F48131171FF4890004264E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812C171FF4890004264E /* MenuViewController.m */; };
+		A5F48132171FF4890004264E /* MissingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812E171FF4890004264E /* MissingViewController.m */; };
 		D5903B27171F81FE00ABC4B3 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B1F171F81FE00ABC4B3 /* CustomButton.m */; };
 		D5903B28171F81FE00ABC4B3 /* video_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5903B20171F81FE00ABC4B3 /* video_icon.png */; };
 		D5903B29171F81FE00ABC4B3 /* VideoEmbed.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B22171F81FE00ABC4B3 /* VideoEmbed.m */; };
@@ -70,6 +74,14 @@
 		87F990B0171023C1002F38C2 /* UISTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISTViewController.m; sourceTree = "<group>"; };
 		87F990B91710247E002F38C2 /* EnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterViewController.h; sourceTree = "<group>"; };
 		87F990BA1710247E002F38C2 /* EnterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterViewController.m; sourceTree = "<group>"; };
+		A5F48127171FF4890004264E /* HavingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavingTableViewCell.h; sourceTree = "<group>"; };
+		A5F48128171FF4890004264E /* HavingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavingTableViewCell.m; sourceTree = "<group>"; };
+		A5F48129171FF4890004264E /* HavingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavingViewController.h; sourceTree = "<group>"; };
+		A5F4812A171FF4890004264E /* HavingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavingViewController.m; sourceTree = "<group>"; };
+		A5F4812B171FF4890004264E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		A5F4812C171FF4890004264E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		A5F4812D171FF4890004264E /* MissingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingViewController.h; sourceTree = "<group>"; };
+		A5F4812E171FF4890004264E /* MissingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingViewController.m; sourceTree = "<group>"; };
 		D5903B1E171F81FE00ABC4B3 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		D5903B1F171F81FE00ABC4B3 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		D5903B20171F81FE00ABC4B3 /* video_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_icon.png; sourceTree = "<group>"; };
@@ -175,6 +187,14 @@
 				D5903B35171F88CB00ABC4B3 /* Precipe.m */,
 				D5903B36171F88CB00ABC4B3 /* Psample.h */,
 				D5903B37171F88CB00ABC4B3 /* Psample.m */,
+				A5F48127171FF4890004264E /* HavingTableViewCell.h */,
+				A5F48128171FF4890004264E /* HavingTableViewCell.m */,
+				A5F48129171FF4890004264E /* HavingViewController.h */,
+				A5F4812A171FF4890004264E /* HavingViewController.m */,
+				A5F4812B171FF4890004264E /* MenuViewController.h */,
+				A5F4812C171FF4890004264E /* MenuViewController.m */,
+				A5F4812D171FF4890004264E /* MissingViewController.h */,
+				A5F4812E171FF4890004264E /* MissingViewController.m */,
 				D5903B38171F88CB00ABC4B3 /* PViewController.h */,
 				D5903B39171F88CB00ABC4B3 /* PViewController.m */,
 				D5903B3A171F88CB00ABC4B3 /* red.jpg */,
@@ -317,6 +337,10 @@
 				D5903B42171F88CC00ABC4B3 /* Precipe.m in Sources */,
 				D5903B43171F88CC00ABC4B3 /* Psample.m in Sources */,
 				D5903B44171F88CC00ABC4B3 /* PViewController.m in Sources */,
+				A5F4812F171FF4890004264E /* HavingTableViewCell.m in Sources */,
+				A5F48130171FF4890004264E /* HavingViewController.m in Sources */,
+				A5F48131171FF4890004264E /* MenuViewController.m in Sources */,
+				A5F48132171FF4890004264E /* MissingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
