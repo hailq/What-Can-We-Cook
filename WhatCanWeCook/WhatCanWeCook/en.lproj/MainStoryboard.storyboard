@@ -1069,7 +1069,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WR-KT-Gt6">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="73" id="RjK-6t-gb2"/>
+                                                        <constraint firstAttribute="width" constant="73" type="user" id="RjK-6t-gb2"/>
+                                                        <constraint firstAttribute="height" constant="43" type="user" id="dgS-5w-bdj"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" type="user" id="drV-83-oS7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Rating">
@@ -1085,7 +1087,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3U-TT-8GJ">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="73" id="Bex-4F-86b"/>
+                                                        <constraint firstAttribute="width" constant="73" type="user" id="Bex-4F-86b"/>
+                                                        <constraint firstAttribute="height" constant="43" type="user" id="FA7-Cb-66m"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" type="user" id="P2H-qi-wTQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="RLV">
@@ -1101,7 +1105,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-zr-VHp">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="73" id="Fwe-Ph-cDH"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" type="user" id="9tF-e6-15d"/>
+                                                        <constraint firstAttribute="width" constant="73" type="user" id="Fwe-Ph-cDH"/>
+                                                        <constraint firstAttribute="height" constant="43" type="user" id="i2J-ke-D8a"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Time">
@@ -1126,7 +1132,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Possible Recipes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-aY-SO5">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="223" id="nRP-CV-OSi"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="223" type="user" id="IDv-Z4-CvM"/>
+                                                        <constraint firstAttribute="height" constant="21" type="user" id="RXs-O5-PTH"/>
+                                                        <constraint firstAttribute="width" constant="223" type="user" id="nRP-CV-OSi"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1134,7 +1142,8 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select Your Recipe:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6C-Z4-PBx">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="223" id="zh5-Lj-ClI"/>
+                                                        <constraint firstAttribute="width" constant="223" type="user" id="RvU-fd-mek"/>
+                                                        <constraint firstAttribute="height" constant="21" type="user" id="fbR-92-ef2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1142,7 +1151,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sort By:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DI-bN-Bcq">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="72" id="yaf-6c-kq8"/>
+                                                        <constraint firstAttribute="height" constant="21" type="user" id="EWq-Tz-gFi"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" type="user" id="QUd-rT-GBK"/>
+                                                        <constraint firstAttribute="width" constant="72" type="user" id="yaf-6c-kq8"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1153,20 +1164,25 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                         </view>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="7WR-KT-Gt6" firstAttribute="top" secondItem="vEM-Gh-eM5" secondAttribute="top" constant="59" id="1mN-XU-c00"/>
-                                            <constraint firstAttribute="trailing" secondItem="i3U-TT-8GJ" secondAttribute="trailing" constant="85" id="Bam-Be-DxI"/>
-                                            <constraint firstItem="7DI-bN-Bcq" firstAttribute="baseline" secondItem="7WR-KT-Gt6" secondAttribute="baseline" type="default" id="Cmu-xF-paP"/>
+                                            <constraint firstItem="7WR-KT-Gt6" firstAttribute="top" secondItem="vEM-Gh-eM5" secondAttribute="top" constant="59" type="user" id="1mN-XU-c00"/>
+                                            <constraint firstAttribute="trailing" secondItem="i3U-TT-8GJ" secondAttribute="trailing" constant="85" type="user" id="Bam-Be-DxI"/>
+                                            <constraint firstItem="7DI-bN-Bcq" firstAttribute="baseline" secondItem="7WR-KT-Gt6" secondAttribute="baseline" type="user" id="Cmu-xF-paP"/>
                                             <constraint firstItem="QYx-zr-VHp" firstAttribute="baseline" secondItem="i3U-TT-8GJ" secondAttribute="baseline" type="default" id="DgY-BE-vdV"/>
-                                            <constraint firstItem="5W8-aY-SO5" firstAttribute="leading" secondItem="vEM-Gh-eM5" secondAttribute="leading" constant="55" id="J9z-k6-skd"/>
+                                            <constraint firstItem="QYx-zr-VHp" firstAttribute="leading" secondItem="i3U-TT-8GJ" secondAttribute="trailing" constant="3" type="user" id="HEe-yh-M90"/>
                                             <constraint firstItem="hoX-1e-0gS" firstAttribute="top" secondItem="vEM-Gh-eM5" secondAttribute="top" constant="-1" id="RT2-BW-P8s"/>
-                                            <constraint firstItem="g6C-Z4-PBx" firstAttribute="centerX" secondItem="vEM-Gh-eM5" secondAttribute="centerX" type="default" id="a4R-qO-1WZ"/>
+                                            <constraint firstItem="5W8-aY-SO5" firstAttribute="leading" secondItem="g6C-Z4-PBx" secondAttribute="leading" type="user" id="VUR-g4-DJW"/>
+                                            <constraint firstItem="7WR-KT-Gt6" firstAttribute="leading" secondItem="7DI-bN-Bcq" secondAttribute="trailing" constant="8" type="user" id="aPS-ME-wmD"/>
+                                            <constraint firstAttribute="centerX" secondItem="g6C-Z4-PBx" secondAttribute="centerX" type="user" id="bFA-fP-mfJ"/>
                                             <constraint firstItem="hoX-1e-0gS" firstAttribute="leading" secondItem="vEM-Gh-eM5" secondAttribute="leading" constant="-90" id="bq6-PE-qcy"/>
                                             <constraint firstItem="5W8-aY-SO5" firstAttribute="centerY" secondItem="hoX-1e-0gS" secondAttribute="centerY" type="default" id="eka-vc-4OT"/>
                                             <constraint firstAttribute="bottom" secondItem="g6C-Z4-PBx" secondAttribute="bottom" constant="27" id="gBg-hC-DsB"/>
+                                            <constraint firstItem="i3U-TT-8GJ" firstAttribute="leading" secondItem="7WR-KT-Gt6" secondAttribute="trailing" constant="2" type="user" id="jLz-q7-78N"/>
+                                            <constraint firstItem="5W8-aY-SO5" firstAttribute="trailing" secondItem="g6C-Z4-PBx" secondAttribute="trailing" type="user" id="kzN-0v-Omf"/>
                                             <constraint firstItem="7WR-KT-Gt6" firstAttribute="baseline" secondItem="i3U-TT-8GJ" secondAttribute="baseline" type="default" id="qfS-GC-fMj"/>
-                                            <constraint firstItem="7DI-bN-Bcq" firstAttribute="leading" secondItem="vEM-Gh-eM5" secondAttribute="leading" constant="7" id="xf7-dz-jRL"/>
-                                            <constraint firstItem="7WR-KT-Gt6" firstAttribute="leading" secondItem="7DI-bN-Bcq" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xgz-ae-fzZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="QYx-zr-VHp" secondAttribute="trailing" constant="9" id="z0g-QF-XMt"/>
+                                            <constraint firstItem="7DI-bN-Bcq" firstAttribute="leading" secondItem="vEM-Gh-eM5" secondAttribute="leading" constant="7" type="user" id="xf7-dz-jRL"/>
+                                            <constraint firstItem="7WR-KT-Gt6" firstAttribute="leading" secondItem="7DI-bN-Bcq" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="xgz-ae-fzZ"/>
+                                            <constraint firstAttribute="centerX" secondItem="5W8-aY-SO5" secondAttribute="centerX" type="user" id="yrX-9z-kqh"/>
+                                            <constraint firstAttribute="trailing" secondItem="QYx-zr-VHp" secondAttribute="trailing" constant="9" type="user" id="z0g-QF-XMt"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="96" id="p8g-TE-ZOA">
