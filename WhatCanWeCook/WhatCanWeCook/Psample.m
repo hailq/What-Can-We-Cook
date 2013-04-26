@@ -19,7 +19,8 @@ UIImage *img1, *img2, *img3;
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    //self.show1;
+    // warning here, but it allows the picture to appear
+    self.show1;
     
 }
 
