@@ -484,7 +484,7 @@
             </objects>
             <point key="canvasLocation" x="334" y="-317"/>
         </scene>
-        <!--Rating View Controller - Recipe Rating-->
+        <!--Rating View Controller - Rating-->
         <scene sceneID="Rhn-Ov-tTs">
             <objects>
                 <viewController id="Mi6-tF-cKG" customClass="RatingViewController" sceneMemberID="viewController">
@@ -557,8 +557,12 @@
                             <outletCollection property="gestureRecognizers" destination="H0Q-or-mqy" appends="YES" id="X3B-3h-xhb"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe Rating" id="sij-Tf-8Zo">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="ASQ-EN-LfL"/>
+                    <navigationItem key="navigationItem" title="Rating" id="sij-Tf-8Zo">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="ASQ-EN-LfL">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="yCn-ZK-dIY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="commentTextView" destination="y74-23-4UP" id="5hS-5A-Ipf"/>
@@ -630,8 +634,12 @@
                             <constraint firstItem="xII-6s-hqd" firstAttribute="top" secondItem="uxF-iW-LLh" secondAttribute="top" type="default" id="p3M-My-ZVZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe on Web" id="EaT-IB-4YQ">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="OOq-Hk-kGy"/>
+                    <navigationItem key="navigationItem" title="Web Link" id="EaT-IB-4YQ">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="OOq-Hk-kGy">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="4iR-Uf-ol2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="webView" destination="b0v-fJ-IuT" id="wDu-dP-6ir"/>
@@ -678,8 +686,12 @@
                             <constraint firstItem="gKh-sn-UVr" firstAttribute="top" secondItem="Rr0-2p-LAk" secondAttribute="bottom" type="default" id="zUD-RI-6Vs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe Video" id="asP-T2-hQE">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="r9M-IB-uUY"/>
+                    <navigationItem key="navigationItem" title="Video Link" id="asP-T2-hQE">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="r9M-IB-uUY">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="g64-Ln-QWR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="thumbnailView" destination="Rr0-2p-LAk" id="Mjt-DD-n02"/>
@@ -689,10 +701,10 @@
             </objects>
             <point key="canvasLocation" x="2428" y="-35"/>
         </scene>
-        <!--View Controller - Web Screen-->
+        <!--View Controller - Directions-->
         <scene sceneID="ays-er-KJO">
             <objects>
-                <viewController title="Web Screen" id="umb-Lo-Ggr" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Web Screen" id="umb-Lo-Ggr" userLabel="View Controller - Directions" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5N-XY-rHb">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -754,14 +766,18 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Directions" id="CdH-sq-4TZ">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="n8i-Sj-0Ka"/>
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="n8i-Sj-0Ka">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="8Yh-47-8rh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8D-Et-CpM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1991" y="-325"/>
         </scene>
-        <!--Having View Controller - What You Have-->
+        <!--Having View Controller - Have-->
         <scene sceneID="QRl-TC-8TX">
             <objects>
                 <viewController id="DbV-Kl-WWD" customClass="HavingViewController" sceneMemberID="viewController">
@@ -864,15 +880,19 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstAttribute="trailing" secondItem="Ayo-vw-Yge" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oIe-IW-p5l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="What You Have" id="vQC-Qm-xCG">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="Cku-nU-hc5"/>
+                    <navigationItem key="navigationItem" title="Have" id="vQC-Qm-xCG">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="Cku-nU-hc5">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="Yy4-Tj-6za"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hc-8z-Shv" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1991" y="-1776"/>
         </scene>
-        <!--Missing View Controller - What's Missing-->
+        <!--Missing View Controller - Missing-->
         <scene sceneID="HNa-XR-RFA">
             <objects>
                 <viewController id="eGx-Id-dmB" customClass="MissingViewController" sceneMemberID="viewController">
@@ -976,8 +996,12 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstItem="30c-iz-cIo" firstAttribute="bottom" secondItem="cN7-bE-aqj" secondAttribute="bottom" type="default" id="zU8-cV-QBH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="What's Missing" id="kxz-K4-QTI">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="MQ8-Mf-eVn"/>
+                    <navigationItem key="navigationItem" title="Missing" id="kxz-K4-QTI">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="MQ8-Mf-eVn">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="tyF-qO-puv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BxG-pp-NDk" sceneMemberID="firstResponder"/>
@@ -1066,7 +1090,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
             </objects>
             <point key="canvasLocation" x="334" y="482"/>
         </scene>
-        <!--Psample - Recipe List-->
+        <!--Psample - Results-->
         <scene sceneID="nO9-k1-YdR">
             <objects>
                 <tableViewController id="3Cg-C8-Kgf" customClass="Psample" sceneMemberID="viewController">
@@ -1352,9 +1376,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <outlet property="delegate" destination="3Cg-C8-Kgf" id="VvQ-zb-5Bn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipe List" id="M1M-Be-p5N">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="UXI-dS-dFM"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Results" id="M1M-Be-p5N"/>
                     <connections>
                         <outlet property="imageview1" destination="xpG-nB-qVg" id="1SM-Ng-Sfn"/>
                         <outlet property="imageview2" destination="8c0-pM-DQA" id="bwn-p0-bCa"/>
@@ -1368,7 +1390,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
             </objects>
             <point key="canvasLocation" x="881" y="-317"/>
         </scene>
-        <!--Precipe - Recipe Details-->
+        <!--Precipe - Details-->
         <scene sceneID="hav-0w-yE4">
             <objects>
                 <viewController id="ZEL-9g-xGF" customClass="Precipe" sceneMemberID="viewController">
@@ -1544,8 +1566,12 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstItem="eNH-fw-oAM" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" type="default" id="zSO-GS-mCV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe Details" id="1nu-yr-cVK">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="qAN-fx-4d8"/>
+                    <navigationItem key="navigationItem" title="Details" id="1nu-yr-cVK">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="qAN-fx-4d8">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="9gs-bQ-JUX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageview" destination="7E5-X7-728" id="vFE-Gl-TvA"/>
@@ -1612,8 +1638,12 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstItem="S6p-Yf-hrP" firstAttribute="bottom" secondItem="bHe-i4-ly1" secondAttribute="bottom" type="default" id="nOY-3l-JNz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Recipe" id="I9k-3K-Zcp">
-                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="gwT-Wb-H22"/>
+                    <navigationItem key="navigationItem" title="Add" id="I9k-3K-Zcp">
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="gwT-Wb-H22">
+                            <connections>
+                                <segue destination="P2b-bC-zaB" kind="push" id="Daz-h5-Q3c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="webView" destination="iOg-n9-DaA" id="87X-F4-iuc"/>
@@ -1718,5 +1748,6 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="aIc-V8-Hg6"/>
+        <segue reference="CNy-yC-BCj"/>
     </inferredMetricsTieBreakers>
 </document>
