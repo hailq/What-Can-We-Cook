@@ -36,6 +36,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segue Method
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+}
+
 #pragma mark -
 #pragma mark Table View Data Source Method
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -56,15 +63,15 @@
     switch (indexPath.row) {
         case 0:
             cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Top Rated Recipes";
+            cell.textLabel.text = @"Enter Ingredient";
             break;
         case 1:
             cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Fastest Recipes";
+            cell.textLabel.text = @"Result";
             break;
         case 2:
             cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Recipes Categories";
+            cell.textLabel.text = @"Recipe";
             break;
         case 3:
             cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
@@ -77,4 +84,27 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    if (indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"SegueEnterIngredient" sender:cell];
+    }
+    
+    else if (indexPath.row == 1) {
+        [self performSegueWithIdentifier:@"SegueResultScreen" sender:cell];
+    }
+    
+    else if (indexPath.row == 2){
+        [self performSegueWithIdentifier:@"SegueRecipeScreen" sender:cell];
+    }
+    
+    else{
+        [self performSegueWithIdentifier:@"SegueAddRecipeScreen" sender:cell];
+    }
+}
 @end

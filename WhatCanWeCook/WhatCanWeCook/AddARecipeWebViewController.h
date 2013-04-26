@@ -10,4 +10,7 @@
 
 @interface AddARecipeWebViewController : UIViewController
 
+{
+    IBOutlet UIw
+}
 @end
