@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad
 {
-    NSURL *url =[NSURL URLWithString:@"http://serv11.divms.uiowa.edu/~ios5/webform/ "];
+    NSURL *url =[NSURL URLWithString:@"http://serv11.divms.uiowa.edu/~ios5/webform/"];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
