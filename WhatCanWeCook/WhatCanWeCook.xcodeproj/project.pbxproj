@@ -44,6 +44,7 @@
 		D5903B45171F88CC00ABC4B3 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B3A171F88CB00ABC4B3 /* red.jpg */; };
 		D5903B46171F88CC00ABC4B3 /* sbcrepe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5903B3B171F88CB00ABC4B3 /* sbcrepe.jpg */; };
 		D5903B47171F88CC00ABC4B3 /* yellow.gif in Resources */ = {isa = PBXBuildFile; fileRef = D5903B3C171F88CB00ABC4B3 /* yellow.gif */; };
+		D5ACB13C172B0C1E0009F246 /* AddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACB13B172B0C1E0009F246 /* AddRecipeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,8 @@
 		D5903B3A171F88CB00ABC4B3 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
 		D5903B3B171F88CB00ABC4B3 /* sbcrepe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sbcrepe.jpg; sourceTree = "<group>"; };
 		D5903B3C171F88CB00ABC4B3 /* yellow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = yellow.gif; sourceTree = "<group>"; };
+		D5ACB13A172B0C1E0009F246 /* AddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecipeViewController.h; sourceTree = "<group>"; };
+		D5ACB13B172B0C1E0009F246 /* AddRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 				D5903B22171F81FE00ABC4B3 /* VideoEmbed.m */,
 				D5903B23171F81FE00ABC4B3 /* ViewController.h */,
 				D5903B24171F81FE00ABC4B3 /* ViewController.m */,
+				D5ACB13A172B0C1E0009F246 /* AddRecipeViewController.h */,
+				D5ACB13B172B0C1E0009F246 /* AddRecipeViewController.m */,
 				D5903B25171F81FE00ABC4B3 /* WebView-Info.plist */,
 				D5903B26171F81FE00ABC4B3 /* WebView-Prefix.pch */,
 				8713E65A1711386B00BDE6AC /* Rating */,
@@ -335,6 +340,7 @@
 				A5F48130171FF4890004264E /* HavingViewController.m in Sources */,
 				A5F48131171FF4890004264E /* MenuViewController.m in Sources */,
 				A5F48132171FF4890004264E /* MissingViewController.m in Sources */,
+				D5ACB13C172B0C1E0009F246 /* AddRecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
