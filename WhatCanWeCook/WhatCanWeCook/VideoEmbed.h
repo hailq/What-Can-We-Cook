@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VideoEmbed : UIViewController {
-    IBOutlet UIWebView * thumbnailView;
-}
+@interface VideoEmbed : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIWebView * thumbnailView;
 @end

@@ -28,9 +28,19 @@
 {
     [super viewDidLoad];
 	
-    NSString *htmlString = @"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 320\"/></head><body style=\"background:#F00;margin-top:0px;margin-left:0px\"><div><object width=\"320\" height=\"504\"><param name=\"movie\" value=\"http://www.youtube.com/embed/scJi0ekLKDM\"></param><param name=\"wmode\" value=\"transparent\"></param><embed src=\"http://www.youtube.com/embed/scJi0ekLKDM\"type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"320\" height=\"504\"></embed></object></div></body></html>";
+    NSString *embedHTML = @"<html><head>\
+    <style type=\"text/css\">\
+    body {\
+    background-color:rgb(255,254,236);\
+    style=\"margin-left: auto; margin-right: auto;\";\
+    }\
+    </style>\
+    </head><body>\
+    <iframe type=\"text/html\" width=\"100%\" src=\"http://www.youtube.com/embed/%@\" frameborder=\"0\"></iframe>\
+    </body></html>";
+    NSString* html = [NSString stringWithFormat:embedHTML, @"2xtqVECh0Js"];
     
-    [thumbnailView loadHTMLString:htmlString baseURL:[NSURL URLWithString:@"http://www.your-url.com"]];
+    [thumbnailView loadHTMLString:html baseURL:nil];
 
 }
 

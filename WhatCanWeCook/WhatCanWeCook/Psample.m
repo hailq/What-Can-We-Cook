@@ -20,7 +20,7 @@ UIImage *img1, *img2, *img3;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor blackColor];
-    self.show1;
+    //self.show1;
     
 }
 
