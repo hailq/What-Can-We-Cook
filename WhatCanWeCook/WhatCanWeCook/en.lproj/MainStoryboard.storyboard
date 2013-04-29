@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bc-ca-tnv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bc-ca-tnv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -469,13 +469,7 @@
                             <constraint firstItem="Ymd-2I-6Zw" firstAttribute="top" secondItem="4qH-y7-Tsv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wWV-MH-RWX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ingredients" id="DIl-et-qze">
-                        <barButtonItem key="leftBarButtonItem" title="Add Recipe" id="k7i-bU-ONv">
-                            <connections>
-                                <segue destination="uKp-lu-SV7" kind="push" id="Ucc-QB-GZj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Ingredients" id="DIl-et-qze"/>
                     <connections>
                         <outlet property="txtIngredients" destination="Ymd-2I-6Zw" id="FXi-Sf-NEN"/>
                     </connections>
@@ -524,7 +518,7 @@
                                     <constraint firstAttribute="width" constant="281" type="user" id="5nE-Cl-9JT"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recipe Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-wy-OWF">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many stars?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-wy-OWF">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" type="user" id="Oah-3E-XS4"/>
                                     <constraint firstAttribute="height" constant="40" type="user" id="sMB-8Q-PqG"/>
@@ -743,12 +737,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Directions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkW-7s-dTQ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Step-by-Step:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkW-7s-dTQ">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" type="user" id="IyH-jj-9Dh"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" type="user" id="Lcl-7O-Zqg"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" type="user" id="aVi-HC-HVk"/>
-                                    <constraint firstAttribute="width" constant="125" type="user" id="mVM-lh-qm3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -780,7 +773,6 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                         <constraints>
                             <constraint firstItem="mwF-QB-yfH" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" constant="66" type="user" id="1Zr-wH-6Hd"/>
                             <constraint firstItem="fkW-7s-dTQ" firstAttribute="centerX" secondItem="mwF-QB-yfH" secondAttribute="centerX" type="default" id="3hn-nG-CZx"/>
-                            <constraint firstAttribute="bottom" secondItem="mwF-QB-yfH" secondAttribute="bottom" constant="67" type="user" id="9LJ-8P-SPu"/>
                             <constraint firstItem="fkW-7s-dTQ" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" type="default" id="BXV-63-puP"/>
                             <constraint firstItem="NRZ-Nz-nIu" firstAttribute="bottom" secondItem="e5N-XY-rHb" secondAttribute="bottom" type="default" id="DxA-Jh-ZVm"/>
                             <constraint firstItem="zjt-EF-OOh" firstAttribute="centerX" secondItem="gjJ-xG-tUt" secondAttribute="centerX" type="default" id="Hxs-QG-fgT"/>
@@ -1615,7 +1607,6 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstItem="eNH-fw-oAM" firstAttribute="trailing" secondItem="K9J-ff-Gqn" secondAttribute="trailing" type="default" id="5Ym-JS-DYr"/>
                             <constraint firstItem="ttE-wN-vAF" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7kb-NY-ZLg"/>
                             <constraint firstItem="1X3-IE-c5D" firstAttribute="top" secondItem="K9J-ff-Gqn" secondAttribute="top" constant="226" id="AVV-kz-cLL"/>
-                            <constraint firstItem="GQ3-hH-2jV" firstAttribute="baseline" secondItem="ttE-wN-vAF" secondAttribute="baseline" type="default" id="GT6-Nm-5I7"/>
                             <constraint firstItem="GQ3-hH-2jV" firstAttribute="top" secondItem="ttE-wN-vAF" secondAttribute="top" type="user" id="GeF-jF-kQ2"/>
                             <constraint firstAttribute="trailing" secondItem="GQ3-hH-2jV" secondAttribute="trailing" constant="19" type="user" id="MPf-PT-0g3"/>
                             <constraint firstAttribute="bottom" secondItem="sz1-B6-ZLL" secondAttribute="bottom" constant="137" id="QZX-9l-odP"/>
@@ -1822,9 +1813,8 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aIc-V8-Hg6"/>
+        <segue reference="gq7-mc-3o3"/>
+        <segue reference="zhw-YP-95U"/>
         <segue reference="sap-BA-guA"/>
-        <segue reference="9gs-bQ-JUX"/>
-        <segue reference="Ucc-QB-GZj"/>
     </inferredMetricsTieBreakers>
 </document>
