@@ -527,7 +527,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recipe Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-wy-OWF">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" type="user" id="Oah-3E-XS4"/>
-                                    <constraint firstAttribute="height" constant="30" id="fh0-3y-DGO"/>
+                                    <constraint firstAttribute="height" constant="40" type="user" id="sMB-8Q-PqG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -551,20 +551,21 @@
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="bottom" secondItem="XOi-ce-WX9" secondAttribute="bottom" type="default" id="64e-fY-340"/>
                             <constraint firstItem="2y3-MX-GTy" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="8ao-Ee-uJP"/>
                             <constraint firstAttribute="trailing" secondItem="y74-23-4UP" secondAttribute="trailing" constant="19" type="user" id="AX8-YC-Rsx"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="70" id="BTP-Sa-eeJ"/>
-                            <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" type="default" id="DRf-29-EkZ"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="xRi-wy-OWF" secondAttribute="bottom" constant="17" type="user" id="BOs-2e-i1A"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="GMW-9f-c8o"/>
-                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="158" id="Jm4-tU-auh"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="57" type="user" id="Q4n-7I-2lj"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Sag-aq-ywl"/>
                             <constraint firstItem="y74-23-4UP" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="WEC-pB-PJg"/>
                             <constraint firstAttribute="bottom" secondItem="n2p-fT-g31" secondAttribute="bottom" constant="108" id="WG7-DI-3jb"/>
                             <constraint firstAttribute="trailing" secondItem="2y3-MX-GTy" secondAttribute="trailing" constant="19" type="user" id="cXW-57-Rz0"/>
-                            <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="369" id="eYd-aT-Ytv"/>
+                            <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" type="user" id="dqD-Ca-C0R"/>
+                            <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="346" id="eAR-tr-vw2"/>
                             <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="xRi-wy-OWF" secondAttribute="centerX" type="user" id="fDo-lt-lTG"/>
                             <constraint firstItem="n2p-fT-g31" firstAttribute="centerX" secondItem="wMj-8Y-6dt" secondAttribute="centerX" type="default" id="fjU-7n-5ci"/>
                             <constraint firstAttribute="bottom" secondItem="wMj-8Y-6dt" secondAttribute="bottom" constant="12" id="gdh-nH-mEI"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="jd0-d9-hgZ"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="mW2-WA-dkK"/>
+                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="174" id="vwq-qz-OFS"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="H0Q-or-mqy" appends="YES" id="X3B-3h-xhb"/>
@@ -1157,7 +1158,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <scene sceneID="nO9-k1-YdR">
             <objects>
                 <tableViewController id="3Cg-C8-Kgf" customClass="Psample" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZtC-4d-lPg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZtC-4d-lPg">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -1394,7 +1395,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                             <constraint firstItem="jMr-IC-1fI" firstAttribute="leading" secondItem="KaJ-Gr-ae3" secondAttribute="trailing" type="user" id="7rC-j4-BM3"/>
                                             <constraint firstItem="KaJ-Gr-ae3" firstAttribute="top" secondItem="3vA-5a-VWQ" secondAttribute="top" type="default" id="9pT-HS-ugN"/>
                                             <constraint firstItem="KaJ-Gr-ae3" firstAttribute="bottom" secondItem="3vA-5a-VWQ" secondAttribute="bottom" type="default" id="SqP-rr-zBt"/>
-                                            <constraint firstItem="jMr-IC-1fI" firstAttribute="bottom" secondItem="3vA-5a-VWQ" secondAttribute="bottom" type="default" id="em0-q5-Kbt"/>
+                                            <constraint firstItem="jMr-IC-1fI" firstAttribute="bottom" secondItem="3vA-5a-VWQ" secondAttribute="bottom" type="default" id="kPb-5u-IkV"/>
                                             <constraint firstItem="KaJ-Gr-ae3" firstAttribute="leading" secondItem="3vA-5a-VWQ" secondAttribute="leading" type="user" id="qYK-ol-rU6"/>
                                             <constraint firstItem="jMr-IC-1fI" firstAttribute="trailing" secondItem="3vA-5a-VWQ" secondAttribute="trailing" type="user" id="xlp-yX-ELS"/>
                                         </constraints>
@@ -1402,22 +1403,22 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                             <segue destination="ZEL-9g-xGF" kind="push" identifier="push3" id="aIc-V8-Hg6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="hO3-4e-vIA">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="rqZ-Xb-rEr">
                                         <rect key="frame" x="0.0" y="461" width="320" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hil-Iz-kOs">
+                                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufx-8K-A0C">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="340" id="pX4-6T-lLy"/>
+                                                    </constraints>
                                                     <items/>
                                                 </toolbar>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What Can We Cook?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-Br-FCX">
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
-                                                    </accessibility>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What Can We Cook?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l51-hH-nws">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="sDL-jh-0YF"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Xr9-mn-KSC"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1427,12 +1428,11 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="hil-Iz-kOs" firstAttribute="trailing" secondItem="hO3-4e-vIA" secondAttribute="trailing" type="default" id="5Ez-PB-hpx"/>
-                                            <constraint firstItem="ImF-Br-FCX" firstAttribute="leading" secondItem="hO3-4e-vIA" secondAttribute="leading" constant="20" type="default" id="5Vz-Dm-bIN"/>
-                                            <constraint firstAttribute="trailing" secondItem="ImF-Br-FCX" secondAttribute="trailing" constant="20" type="default" id="j8T-Di-0ua"/>
-                                            <constraint firstItem="ImF-Br-FCX" firstAttribute="top" secondItem="hO3-4e-vIA" secondAttribute="top" constant="11" id="o8e-DY-sBb"/>
-                                            <constraint firstItem="hil-Iz-kOs" firstAttribute="top" secondItem="hO3-4e-vIA" secondAttribute="top" type="default" id="vZL-du-07T"/>
-                                            <constraint firstItem="hil-Iz-kOs" firstAttribute="leading" secondItem="hO3-4e-vIA" secondAttribute="leading" type="default" id="zU6-M1-IsT"/>
+                                            <constraint firstItem="l51-hH-nws" firstAttribute="leading" secondItem="rqZ-Xb-rEr" secondAttribute="leading" type="default" id="9b6-zl-ctD"/>
+                                            <constraint firstItem="Ufx-8K-A0C" firstAttribute="top" secondItem="rqZ-Xb-rEr" secondAttribute="top" constant="2" id="DCs-jV-ead"/>
+                                            <constraint firstItem="l51-hH-nws" firstAttribute="trailing" secondItem="rqZ-Xb-rEr" secondAttribute="trailing" type="default" id="NGu-Oe-0sc"/>
+                                            <constraint firstItem="Ufx-8K-A0C" firstAttribute="trailing" secondItem="rqZ-Xb-rEr" secondAttribute="trailing" type="default" id="sa4-Bf-bR3"/>
+                                            <constraint firstItem="l51-hH-nws" firstAttribute="top" secondItem="rqZ-Xb-rEr" secondAttribute="top" constant="13" id="w1q-H9-aPM"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -1798,6 +1798,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="RatingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RatingViewController.h"/>
             <relationships>
+                <relationship kind="action" name="tapHideKeyBoard:"/>
                 <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="starRatingView" candidateClass="RatingView"/>
             </relationships>
@@ -1823,7 +1824,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
     <inferredMetricsTieBreakers>
         <segue reference="aIc-V8-Hg6"/>
         <segue reference="sap-BA-guA"/>
-        <segue reference="WAC-VD-TbM"/>
-        <segue reference="yCn-ZK-dIY"/>
+        <segue reference="9gs-bQ-JUX"/>
+        <segue reference="Ucc-QB-GZj"/>
     </inferredMetricsTieBreakers>
 </document>
