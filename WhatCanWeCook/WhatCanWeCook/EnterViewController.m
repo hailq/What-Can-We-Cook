@@ -10,6 +10,9 @@
 
 @interface EnterViewController () {
     NSMutableArray *filterArray;
+    NSArray *ingredients;
+    NSArray *country;
+    NSArray *category;
 }
 @end
 

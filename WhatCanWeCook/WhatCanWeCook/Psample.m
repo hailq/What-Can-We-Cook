@@ -8,7 +8,12 @@
 
 #import "Psample.h"
 #import "Precipe.h"
-@implementation Psample
+@implementation Psample {
+    NSMutableArray *filterArray;
+    NSArray *ingredients;
+    NSArray *country;
+    NSArray *category;
+}
 
 NSString *s1;
 UIImage *img1, *img2, *img3;

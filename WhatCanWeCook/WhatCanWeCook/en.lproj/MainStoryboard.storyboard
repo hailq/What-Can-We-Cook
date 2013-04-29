@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bc-ca-tnv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bc-ca-tnv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -1834,9 +1834,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gq7-mc-3o3"/>
-        <segue reference="WAC-VD-TbM"/>
         <segue reference="sap-BA-guA"/>
-        <segue reference="zhw-YP-95U"/>
+        <segue reference="WAC-VD-TbM"/>
+        <segue reference="aIc-V8-Hg6"/>
+        <segue reference="9gs-bQ-JUX"/>
     </inferredMetricsTieBreakers>
 </document>
