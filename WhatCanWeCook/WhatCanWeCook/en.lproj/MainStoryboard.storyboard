@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bc-ca-tnv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bc-ca-tnv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -1383,13 +1383,14 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="jMr-IC-1fI" firstAttribute="top" secondItem="3vA-5a-VWQ" secondAttribute="top" type="default" id="1go-u7-JRc"/>
+                                            <constraint firstItem="jMr-IC-1fI" firstAttribute="top" secondItem="3vA-5a-VWQ" secondAttribute="top" type="user" id="1go-u7-JRc"/>
                                             <constraint firstItem="jMr-IC-1fI" firstAttribute="leading" secondItem="KaJ-Gr-ae3" secondAttribute="trailing" type="user" id="7rC-j4-BM3"/>
                                             <constraint firstItem="KaJ-Gr-ae3" firstAttribute="top" secondItem="3vA-5a-VWQ" secondAttribute="top" type="default" id="9pT-HS-ugN"/>
-                                            <constraint firstItem="KaJ-Gr-ae3" firstAttribute="bottom" secondItem="3vA-5a-VWQ" secondAttribute="bottom" type="default" id="SqP-rr-zBt"/>
-                                            <constraint firstItem="jMr-IC-1fI" firstAttribute="bottom" secondItem="3vA-5a-VWQ" secondAttribute="bottom" type="default" id="kPb-5u-IkV"/>
+                                            <constraint firstItem="jMr-IC-1fI" firstAttribute="top" secondItem="KaJ-Gr-ae3" secondAttribute="bottom" constant="-101" type="user" id="Qh7-Vq-CRu"/>
+                                            <constraint firstItem="KaJ-Gr-ae3" firstAttribute="bottom" secondItem="3vA-5a-VWQ" secondAttribute="bottom" type="user" id="SqP-rr-zBt"/>
                                             <constraint firstItem="KaJ-Gr-ae3" firstAttribute="leading" secondItem="3vA-5a-VWQ" secondAttribute="leading" type="user" id="qYK-ol-rU6"/>
                                             <constraint firstItem="jMr-IC-1fI" firstAttribute="trailing" secondItem="3vA-5a-VWQ" secondAttribute="trailing" type="user" id="xlp-yX-ELS"/>
+                                            <constraint firstItem="KaJ-Gr-ae3" firstAttribute="centerY" secondItem="jMr-IC-1fI" secondAttribute="centerY" type="default" id="zdP-64-iRf"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="ZEL-9g-xGF" kind="push" identifier="push3" id="aIc-V8-Hg6"/>
@@ -1811,8 +1812,8 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gq7-mc-3o3"/>
-        <segue reference="zhw-YP-95U"/>
         <segue reference="sap-BA-guA"/>
+        <segue reference="aIc-V8-Hg6"/>
+        <segue reference="tyF-qO-puv"/>
     </inferredMetricsTieBreakers>
 </document>
