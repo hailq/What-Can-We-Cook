@@ -11,5 +11,6 @@
 @interface EnterViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *txtIngredients;
+@property (strong, nonatomic) UIButton *menuBT;
 
 @end

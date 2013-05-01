@@ -1,14 +1,13 @@
 //
-//  MenuViewController.h
+//  initViewController.h
 //  WhatCanWeCook
 //
 //  Created by hust9 on 4/30/13.
 //  Copyright (c) 2013 UIHUST. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ECSlidingViewController.h"
 
-@interface MenuViewController : UITableViewController
-
+@interface initViewController : ECSlidingViewController
 
 @end

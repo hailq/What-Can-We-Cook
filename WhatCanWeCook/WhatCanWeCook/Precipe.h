@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) UIImage *img;
 @property (weak, nonatomic) NSString *introString;
+@property (strong, nonatomic) UIButton *menuBT;
 @end

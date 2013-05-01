@@ -11,5 +11,6 @@
 @interface AddRecipeViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) UIButton *menuBT;
 
 @end

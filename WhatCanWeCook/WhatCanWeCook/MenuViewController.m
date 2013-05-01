@@ -1,22 +1,27 @@
 //
 //  MenuViewController.m
-//  WhatCanWeMake_datdh
+//  WhatCanWeCook
 //
-//  Created by hust9 on 4/8/13.
-//  Copyright (c) 2013 hust9. All rights reserved.
+//  Created by hust9 on 4/30/13.
+//  Copyright (c) 2013 UIHUST. All rights reserved.
 //
 
 #import "MenuViewController.h"
+#import "ECSlidingViewController.h"
 
 @interface MenuViewController ()
+
+@property (strong, nonatomic) NSArray *menu;
 
 @end
 
 @implementation MenuViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize menu;
+
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -26,8 +31,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    self.menu = [NSArray arrayWithObjects:@"Ingredient",@"Recipe",@"Result",@"Add Recipe", nil];
+    
+    [self.slidingViewController setAnchorRightRevealAmount:200.0f];
+    self.slidingViewController.underLeftWidthLayout = ECFullWidth;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,75 +51,99 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Segue Method
+#pragma mark - Table view data source
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
 }
 
-#pragma mark -
-#pragma mark Table View Data Source Method
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return [self.menu count];
 }
 
-#pragma mark Table View Delegate
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *tableIdentifier = @"tableIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
-    
+    NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    switch (indexPath.row) {
-        case 0:
-            cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Enter Ingredient";
-            break;
-        case 1:
-            cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Result";
-            break;
-        case 2:
-            cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Recipe";
-            break;
-        case 3:
-            cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.textLabel.text = @"Add a recipe";
-            break;
-            
-        default:
-            break;
-    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.menu objectAtIndex:indexPath.row]];
+    // Configure the cell...
+    
     return cell;
 }
+
+/*
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
+
+/*
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
     
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"SegueEnterIngredient" sender:cell];
-    }
+    NSString *identifier = [NSString stringWithFormat:@"%@", [self.menu objectAtIndex:indexPath.row]];
     
-    else if (indexPath.row == 1) {
-        [self performSegueWithIdentifier:@"SegueResultScreen" sender:cell];
-    }
+    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
     
-    else if (indexPath.row == 2){
-        [self performSegueWithIdentifier:@"SegueRecipeScreen" sender:cell];
-    }
+    [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
+        CGRect frame = self.slidingViewController.topViewController.view.frame;
+        self.slidingViewController.topViewController = newTopViewController;
+        self.slidingViewController.topViewController.view.frame = frame;
+        [self.slidingViewController resetTopView];
+    }];
     
-    else{
-        [self performSegueWithIdentifier:@"SegueAddRecipeScreen" sender:cell];
-    }
+    
 }
+
 @end

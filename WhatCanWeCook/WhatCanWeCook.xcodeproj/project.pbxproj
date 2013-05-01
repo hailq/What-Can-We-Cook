@@ -25,9 +25,13 @@
 		87F990AE171023C1002F38C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F990AC171023C1002F38C2 /* MainStoryboard.storyboard */; };
 		87F990B1171023C1002F38C2 /* UISTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F990B0171023C1002F38C2 /* UISTViewController.m */; };
 		87F990BB1710247E002F38C2 /* EnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F990BA1710247E002F38C2 /* EnterViewController.m */; };
+		A51C37331730C0770039E1D8 /* menuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A51C37321730C0770039E1D8 /* menuButton@2x.png */; };
+		A58707CA172F3A4100EA8681 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707C7172F3A4100EA8681 /* ECSlidingViewController.m */; };
+		A58707CB172F3A4100EA8681 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707C9172F3A4100EA8681 /* UIImage+ImageWithUIView.m */; };
+		A58707D1172F3B4400EA8681 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707D0172F3B4400EA8681 /* MenuViewController.m */; };
+		A58707D4172F435E00EA8681 /* initViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707D3172F435E00EA8681 /* initViewController.m */; };
 		A5F4812F171FF4890004264E /* HavingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F48128171FF4890004264E /* HavingTableViewCell.m */; };
 		A5F48130171FF4890004264E /* HavingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812A171FF4890004264E /* HavingViewController.m */; };
-		A5F48131171FF4890004264E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812C171FF4890004264E /* MenuViewController.m */; };
 		A5F48132171FF4890004264E /* MissingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812E171FF4890004264E /* MissingViewController.m */; };
 		D5903B27171F81FE00ABC4B3 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5903B1F171F81FE00ABC4B3 /* CustomButton.m */; };
 		D5903B28171F81FE00ABC4B3 /* video_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5903B20171F81FE00ABC4B3 /* video_icon.png */; };
@@ -74,12 +78,19 @@
 		87F990B0171023C1002F38C2 /* UISTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISTViewController.m; sourceTree = "<group>"; };
 		87F990B91710247E002F38C2 /* EnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterViewController.h; sourceTree = "<group>"; };
 		87F990BA1710247E002F38C2 /* EnterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterViewController.m; sourceTree = "<group>"; };
+		A51C37321730C0770039E1D8 /* menuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButton@2x.png"; sourceTree = "<group>"; };
+		A58707C6172F3A4100EA8681 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		A58707C7172F3A4100EA8681 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		A58707C8172F3A4100EA8681 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		A58707C9172F3A4100EA8681 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		A58707CF172F3B4400EA8681 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		A58707D0172F3B4400EA8681 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		A58707D2172F435E00EA8681 /* initViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initViewController.h; sourceTree = "<group>"; };
+		A58707D3172F435E00EA8681 /* initViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initViewController.m; sourceTree = "<group>"; };
 		A5F48127171FF4890004264E /* HavingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavingTableViewCell.h; sourceTree = "<group>"; };
 		A5F48128171FF4890004264E /* HavingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavingTableViewCell.m; sourceTree = "<group>"; };
 		A5F48129171FF4890004264E /* HavingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavingViewController.h; sourceTree = "<group>"; };
 		A5F4812A171FF4890004264E /* HavingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavingViewController.m; sourceTree = "<group>"; };
-		A5F4812B171FF4890004264E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		A5F4812C171FF4890004264E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		A5F4812D171FF4890004264E /* MissingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingViewController.h; sourceTree = "<group>"; };
 		A5F4812E171FF4890004264E /* MissingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissingViewController.m; sourceTree = "<group>"; };
 		D5903B1E171F81FE00ABC4B3 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
@@ -176,6 +187,8 @@
 		87F9909A171023C0002F38C2 /* WhatCanWeCook */ = {
 			isa = PBXGroup;
 			children = (
+				A51C37321730C0770039E1D8 /* menuButton@2x.png */,
+				A58707C5172F3A4100EA8681 /* ECSlidingViewController */,
 				D5903B2D171F88CB00ABC4B3 /* Giant_Burger_frei.jpg */,
 				D5903B2E171F88CB00ABC4B3 /* green.jpg */,
 				D5903B2F171F88CB00ABC4B3 /* New-Info.plist */,
@@ -185,12 +198,14 @@
 				D5903B35171F88CB00ABC4B3 /* Precipe.m */,
 				D5903B36171F88CB00ABC4B3 /* Psample.h */,
 				D5903B37171F88CB00ABC4B3 /* Psample.m */,
+				A58707D2172F435E00EA8681 /* initViewController.h */,
+				A58707D3172F435E00EA8681 /* initViewController.m */,
+				A58707CF172F3B4400EA8681 /* MenuViewController.h */,
+				A58707D0172F3B4400EA8681 /* MenuViewController.m */,
 				A5F48127171FF4890004264E /* HavingTableViewCell.h */,
 				A5F48128171FF4890004264E /* HavingTableViewCell.m */,
 				A5F48129171FF4890004264E /* HavingViewController.h */,
 				A5F4812A171FF4890004264E /* HavingViewController.m */,
-				A5F4812B171FF4890004264E /* MenuViewController.h */,
-				A5F4812C171FF4890004264E /* MenuViewController.m */,
 				A5F4812D171FF4890004264E /* MissingViewController.h */,
 				A5F4812E171FF4890004264E /* MissingViewController.m */,
 				D5903B38171F88CB00ABC4B3 /* PViewController.h */,
@@ -242,6 +257,17 @@
 				87F990BA1710247E002F38C2 /* EnterViewController.m */,
 			);
 			name = Enter;
+			sourceTree = "<group>";
+		};
+		A58707C5172F3A4100EA8681 /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A58707C6172F3A4100EA8681 /* ECSlidingViewController.h */,
+				A58707C7172F3A4100EA8681 /* ECSlidingViewController.m */,
+				A58707C8172F3A4100EA8681 /* UIImage+ImageWithUIView.h */,
+				A58707C9172F3A4100EA8681 /* UIImage+ImageWithUIView.m */,
+			);
+			path = ECSlidingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +340,7 @@
 				D5903B45171F88CC00ABC4B3 /* red.jpg in Resources */,
 				D5903B46171F88CC00ABC4B3 /* sbcrepe.jpg in Resources */,
 				D5903B47171F88CC00ABC4B3 /* yellow.gif in Resources */,
+				A51C37331730C0770039E1D8 /* menuButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +365,12 @@
 				D5903B44171F88CC00ABC4B3 /* PViewController.m in Sources */,
 				A5F4812F171FF4890004264E /* HavingTableViewCell.m in Sources */,
 				A5F48130171FF4890004264E /* HavingViewController.m in Sources */,
-				A5F48131171FF4890004264E /* MenuViewController.m in Sources */,
 				A5F48132171FF4890004264E /* MissingViewController.m in Sources */,
 				D5ACB13C172B0C1E0009F246 /* AddRecipeViewController.m in Sources */,
+				A58707CA172F3A4100EA8681 /* ECSlidingViewController.m in Sources */,
+				A58707CB172F3A4100EA8681 /* UIImage+ImageWithUIView.m in Sources */,
+				A58707D1172F3B4400EA8681 /* MenuViewController.m in Sources */,
+				A58707D4172F435E00EA8681 /* initViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

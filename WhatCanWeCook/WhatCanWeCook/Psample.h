@@ -28,4 +28,6 @@
 -(IBAction)show1;
 -(IBAction)show2;
 -(IBAction)show3;
+
+@property (strong, nonatomic) UIButton *menuBT;
 @end
