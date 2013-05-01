@@ -13,6 +13,11 @@
 		878F8CE1171321310033A1BA /* star_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 878F8CDE171321310033A1BA /* star_full.png */; };
 		878F8CE2171321310033A1BA /* star_half_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 878F8CDF171321310033A1BA /* star_half_left.png */; };
 		878F8CE5171322DD0033A1BA /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878F8CE4171322DD0033A1BA /* RatingView.m */; };
+		87AE7E3217310BD10027DD69 /* RecipeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AE7E3117310BD10027DD69 /* RecipeParser.m */; };
+		87AE7E35173166440027DD69 /* XMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AE7E34173166440027DD69 /* XMLElement.m */; };
+		87AE7E3817316C060027DD69 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AE7E3717316C060027DD69 /* XMLParser.m */; };
+		87AE7E3B173173750027DD69 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AE7E3A173173740027DD69 /* Common.m */; };
+		87B2178E1730D3BE008778CE /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B2178D1730D3BE008778CE /* Recipe.m */; };
 		87F99095171023C0002F38C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F99094171023C0002F38C2 /* UIKit.framework */; };
 		87F99097171023C0002F38C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F99096171023C0002F38C2 /* Foundation.framework */; };
 		87F99099171023C0002F38C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F99098171023C0002F38C2 /* CoreGraphics.framework */; };
@@ -60,6 +65,16 @@
 		878F8CDF171321310033A1BA /* star_half_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_half_left.png; sourceTree = "<group>"; };
 		878F8CE3171322DD0033A1BA /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
 		878F8CE4171322DD0033A1BA /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
+		87AE7E3017310BD10027DD69 /* RecipeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeParser.h; sourceTree = "<group>"; };
+		87AE7E3117310BD10027DD69 /* RecipeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeParser.m; sourceTree = "<group>"; };
+		87AE7E33173166440027DD69 /* XMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElement.h; sourceTree = "<group>"; };
+		87AE7E34173166440027DD69 /* XMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLElement.m; sourceTree = "<group>"; };
+		87AE7E3617316C060027DD69 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		87AE7E3717316C060027DD69 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		87AE7E39173173740027DD69 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = WhatCanWeCook/Common.h; sourceTree = "<group>"; };
+		87AE7E3A173173740027DD69 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = WhatCanWeCook/Common.m; sourceTree = "<group>"; };
+		87B2178C1730D3BE008778CE /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		87B2178D1730D3BE008778CE /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		87F99091171023C0002F38C2 /* WhatCanWeCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatCanWeCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F99094171023C0002F38C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87F99096171023C0002F38C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -156,9 +171,33 @@
 			name = Rating;
 			sourceTree = "<group>";
 		};
+		87B2178A1730D30B008778CE /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				87AE7E3017310BD10027DD69 /* RecipeParser.h */,
+				87AE7E3117310BD10027DD69 /* RecipeParser.m */,
+				87AE7E3617316C060027DD69 /* XMLParser.h */,
+				87AE7E3717316C060027DD69 /* XMLParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		87B2178B1730D36B008778CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87B2178C1730D3BE008778CE /* Recipe.h */,
+				87B2178D1730D3BE008778CE /* Recipe.m */,
+				87AE7E33173166440027DD69 /* XMLElement.h */,
+				87AE7E34173166440027DD69 /* XMLElement.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		87F99088171023C0002F38C2 = {
 			isa = PBXGroup;
 			children = (
+				87AE7E39173173740027DD69 /* Common.h */,
+				87AE7E3A173173740027DD69 /* Common.m */,
 				870224B4171098CF005818C4 /* Images */,
 				87F9909A171023C0002F38C2 /* WhatCanWeCook */,
 				87F99093171023C0002F38C2 /* Frameworks */,
@@ -187,6 +226,8 @@
 		87F9909A171023C0002F38C2 /* WhatCanWeCook */ = {
 			isa = PBXGroup;
 			children = (
+				87B2178B1730D36B008778CE /* Model */,
+				87B2178A1730D30B008778CE /* Parser */,
 				A51C37321730C0770039E1D8 /* menuButton@2x.png */,
 				A58707C5172F3A4100EA8681 /* ECSlidingViewController */,
 				D5903B2D171F88CB00ABC4B3 /* Giant_Burger_frei.jpg */,
@@ -371,6 +412,11 @@
 				A58707CB172F3A4100EA8681 /* UIImage+ImageWithUIView.m in Sources */,
 				A58707D1172F3B4400EA8681 /* MenuViewController.m in Sources */,
 				A58707D4172F435E00EA8681 /* initViewController.m in Sources */,
+				87B2178E1730D3BE008778CE /* Recipe.m in Sources */,
+				87AE7E3217310BD10027DD69 /* RecipeParser.m in Sources */,
+				87AE7E35173166440027DD69 /* XMLElement.m in Sources */,
+				87AE7E3817316C060027DD69 /* XMLParser.m in Sources */,
+				87AE7E3B173173750027DD69 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

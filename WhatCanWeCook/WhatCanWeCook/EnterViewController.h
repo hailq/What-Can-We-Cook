@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecipeParser.h"
 
 @interface EnterViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *txtIngredients;
 @property (strong, nonatomic) UIButton *menuBT;
+
+- (IBAction)submitTap:(id)sender;
+
 
 @end

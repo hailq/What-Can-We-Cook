@@ -87,5 +87,9 @@
     [sender resignFirstResponder];
 }
 
+- (IBAction)submitTap:(id)sender {
+    RecipeParser *rps = [RecipeParser new];
+    [rps startParser:@"<?xml version='1.0' encoding='utf-8' ?><recipes><recipe id='1'><name>test1</name><rating>2</rating><time>30min</time><web>http://test.com</web><video>http://test_video.com</video><ingredients><ingredient><amount></amount><measure></measure><type></type></ingredient></ingredients> <directions><step></step><instruction></instruction></directions></recipe><recipe id='2'><name>test2</name><rating>2</rating><time>32min</time><web>http://test2.com</web><video>http://test_video2.com</video><ingredients><ingredient><amount></amount><measure></measure><type></type></ingredient></ingredients><directions><step></step><instruction></instruction></directions></recipe><recipes>"];
 
+}
 @end
