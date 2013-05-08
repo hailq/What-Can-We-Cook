@@ -1721,6 +1721,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="Precipe" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Precipe.h"/>
             <relationships>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="imageview" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
             </relationships>
