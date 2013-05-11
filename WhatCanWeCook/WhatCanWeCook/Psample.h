@@ -8,26 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Psample : UITableViewController
-{
+@interface Psample : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-    IBOutlet UIImageView *imageview1;
-    IBOutlet UIImageView *imageview2;
-    IBOutlet UIImageView *imageview3;
-
-    
-    __weak IBOutlet UILabel *label1;
-    
-    __weak IBOutlet UILabel *label2;
-    
-    __weak IBOutlet UILabel *label3;
-
-    //__weak IBOutlet UITextView *text1;
-}
-
--(IBAction)show1;
--(IBAction)show2;
--(IBAction)show3;
-
+@property (strong, nonatomic) NSMutableArray *recipeList;
 @property (strong, nonatomic) UIButton *menuBT;
+
 @end

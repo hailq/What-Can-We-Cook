@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString *kRecipeRoot = @"recipes";
-static NSString *kRecipeTag = @"recipe";
-static NSString *kRecipeNameTag = @"name";
-static NSString *kRecipeRatingTag = @"rating";
-static NSString *kRecipeTimeTag = @"time";
-static NSString *kRecipeWebTag = @"web";
-static NSString *kRecipeVideoTag = @"video";
+#define kRecipeRoot @"recipes"
+#define kRecipeTag @"recipe"
+#define kRecipeNameTag @"name"
+#define kRecipeRatingTag @"rating"
+#define kRecipeTimeTag @"time"
+#define kRecipeWebTag @"web"
+#define kRecipeVideoTag @"video"
 
 @interface Common : NSObject
 
