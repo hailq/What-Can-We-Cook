@@ -61,6 +61,11 @@
                             recipe.webLink = e.text;
                         } else if ([tagName isEqualToString:kRecipeVideoTag]) {
                             recipe.videoLink = e.text;
+                        } else if ([tagName isEqualToString:kRecipeDirection]) {
+                            recipe.directions = e.text;
+                        } else if ([tagName isEqualToString:kRecipeImage]) {
+                            NSURL *imageUrl = [NSURL URLWithString:e.text];
+                            recipe.recipeImage = [NSData dataWithContentsOfURL:imageUrl];
                         }
                     }
                 }

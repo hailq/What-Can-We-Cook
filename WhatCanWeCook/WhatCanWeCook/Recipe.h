@@ -17,7 +17,8 @@
     @property(copy) NSString *webLink;
     @property(copy) NSString *videoLink;
     @property(copy) NSString *cookTime;
-    @property(copy) NSArray *ingredients;
-    @property(copy) NSArray *directions;
+    @property(copy) NSString *directions;
+    @property(copy) NSArray  *ingredients;
+    @property(copy) NSData   *recipeImage;
 
 @end

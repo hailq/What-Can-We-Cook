@@ -18,7 +18,7 @@
 }
 
 @property (strong,nonatomic) NSString *xmlString;
-@property (strong,nonatomic) NSMutableArray *recipeArray;
+@property (copy,nonatomic) NSMutableArray *recipeArray;
 
 -(void)startParser:(NSString*)xmlString;
 

@@ -11,7 +11,7 @@
 @implementation Recipe
 
 @synthesize recipeId, recipeRanking;
-@synthesize recipeName, cookTime, webLink, videoLink;
+@synthesize recipeName, cookTime, webLink, videoLink, recipeImage;
 @synthesize ingredients, directions;
 
 @end

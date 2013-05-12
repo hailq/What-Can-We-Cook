@@ -262,6 +262,9 @@
 		87F9909A171023C0002F38C2 /* WhatCanWeCook */ = {
 			isa = PBXGroup;
 			children = (
+				A559D11A173F4B88002983AA /* AddRecipe */,
+				A559D119173F4B67002983AA /* Ingredients */,
+				A559D118173F4ABD002983AA /* Result */,
 				87B2178B1730D36B008778CE /* Model */,
 				87B2178A1730D30B008778CE /* Parser */,
 				A51C37321730C0770039E1D8 /* menuButton@2x.png */,
@@ -271,20 +274,10 @@
 				D5903B2F171F88CB00ABC4B3 /* New-Info.plist */,
 				D5903B30171F88CB00ABC4B3 /* New-Prefix.pch */,
 				D5903B31171F88CB00ABC4B3 /* omlette.jpg */,
-				D5903B34171F88CB00ABC4B3 /* Precipe.h */,
-				D5903B35171F88CB00ABC4B3 /* Precipe.m */,
-				D5903B36171F88CB00ABC4B3 /* Psample.h */,
-				D5903B37171F88CB00ABC4B3 /* Psample.m */,
 				A58707D2172F435E00EA8681 /* initViewController.h */,
 				A58707D3172F435E00EA8681 /* initViewController.m */,
 				A58707CF172F3B4400EA8681 /* MenuViewController.h */,
 				A58707D0172F3B4400EA8681 /* MenuViewController.m */,
-				A5F48127171FF4890004264E /* HavingTableViewCell.h */,
-				A5F48128171FF4890004264E /* HavingTableViewCell.m */,
-				A5F48129171FF4890004264E /* HavingViewController.h */,
-				A5F4812A171FF4890004264E /* HavingViewController.m */,
-				A5F4812D171FF4890004264E /* MissingViewController.h */,
-				A5F4812E171FF4890004264E /* MissingViewController.m */,
 				D5903B38171F88CB00ABC4B3 /* PViewController.h */,
 				D5903B39171F88CB00ABC4B3 /* PViewController.m */,
 				D5903B3A171F88CB00ABC4B3 /* red.jpg */,
@@ -297,8 +290,6 @@
 				D5903B22171F81FE00ABC4B3 /* VideoEmbed.m */,
 				D5903B23171F81FE00ABC4B3 /* ViewController.h */,
 				D5903B24171F81FE00ABC4B3 /* ViewController.m */,
-				D5ACB13A172B0C1E0009F246 /* AddRecipeViewController.h */,
-				D5ACB13B172B0C1E0009F246 /* AddRecipeViewController.m */,
 				D5903B25171F81FE00ABC4B3 /* WebView-Info.plist */,
 				D5903B26171F81FE00ABC4B3 /* WebView-Prefix.pch */,
 				8713E65A1711386B00BDE6AC /* Rating */,
@@ -334,6 +325,39 @@
 				87F990BA1710247E002F38C2 /* EnterViewController.m */,
 			);
 			name = Enter;
+			sourceTree = "<group>";
+		};
+		A559D118173F4ABD002983AA /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				D5903B34171F88CB00ABC4B3 /* Precipe.h */,
+				D5903B35171F88CB00ABC4B3 /* Precipe.m */,
+				D5903B36171F88CB00ABC4B3 /* Psample.h */,
+				D5903B37171F88CB00ABC4B3 /* Psample.m */,
+			);
+			name = Result;
+			sourceTree = "<group>";
+		};
+		A559D119173F4B67002983AA /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				A5F48127171FF4890004264E /* HavingTableViewCell.h */,
+				A5F48128171FF4890004264E /* HavingTableViewCell.m */,
+				A5F48129171FF4890004264E /* HavingViewController.h */,
+				A5F4812A171FF4890004264E /* HavingViewController.m */,
+				A5F4812D171FF4890004264E /* MissingViewController.h */,
+				A5F4812E171FF4890004264E /* MissingViewController.m */,
+			);
+			name = Ingredients;
+			sourceTree = "<group>";
+		};
+		A559D11A173F4B88002983AA /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				D5ACB13A172B0C1E0009F246 /* AddRecipeViewController.h */,
+				D5ACB13B172B0C1E0009F246 /* AddRecipeViewController.m */,
+			);
+			name = AddRecipe;
 			sourceTree = "<group>";
 		};
 		A58707C5172F3A4100EA8681 /* ECSlidingViewController */ = {

@@ -15,7 +15,11 @@
 #define kRecipeTimeTag @"time"
 #define kRecipeWebTag @"web"
 #define kRecipeVideoTag @"video"
+#define kRecipeImage @"image"
+#define kRecipeDirection @"direction"
 
+
+#define kBaseUrl @"http://serv11.divms.uiowa.edu/~ios5/webform/testRecipe.xml"
 @interface Common : NSObject
 
 @end
