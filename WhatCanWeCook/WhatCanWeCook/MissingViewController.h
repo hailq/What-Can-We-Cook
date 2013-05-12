@@ -10,4 +10,5 @@
 
 @interface MissingViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+- (IBAction)backHandler:(UIBarButtonItem *)sender;
 @end

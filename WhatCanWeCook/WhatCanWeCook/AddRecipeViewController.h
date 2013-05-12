@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 
-@interface AddRecipeViewController : UIViewController
+@interface AddRecipeViewController : UIViewController<UIWebViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadSpinning;
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) UIButton *menuBT;
+
+- (IBAction)refreshHandler:(UIBarButtonItem *)sender;
 
 @end

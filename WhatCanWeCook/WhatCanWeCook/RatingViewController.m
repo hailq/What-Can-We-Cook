@@ -74,11 +74,14 @@
     }
 }
 
-
 - (IBAction)tapHideKeyBoard:(id)sender {
     if (![sender isKindOfClass:[UITextView class]]) {
         [self.commentTextView resignFirstResponder];
     }
+}
+
+- (IBAction)backHandler:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -

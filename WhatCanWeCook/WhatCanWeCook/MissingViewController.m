@@ -36,6 +36,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backHandler:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark -
 #pragma mark Table View DataSource
 
@@ -70,5 +74,6 @@
     
     return cell;
 }
+
 
 @end

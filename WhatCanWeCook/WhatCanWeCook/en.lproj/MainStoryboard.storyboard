@@ -233,7 +233,6 @@
         <!--Enter View Controller - Ingredients-->
         <scene sceneID="fqj-xR-R7U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NtP-YZ-vNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Ingredient" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P2b-bC-zaB" customClass="EnterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQg-1M-WtZ">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -303,7 +302,6 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Relevence" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVE-in-dM5">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="82" id="ac3-ed-By9"/>
-                                            <constraint firstAttribute="height" constant="21" id="xMC-MQ-1LB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,6 +313,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yg-II-HzO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="TPP-bg-xdE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -343,7 +344,6 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="6Yg-II-HzO" firstAttribute="trailing" secondItem="C6o-G9-fpB" secondAttribute="trailing" type="default" id="55a-CT-dCL"/>
-                                    <constraint firstItem="JVE-in-dM5" firstAttribute="bottom" secondItem="6Yg-II-HzO" secondAttribute="bottom" type="default" id="5wI-KG-AC6"/>
                                     <constraint firstItem="C6o-G9-fpB" firstAttribute="top" secondItem="bBb-U2-y3l" secondAttribute="top" constant="32" id="67D-hi-EzX"/>
                                     <constraint firstItem="GoO-FQ-bO7" firstAttribute="leading" secondItem="JVE-in-dM5" secondAttribute="leading" type="default" id="7vk-0d-qlw"/>
                                     <constraint firstItem="Q9i-RA-Yfq" firstAttribute="leading" secondItem="bBb-U2-y3l" secondAttribute="leading" type="default" id="JHJ-Gk-AJh"/>
@@ -359,8 +359,8 @@
                                     <constraint firstAttribute="bottom" secondItem="2S3-zi-71M" secondAttribute="bottom" constant="9" id="j6Q-Lu-IP5"/>
                                     <constraint firstItem="Q9i-RA-Yfq" firstAttribute="top" secondItem="bBb-U2-y3l" secondAttribute="top" constant="8" id="n5o-7W-U7o"/>
                                     <constraint firstItem="6Yg-II-HzO" firstAttribute="trailing" secondItem="2S3-zi-71M" secondAttribute="trailing" type="default" id="o8A-PR-TO1"/>
-                                    <constraint firstItem="JVE-in-dM5" firstAttribute="top" secondItem="6Yg-II-HzO" secondAttribute="top" type="default" id="tPc-in-R1b"/>
                                     <constraint firstItem="GoO-FQ-bO7" firstAttribute="top" secondItem="2S3-zi-71M" secondAttribute="top" type="default" id="xlP-MM-L6T"/>
+                                    <constraint firstItem="6Yg-II-HzO" firstAttribute="top" secondItem="bBb-U2-y3l" secondAttribute="top" constant="79" id="zZG-Ho-oRV"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kj3-ma-K4D">
@@ -384,7 +384,6 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Indian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MW-E2-LfD">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="6LI-1U-E25"/>
-                                            <constraint firstAttribute="height" constant="21" id="fE1-9n-LD8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -428,6 +427,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imo-cU-gSc">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="4Fy-HV-38a"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -441,7 +443,7 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="9MW-E2-LfD" firstAttribute="bottom" secondItem="Imo-cU-gSc" secondAttribute="bottom" type="default" id="3Me-8x-Uh8"/>
+                                    <constraint firstItem="Imo-cU-gSc" firstAttribute="top" secondItem="kj3-ma-K4D" secondAttribute="top" constant="79" id="1Rw-xu-NCA"/>
                                     <constraint firstItem="3Xw-KQ-irA" firstAttribute="top" secondItem="kj3-ma-K4D" secondAttribute="top" constant="32" id="5qE-QS-JUB"/>
                                     <constraint firstItem="Zk1-Ol-47k" firstAttribute="leading" secondItem="kj3-ma-K4D" secondAttribute="leading" constant="30" id="Dct-0Q-AuH"/>
                                     <constraint firstItem="g0h-wa-nDL" firstAttribute="leading" secondItem="9MW-E2-LfD" secondAttribute="leading" type="default" id="FYG-E4-tlg"/>
@@ -456,7 +458,6 @@
                                     <constraint firstItem="Imo-cU-gSc" firstAttribute="trailing" secondItem="3Xw-KQ-irA" secondAttribute="trailing" type="default" id="nNI-C1-8XP"/>
                                     <constraint firstItem="3Xw-KQ-irA" firstAttribute="top" secondItem="Zk1-Ol-47k" secondAttribute="top" type="default" id="qq3-ZW-gfE"/>
                                     <constraint firstAttribute="height" constant="160" type="user" id="sng-9A-3b5"/>
-                                    <constraint firstItem="9MW-E2-LfD" firstAttribute="top" secondItem="Imo-cU-gSc" secondAttribute="top" type="default" id="xfI-3A-Ct9"/>
                                     <constraint firstItem="w3L-9f-fle" firstAttribute="top" secondItem="kj3-ma-K4D" secondAttribute="top" constant="8" id="zcj-rM-70Q"/>
                                     <constraint firstItem="HP1-te-s92" firstAttribute="top" secondItem="g0h-wa-nDL" secondAttribute="top" type="default" id="ztB-81-mkl"/>
                                 </constraints>
@@ -518,6 +519,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dinner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ey-Bf-QNS">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="82" id="GhF-mv-7Yt"/>
+                                            <constraint firstAttribute="height" constant="20" id="aD0-rH-rA1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -548,14 +550,12 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="6ey-Bf-QNS" firstAttribute="bottom" secondItem="e20-5w-dsM" secondAttribute="bottom" type="default" id="3Q5-Aj-lIG"/>
-                                    <constraint firstItem="6ey-Bf-QNS" firstAttribute="top" secondItem="e20-5w-dsM" secondAttribute="top" type="default" id="47a-ua-bcG"/>
                                     <constraint firstItem="HEC-lM-bbD" firstAttribute="leading" secondItem="6ey-Bf-QNS" secondAttribute="leading" type="default" id="6pJ-2v-nlm"/>
                                     <constraint firstItem="5py-M4-BTX" firstAttribute="leading" secondItem="kgL-V2-Zfy" secondAttribute="leading" type="default" id="8mV-ib-5Sd"/>
                                     <constraint firstAttribute="bottom" secondItem="6ey-Bf-QNS" secondAttribute="bottom" constant="60" id="91c-JI-5zk"/>
                                     <constraint firstItem="Tzo-cF-kr1" firstAttribute="leading" secondItem="kgL-V2-Zfy" secondAttribute="leading" type="default" id="AuR-y2-zzk"/>
+                                    <constraint firstItem="e20-5w-dsM" firstAttribute="top" secondItem="kgL-V2-Zfy" secondAttribute="top" constant="79" id="CdG-EP-Czq"/>
                                     <constraint firstItem="Tzo-cF-kr1" firstAttribute="trailing" secondItem="e20-5w-dsM" secondAttribute="trailing" type="default" id="LeL-nM-1iZ"/>
-                                    <constraint firstItem="6ey-Bf-QNS" firstAttribute="top" secondItem="kgL-V2-Zfy" secondAttribute="top" constant="80" scoringType="5" id="SA3-da-kex"/>
                                     <constraint firstItem="e20-5w-dsM" firstAttribute="trailing" secondItem="5py-M4-BTX" secondAttribute="trailing" type="default" id="Szd-Cn-yMI"/>
                                     <constraint firstItem="Tzo-cF-kr1" firstAttribute="top" secondItem="HEC-lM-bbD" secondAttribute="top" type="default" id="V8L-qk-Y8Y"/>
                                     <constraint firstItem="5py-M4-BTX" firstAttribute="top" secondItem="kgL-V2-Zfy" secondAttribute="top" constant="32" id="WUY-fM-PA3"/>
@@ -613,6 +613,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Beverages" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-na-UQU">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="9as-K0-9yj"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -644,17 +647,16 @@
                                     <constraint firstItem="VtC-V4-sxe" firstAttribute="leading" secondItem="bcq-na-UQU" secondAttribute="leading" type="default" id="8Ml-S3-zvK"/>
                                     <constraint firstItem="Mu7-u6-cfs" firstAttribute="leading" secondItem="AG3-zI-4sb" secondAttribute="leading" type="default" id="8PP-Ix-qTE"/>
                                     <constraint firstItem="79a-gt-2cW" firstAttribute="leading" secondItem="AG3-zI-4sb" secondAttribute="leading" constant="30" id="9nK-bP-abQ"/>
-                                    <constraint firstItem="bcq-na-UQU" firstAttribute="top" secondItem="1Jp-as-Jkr" secondAttribute="top" type="default" id="AwI-2M-T0Z"/>
                                     <constraint firstItem="1Jp-as-Jkr" firstAttribute="leading" secondItem="AG3-zI-4sb" secondAttribute="leading" type="default" id="EcG-Lj-yBi"/>
                                     <constraint firstItem="Mu7-u6-cfs" firstAttribute="top" secondItem="AG3-zI-4sb" secondAttribute="top" constant="8" id="IDH-iI-dOS"/>
                                     <constraint firstItem="79a-gt-2cW" firstAttribute="top" secondItem="LeG-8U-1PI" secondAttribute="top" type="default" id="Kmw-ts-wqL"/>
                                     <constraint firstItem="LeG-8U-1PI" firstAttribute="top" secondItem="AG3-zI-4sb" secondAttribute="top" constant="32" id="VLN-rd-Qre"/>
                                     <constraint firstItem="VtC-V4-sxe" firstAttribute="top" secondItem="vwO-G1-9H4" secondAttribute="top" type="default" id="Wtb-yG-E9W"/>
+                                    <constraint firstItem="1Jp-as-Jkr" firstAttribute="top" secondItem="AG3-zI-4sb" secondAttribute="top" constant="79" id="aiy-k6-tEJ"/>
                                     <constraint firstItem="79a-gt-2cW" firstAttribute="bottom" secondItem="LeG-8U-1PI" secondAttribute="bottom" type="default" id="gpP-Z6-T7R"/>
                                     <constraint firstItem="VtC-V4-sxe" firstAttribute="bottom" secondItem="vwO-G1-9H4" secondAttribute="bottom" type="default" id="gyZ-2t-OAY"/>
                                     <constraint firstAttribute="bottom" secondItem="vwO-G1-9H4" secondAttribute="bottom" constant="10" id="kUu-KK-N3A"/>
                                     <constraint firstItem="bcq-na-UQU" firstAttribute="leading" secondItem="79a-gt-2cW" secondAttribute="leading" type="default" id="nMB-jA-Idf"/>
-                                    <constraint firstItem="bcq-na-UQU" firstAttribute="bottom" secondItem="1Jp-as-Jkr" secondAttribute="bottom" type="default" id="ouK-dw-P4A"/>
                                     <constraint firstItem="1Jp-as-Jkr" firstAttribute="trailing" secondItem="LeG-8U-1PI" secondAttribute="trailing" type="default" id="rtw-QH-9Kn"/>
                                     <constraint firstItem="vwO-G1-9H4" firstAttribute="trailing" secondItem="1Jp-as-Jkr" secondAttribute="trailing" type="default" id="wgj-wy-cBU"/>
                                     <constraint firstItem="vwO-G1-9H4" firstAttribute="leading" secondItem="AG3-zI-4sb" secondAttribute="leading" type="default" id="zPu-QV-jVB"/>
@@ -663,39 +665,37 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="JlU-3P-r7N" secondAttribute="centerX" type="user" id="077-QZ-Ssq"/>
-                            <constraint firstAttribute="trailing" secondItem="kj3-ma-K4D" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="919-KA-ScU"/>
+                            <constraint firstItem="Vei-T8-waG" firstAttribute="trailing" secondItem="kj3-ma-K4D" secondAttribute="trailing" type="default" id="1RL-hm-Ake"/>
+                            <constraint firstItem="Q17-e9-7rd" firstAttribute="centerX" secondItem="Vei-T8-waG" secondAttribute="centerX" type="default" id="5p8-aR-DyN"/>
+                            <constraint firstItem="bBb-U2-y3l" firstAttribute="trailing" secondItem="AG3-zI-4sb" secondAttribute="trailing" type="default" id="9q7-LD-t0u"/>
                             <constraint firstItem="Q17-e9-7rd" firstAttribute="top" secondItem="wQg-1M-WtZ" secondAttribute="top" type="default" id="Ewi-ro-CiO"/>
                             <constraint firstItem="FeR-Zj-KLB" firstAttribute="bottom" secondItem="wQg-1M-WtZ" secondAttribute="bottom" type="default" id="Fsf-2M-INb"/>
                             <constraint firstAttribute="bottom" secondItem="F3w-RM-QAm" secondAttribute="bottom" constant="12" id="JQo-pa-rMv"/>
                             <constraint firstItem="Q17-e9-7rd" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" type="default" id="KEr-4Q-Cqu"/>
+                            <constraint firstAttribute="bottom" secondItem="AG3-zI-4sb" secondAttribute="bottom" constant="98" id="OXD-wz-h2T"/>
                             <constraint firstAttribute="bottom" secondItem="JlU-3P-r7N" secondAttribute="bottom" constant="52" id="Ox5-rB-cIB"/>
-                            <constraint firstAttribute="trailing" secondItem="AG3-zI-4sb" secondAttribute="trailing" constant="165" type="user" id="PIQ-zt-TQu"/>
                             <constraint firstItem="AG3-zI-4sb" firstAttribute="top" secondItem="wQg-1M-WtZ" secondAttribute="top" constant="290" type="user" id="PPD-7Q-LJi"/>
                             <constraint firstItem="CZh-Dx-Tbb" firstAttribute="top" secondItem="wQg-1M-WtZ" secondAttribute="top" constant="55" type="user" id="PSM-Dw-16e"/>
-                            <constraint firstAttribute="trailing" secondItem="Vei-T8-waG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RiE-Je-zBy"/>
                             <constraint firstItem="AG3-zI-4sb" firstAttribute="top" secondItem="kgL-V2-Zfy" secondAttribute="top" type="user" id="TfY-yN-Wai"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kgL-V2-Zfy" secondAttribute="trailing" constant="20" type="user" id="VTK-jp-aXe"/>
-                            <constraint firstItem="FeR-Zj-KLB" firstAttribute="trailing" secondItem="wQg-1M-WtZ" secondAttribute="trailing" type="default" id="WJ9-CO-hVr"/>
+                            <constraint firstItem="FeR-Zj-KLB" firstAttribute="centerX" secondItem="JlU-3P-r7N" secondAttribute="centerX" type="default" id="Uj9-Nc-9tw"/>
                             <constraint firstItem="kj3-ma-K4D" firstAttribute="top" secondItem="Vei-T8-waG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="WQs-vI-zRT"/>
-                            <constraint firstAttribute="trailing" secondItem="bBb-U2-y3l" secondAttribute="trailing" constant="165" type="user" id="YXN-0j-K6R"/>
                             <constraint firstItem="AG3-zI-4sb" firstAttribute="top" secondItem="bBb-U2-y3l" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Z2B-Bb-Bqb"/>
-                            <constraint firstItem="Q17-e9-7rd" firstAttribute="trailing" secondItem="wQg-1M-WtZ" secondAttribute="trailing" type="default" id="ZNG-qW-waK"/>
                             <constraint firstItem="Vei-T8-waG" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZVH-iw-waZ"/>
                             <constraint firstItem="F3w-RM-QAm" firstAttribute="centerX" secondItem="FeR-Zj-KLB" secondAttribute="centerX" type="default" id="adv-qc-dsK"/>
                             <constraint firstItem="AG3-zI-4sb" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="atY-N8-yUF"/>
                             <constraint firstItem="FeR-Zj-KLB" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" type="default" id="beK-sB-jHN"/>
+                            <constraint firstItem="Q17-e9-7rd" firstAttribute="centerX" secondItem="wQg-1M-WtZ" secondAttribute="centerX" type="default" id="dNa-f5-5VO"/>
                             <constraint firstItem="Vei-T8-waG" firstAttribute="top" secondItem="CZh-Dx-Tbb" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="er4-1R-Qcg"/>
                             <constraint firstItem="bBb-U2-y3l" firstAttribute="top" secondItem="Vei-T8-waG" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="fFv-pP-Drt"/>
+                            <constraint firstItem="Q17-e9-7rd" firstAttribute="trailing" secondItem="FeR-Zj-KLB" secondAttribute="trailing" type="default" id="fdd-Kn-kAN"/>
+                            <constraint firstItem="kj3-ma-K4D" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" constant="165" id="gKw-HV-05O"/>
                             <constraint firstItem="kgL-V2-Zfy" firstAttribute="top" secondItem="kj3-ma-K4D" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="gSk-VW-2ev"/>
                             <constraint firstItem="AG3-zI-4sb" firstAttribute="bottom" secondItem="kgL-V2-Zfy" secondAttribute="bottom" type="default" id="jbq-jD-MZ6"/>
                             <constraint firstItem="kgL-V2-Zfy" firstAttribute="leading" secondItem="kj3-ma-K4D" secondAttribute="leading" type="default" id="jzu-lP-TN0"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kj3-ma-K4D" secondAttribute="trailing" constant="20" type="user" id="nI5-Ik-ORb"/>
-                            <constraint firstItem="CZh-Dx-Tbb" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nIO-2d-8Ti"/>
-                            <constraint firstItem="kgL-V2-Zfy" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" constant="165" id="t54-zG-Kkx"/>
-                            <constraint firstAttribute="trailing" secondItem="kgL-V2-Zfy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vFj-50-v8N"/>
+                            <constraint firstAttribute="trailing" secondItem="bBb-U2-y3l" secondAttribute="trailing" constant="164" id="ql0-tx-jQs"/>
+                            <constraint firstItem="Vei-T8-waG" firstAttribute="leading" secondItem="CZh-Dx-Tbb" secondAttribute="leading" type="default" id="vei-NR-XxJ"/>
+                            <constraint firstItem="kgL-V2-Zfy" firstAttribute="trailing" secondItem="kj3-ma-K4D" secondAttribute="trailing" type="default" id="wPe-x5-TkW"/>
                             <constraint firstItem="bBb-U2-y3l" firstAttribute="leading" secondItem="wQg-1M-WtZ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xNH-lm-GKg"/>
-                            <constraint firstItem="AG3-zI-4sb" firstAttribute="trailing" secondItem="bBb-U2-y3l" secondAttribute="trailing" type="user" id="ylF-eH-NG0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ingredients" id="DIl-et-qze"/>
@@ -707,6 +707,7 @@
                         <outlet property="txtIngredients" destination="Vei-T8-waG" id="I9q-0C-Wg4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NtP-YZ-vNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="668" y="-582"/>
         </scene>
@@ -720,11 +721,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2p-fT-g31">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Srh-pv-WBd"/>
                                     <constraint firstAttribute="width" constant="106" type="user" id="ci8-wb-5jk"/>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="lPl-EX-Dnp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Submit" backgroundImage="greenButton.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -735,7 +736,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your comment here" translatesAutoresizingMaskIntoConstraints="NO" id="y74-23-4UP">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" type="user" id="5OF-aD-DD3"/>
+                                    <constraint firstAttribute="height" constant="120" id="Dvn-sQ-hP0"/>
                                     <constraint firstAttribute="width" constant="281" type="user" id="su3-QW-AtT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
@@ -746,9 +747,6 @@
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-MX-GTy" customClass="RatingView">
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="281" type="user" id="5nE-Cl-9JT"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many stars?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-wy-OWF">
                                 <constraints>
@@ -770,28 +768,41 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-m5-8FH">
+                                <items>
+                                    <navigationItem title="Rating" id="iwo-ap-rxd">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="mTb-Jf-Kcm"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hRa-PR-Hc1">
+                                            <connections>
+                                                <action selector="backHandler:" destination="Mi6-tF-cKG" id="dWA-Nt-62M"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="bottom" secondItem="XOi-ce-WX9" secondAttribute="bottom" type="default" id="64e-fY-340"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="8ao-Ee-uJP"/>
-                            <constraint firstAttribute="trailing" secondItem="y74-23-4UP" secondAttribute="trailing" constant="19" type="user" id="AX8-YC-Rsx"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="xRi-wy-OWF" secondAttribute="bottom" constant="17" type="user" id="BOs-2e-i1A"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="GMW-9f-c8o"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="57" type="user" id="Q4n-7I-2lj"/>
+                            <constraint firstItem="ffv-m5-8FH" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Lzs-7M-CJq"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Sag-aq-ywl"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="10" id="VwO-yV-xe3"/>
                             <constraint firstItem="y74-23-4UP" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="WEC-pB-PJg"/>
-                            <constraint firstAttribute="bottom" secondItem="n2p-fT-g31" secondAttribute="bottom" constant="108" id="WG7-DI-3jb"/>
-                            <constraint firstAttribute="trailing" secondItem="2y3-MX-GTy" secondAttribute="trailing" constant="19" type="user" id="cXW-57-Rz0"/>
-                            <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" type="user" id="dqD-Ca-C0R"/>
-                            <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="346" id="eAR-tr-vw2"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="xRi-wy-OWF" secondAttribute="centerX" type="user" id="fDo-lt-lTG"/>
+                            <constraint firstItem="ffv-m5-8FH" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" type="default" id="bnW-ZL-Xge"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="xRi-wy-OWF" secondAttribute="centerX" type="default" id="bqF-Xf-hxR"/>
+                            <constraint firstItem="n2p-fT-g31" firstAttribute="top" secondItem="y74-23-4UP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="djB-mt-2bq"/>
+                            <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="ffv-m5-8FH" secondAttribute="bottom" type="default" id="el9-72-r9s"/>
                             <constraint firstItem="n2p-fT-g31" firstAttribute="centerX" secondItem="wMj-8Y-6dt" secondAttribute="centerX" type="default" id="fjU-7n-5ci"/>
                             <constraint firstAttribute="bottom" secondItem="wMj-8Y-6dt" secondAttribute="bottom" constant="12" id="gdh-nH-mEI"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="jd0-d9-hgZ"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="130" id="lFX-ug-yFa"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="mW2-WA-dkK"/>
-                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="174" id="vwq-qz-OFS"/>
+                            <constraint firstItem="ffv-m5-8FH" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="pPA-U3-7Ao"/>
+                            <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="338" id="reT-H6-agj"/>
+                            <constraint firstItem="xRi-wy-OWF" firstAttribute="centerX" secondItem="ffv-m5-8FH" secondAttribute="centerX" type="default" id="sZM-zK-XRN"/>
+                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="245" id="xxc-bM-CQD"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="H0Q-or-mqy" appends="YES" id="X3B-3h-xhb"/>
@@ -828,6 +839,9 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-fJ-IuT">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jm1-yi-a3d" id="SlM-FS-j0f"/>
+                                </connections>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynY-1s-MZY">
                                 <items/>
@@ -841,28 +855,42 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-Jf-2p8">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u2J-nv-K2m">
+                                <color key="color" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awm-WG-QXH">
                                 <items>
-                                    <barButtonItem width="200" style="plain" systemItem="fixedSpace" id="Hrt-Zp-Q64"/>
-                                    <barButtonItem title="Back" id="iXx-tF-zhJ"/>
-                                    <barButtonItem systemItem="refresh" id="tuV-Rc-Y4F"/>
+                                    <navigationItem title="Recipe Web" id="gKz-rM-cdK">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RTr-gb-zUi">
+                                            <connections>
+                                                <action selector="backHandle:" destination="jm1-yi-a3d" id="s1H-hz-IYp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ioa-aR-xre">
+                                            <connections>
+                                                <action selector="refreshHandler:" destination="jm1-yi-a3d" id="aE2-xP-kbp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
-                            </toolbar>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="u2J-nv-K2m" firstAttribute="centerX" secondItem="boF-tS-9qO" secondAttribute="centerX" type="default" id="1WO-8s-tUU"/>
                             <constraint firstItem="boF-tS-9qO" firstAttribute="centerX" secondItem="ynY-1s-MZY" secondAttribute="centerX" type="default" id="2Hx-g3-LjL"/>
-                            <constraint firstItem="aDv-Jf-2p8" firstAttribute="top" secondItem="uxF-iW-LLh" secondAttribute="top" type="default" id="7U7-YE-ntJ"/>
-                            <constraint firstItem="aDv-Jf-2p8" firstAttribute="trailing" secondItem="uxF-iW-LLh" secondAttribute="trailing" type="default" id="Aiw-Xj-YAn"/>
+                            <constraint firstItem="awm-WG-QXH" firstAttribute="leading" secondItem="uxF-iW-LLh" secondAttribute="leading" type="default" id="6qY-4m-nrm"/>
+                            <constraint firstItem="u2J-nv-K2m" firstAttribute="centerY" secondItem="b0v-fJ-IuT" secondAttribute="centerY" type="default" id="7M0-Vq-oss"/>
+                            <constraint firstItem="u2J-nv-K2m" firstAttribute="centerY" secondItem="uxF-iW-LLh" secondAttribute="centerY" type="default" id="9lQ-YK-NUB"/>
                             <constraint firstAttribute="bottom" secondItem="boF-tS-9qO" secondAttribute="bottom" constant="12" id="DJF-yd-75c"/>
                             <constraint firstItem="b0v-fJ-IuT" firstAttribute="leading" secondItem="uxF-iW-LLh" secondAttribute="leading" type="default" id="Hqh-Yt-nGK"/>
                             <constraint firstItem="ynY-1s-MZY" firstAttribute="bottom" secondItem="uxF-iW-LLh" secondAttribute="bottom" type="default" id="KY6-fI-0mm"/>
                             <constraint firstItem="b0v-fJ-IuT" firstAttribute="trailing" secondItem="uxF-iW-LLh" secondAttribute="trailing" type="default" id="Ph6-0O-JzX"/>
                             <constraint firstItem="ynY-1s-MZY" firstAttribute="leading" secondItem="uxF-iW-LLh" secondAttribute="leading" type="default" id="R54-Ke-FnT"/>
-                            <constraint firstItem="aDv-Jf-2p8" firstAttribute="leading" secondItem="uxF-iW-LLh" secondAttribute="leading" type="default" id="Zho-6o-cay"/>
+                            <constraint firstItem="awm-WG-QXH" firstAttribute="bottom" secondItem="b0v-fJ-IuT" secondAttribute="top" type="default" id="XYm-xs-0c2"/>
                             <constraint firstItem="ynY-1s-MZY" firstAttribute="top" secondItem="b0v-fJ-IuT" secondAttribute="bottom" type="default" id="eP8-49-tci"/>
+                            <constraint firstItem="awm-WG-QXH" firstAttribute="trailing" secondItem="uxF-iW-LLh" secondAttribute="trailing" type="default" id="iv6-1j-vwi"/>
                             <constraint firstItem="b0v-fJ-IuT" firstAttribute="trailing" secondItem="ynY-1s-MZY" secondAttribute="trailing" type="default" id="rBS-NQ-plf"/>
-                            <constraint firstItem="aDv-Jf-2p8" firstAttribute="bottom" secondItem="b0v-fJ-IuT" secondAttribute="top" type="default" id="vzi-81-5iK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Web Link" id="EaT-IB-4YQ">
@@ -873,6 +901,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loadSpinning" destination="u2J-nv-K2m" id="gli-Fr-VDK"/>
                         <outlet property="webView" destination="b0v-fJ-IuT" id="wDu-dP-6ir"/>
                     </connections>
                 </viewController>
@@ -902,19 +931,36 @@
                             </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rr0-2p-LAk">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="kp4-H3-ejf"/>
+                                </constraints>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWh-Uy-oc8">
+                                <items>
+                                    <navigationItem title="Title" id="Kfr-gP-MnB">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Oth-I0-289">
+                                            <connections>
+                                                <action selector="backHandler:" destination="sYZ-Su-ucG" id="ThS-Rf-PAF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="XsT-MA-DIi"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="gKh-sn-UVr" firstAttribute="leading" secondItem="NYf-eb-thV" secondAttribute="leading" type="default" id="3t9-s2-zoP"/>
+                            <constraint firstItem="OWh-Uy-oc8" firstAttribute="top" secondItem="NYf-eb-thV" secondAttribute="top" type="default" id="7a9-NE-RAG"/>
                             <constraint firstItem="Rr0-2p-LAk" firstAttribute="leading" secondItem="NYf-eb-thV" secondAttribute="leading" type="default" id="7xJ-At-Qtp"/>
                             <constraint firstItem="gKh-sn-UVr" firstAttribute="bottom" secondItem="NYf-eb-thV" secondAttribute="bottom" type="default" id="AHb-vf-EZV"/>
                             <constraint firstItem="gKh-sn-UVr" firstAttribute="trailing" secondItem="NYf-eb-thV" secondAttribute="trailing" type="default" id="Caf-iM-QCk"/>
                             <constraint firstItem="ish-cp-zS4" firstAttribute="centerX" secondItem="gKh-sn-UVr" secondAttribute="centerX" type="default" id="Hdk-0o-zuz"/>
-                            <constraint firstItem="Rr0-2p-LAk" firstAttribute="top" secondItem="NYf-eb-thV" secondAttribute="top" type="default" id="Wae-Vc-CPs"/>
+                            <constraint firstItem="OWh-Uy-oc8" firstAttribute="trailing" secondItem="NYf-eb-thV" secondAttribute="trailing" type="default" id="fEr-NR-PIK"/>
                             <constraint firstItem="Rr0-2p-LAk" firstAttribute="trailing" secondItem="NYf-eb-thV" secondAttribute="trailing" type="default" id="p94-i7-wGW"/>
                             <constraint firstAttribute="bottom" secondItem="ish-cp-zS4" secondAttribute="bottom" constant="12" id="s1r-uQ-b2s"/>
-                            <constraint firstItem="gKh-sn-UVr" firstAttribute="top" secondItem="Rr0-2p-LAk" secondAttribute="bottom" type="default" id="zUD-RI-6Vs"/>
+                            <constraint firstItem="Rr0-2p-LAk" firstAttribute="top" secondItem="OWh-Uy-oc8" secondAttribute="bottom" type="default" id="vHp-sv-wr1"/>
+                            <constraint firstItem="OWh-Uy-oc8" firstAttribute="leading" secondItem="NYf-eb-thV" secondAttribute="leading" type="default" id="xXI-w6-QqT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Video Link" id="asP-T2-hQE">
@@ -979,34 +1025,39 @@
                                     <constraint firstAttribute="width" constant="280" type="user" id="Gds-yv-Y4Y"/>
                                     <constraint firstAttribute="height" constant="371" type="user" id="mbM-xX-VHl"/>
                                 </constraints>
-                                <string key="text">Whisk the lime, oil, garlic, salt and pepper until combined in a small bowl. Place the chicken in a 1-gallon plastic bag. Pour half of the lime mixture over the chicken; turn to coat. Let the chicken marinate in the fridge for at least 2 hours and up to 8 hours.
-
-Arrange the scallions, onions, green peppers and red peppers on a large rimmed baking sheet. Pour the remaining lime mixture over the vegetables; turn to coat.
-
-Preheat the grill to medium-high heat. Remove the chicken from the lime mixture and bring to room temperature. Sprinkle each side of the chicken with salt and pepper. Grill the chicken until cooked through, about 7 minutes each side. Grill the vegetables until tender, turning frequently, about 10 minutes for the scallions and peppers and 15 minutes for the onions.
-
-Transfer the chicken to a work surface and cover with aluminum foil. Set aside the chicken for 10 minutes. Meanwhile, slice the onions and peppers and arrange them on a platter with the scallions. Slice the chicken crosswise into strips and transfer to the platter. Serve with the Cheddar and sour cream.
-
-Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicken-fajitas-platter-recipe/index.html?oc=linkback</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZH-O6-J7A">
+                                <items>
+                                    <navigationItem title="Direction" id="42I-yg-sN4">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="GSr-96-Dmb">
+                                            <connections>
+                                                <action selector="backHandle:" destination="umb-Lo-Ggr" id="aiO-Po-bcg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mwF-QB-yfH" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" constant="66" type="user" id="1Zr-wH-6Hd"/>
-                            <constraint firstItem="fkW-7s-dTQ" firstAttribute="centerX" secondItem="mwF-QB-yfH" secondAttribute="centerX" type="default" id="3hn-nG-CZx"/>
-                            <constraint firstItem="fkW-7s-dTQ" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" type="default" id="BXV-63-puP"/>
                             <constraint firstItem="NRZ-Nz-nIu" firstAttribute="bottom" secondItem="e5N-XY-rHb" secondAttribute="bottom" type="default" id="DxA-Jh-ZVm"/>
+                            <constraint firstItem="BZH-O6-J7A" firstAttribute="leading" secondItem="e5N-XY-rHb" secondAttribute="leading" type="default" id="FC2-G6-8hN"/>
                             <constraint firstItem="zjt-EF-OOh" firstAttribute="centerX" secondItem="gjJ-xG-tUt" secondAttribute="centerX" type="default" id="Hxs-QG-fgT"/>
                             <constraint firstAttribute="trailing" secondItem="mwF-QB-yfH" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="Iqi-Pg-fv4"/>
+                            <constraint firstItem="mwF-QB-yfH" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" constant="88" id="JzE-kH-GjG"/>
                             <constraint firstAttribute="bottom" secondItem="zjt-EF-OOh" secondAttribute="bottom" constant="12" id="NQI-8b-nx8"/>
                             <constraint firstItem="zjt-EF-OOh" firstAttribute="leading" secondItem="e5N-XY-rHb" secondAttribute="leading" type="default" id="PCv-W4-qfX"/>
                             <constraint firstItem="NRZ-Nz-nIu" firstAttribute="trailing" secondItem="e5N-XY-rHb" secondAttribute="trailing" type="default" id="XoX-LK-Yvg"/>
                             <constraint firstItem="gjJ-xG-tUt" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" constant="515" id="cJO-6X-sbz"/>
                             <constraint firstItem="NRZ-Nz-nIu" firstAttribute="leading" secondItem="e5N-XY-rHb" secondAttribute="leading" type="default" id="dd2-AR-MLf"/>
+                            <constraint firstItem="BZH-O6-J7A" firstAttribute="centerX" secondItem="fkW-7s-dTQ" secondAttribute="centerX" type="default" id="gew-bI-aRy"/>
                             <constraint firstItem="zjt-EF-OOh" firstAttribute="trailing" secondItem="e5N-XY-rHb" secondAttribute="trailing" type="default" id="jce-po-XIO"/>
+                            <constraint firstItem="BZH-O6-J7A" firstAttribute="trailing" secondItem="e5N-XY-rHb" secondAttribute="trailing" type="default" id="ltV-By-Kdy"/>
                             <constraint firstItem="mwF-QB-yfH" firstAttribute="leading" secondItem="e5N-XY-rHb" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="nq9-Uj-RM0"/>
+                            <constraint firstItem="BZH-O6-J7A" firstAttribute="top" secondItem="e5N-XY-rHb" secondAttribute="top" constant="-3" id="oz0-Zp-2q6"/>
+                            <constraint firstItem="BZH-O6-J7A" firstAttribute="bottom" secondItem="fkW-7s-dTQ" secondAttribute="top" type="default" id="pIW-vH-hcv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Directions" id="CdH-sq-4TZ">
@@ -1043,7 +1094,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" type="user" id="P7D-lQ-Acc"/>
-                                    <constraint firstAttribute="height" constant="414" type="user" id="ayu-za-vOY"/>
+                                    <constraint firstAttribute="height" constant="400" id="hDB-bg-VQg"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="tableIdentifier" id="8NI-ia-Bp4" customClass="HavingTableViewCell">
@@ -1123,9 +1174,21 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Roq-RT-hPF">
+                                <items>
+                                    <navigationItem title="Having" id="Zbk-vY-qQG">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Zb-ko-oth">
+                                            <connections>
+                                                <action selector="backHandler:" destination="DbV-Kl-WWD" id="hod-R2-VOz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Roq-RT-hPF" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" type="default" id="0EE-3G-yo7"/>
                             <constraint firstAttribute="trailing" secondItem="JNh-aT-AdZ" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="55z-J2-q7M"/>
                             <constraint firstItem="1F3-NG-WI4" firstAttribute="trailing" secondItem="ePI-lk-0BP" secondAttribute="trailing" type="default" id="8Ga-v6-3dr"/>
                             <constraint firstItem="qJU-et-tPp" firstAttribute="centerY" secondItem="1F3-NG-WI4" secondAttribute="centerY" type="default" id="E6B-BH-quA"/>
@@ -1133,11 +1196,13 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstItem="qJU-et-tPp" firstAttribute="trailing" secondItem="ePI-lk-0BP" secondAttribute="trailing" type="default" id="MTu-uM-HYz"/>
                             <constraint firstItem="Ayo-vw-Yge" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="QA1-VE-Fiq"/>
                             <constraint firstItem="Ayo-vw-Yge" firstAttribute="top" secondItem="JNh-aT-AdZ" secondAttribute="bottom" constant="8" type="user" id="VOr-XF-pMy"/>
+                            <constraint firstItem="Roq-RT-hPF" firstAttribute="trailing" secondItem="ePI-lk-0BP" secondAttribute="trailing" type="default" id="XRC-qV-qKN"/>
+                            <constraint firstItem="JNh-aT-AdZ" firstAttribute="top" secondItem="Roq-RT-hPF" secondAttribute="bottom" type="default" id="a2P-Ut-F3s"/>
                             <constraint firstItem="1F3-NG-WI4" firstAttribute="bottom" secondItem="ePI-lk-0BP" secondAttribute="bottom" type="default" id="bvP-uB-srh"/>
                             <constraint firstItem="Ayo-vw-Yge" firstAttribute="top" secondItem="JNh-aT-AdZ" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="dhG-t8-Klq"/>
                             <constraint firstItem="1F3-NG-WI4" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" type="default" id="hAF-xR-qUX"/>
-                            <constraint firstItem="JNh-aT-AdZ" firstAttribute="top" secondItem="ePI-lk-0BP" secondAttribute="top" constant="20" symbolic="YES" type="user" id="mdR-J8-U7O"/>
                             <constraint firstItem="qJU-et-tPp" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" type="default" id="nNd-KS-d9k"/>
+                            <constraint firstItem="Roq-RT-hPF" firstAttribute="top" secondItem="ePI-lk-0BP" secondAttribute="top" type="default" id="oBc-zO-bRg"/>
                             <constraint firstAttribute="trailing" secondItem="Ayo-vw-Yge" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="oIe-IW-p5l"/>
                         </constraints>
                     </view>
@@ -1171,6 +1236,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="paV-b5-aPm">
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="XmA-Dc-2Ot"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="tableIdentifier" id="UY7-SX-NmZ" customClass="HavingTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="280" height="44"/>
@@ -1249,22 +1317,35 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxj-6L-kO3">
+                                <items>
+                                    <navigationItem title="Missing" id="BVW-hE-ep4">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="IYD-T5-PZY">
+                                            <connections>
+                                                <action selector="backHandler:" destination="eGx-Id-dmB" id="kyb-ap-h1X"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tAB-zS-1iu" firstAttribute="top" secondItem="cN7-bE-aqj" secondAttribute="top" constant="20" symbolic="YES" type="default" id="1Mr-2Z-GVU"/>
                             <constraint firstItem="30c-iz-cIo" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" type="default" id="457-C6-MI4"/>
+                            <constraint firstItem="hxj-6L-kO3" firstAttribute="top" secondItem="cN7-bE-aqj" secondAttribute="top" type="default" id="8Jk-PA-hIw"/>
                             <constraint firstAttribute="trailing" secondItem="tAB-zS-1iu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9FY-tc-GIW"/>
+                            <constraint firstItem="hxj-6L-kO3" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" type="default" id="CAu-gm-sDP"/>
+                            <constraint firstItem="tAB-zS-1iu" firstAttribute="top" secondItem="hxj-6L-kO3" secondAttribute="bottom" type="default" id="E1W-Nw-t0g"/>
                             <constraint firstAttribute="bottom" secondItem="jCT-eM-iGf" secondAttribute="bottom" constant="6" id="LWV-8q-PP0"/>
                             <constraint firstItem="paV-b5-aPm" firstAttribute="top" secondItem="tAB-zS-1iu" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="OKp-ob-nwZ"/>
                             <constraint firstItem="30c-iz-cIo" firstAttribute="trailing" secondItem="cN7-bE-aqj" secondAttribute="trailing" type="default" id="OZ2-aF-jvr"/>
                             <constraint firstItem="tAB-zS-1iu" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="T8c-0y-FmG"/>
-                            <constraint firstItem="paV-b5-aPm" firstAttribute="centerY" secondItem="cN7-bE-aqj" secondAttribute="centerY" type="default" id="Wnl-iC-WX1"/>
                             <constraint firstItem="jCT-eM-iGf" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" type="default" id="aXw-pE-jxt"/>
                             <constraint firstItem="paV-b5-aPm" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dum-1c-jcv"/>
                             <constraint firstItem="paV-b5-aPm" firstAttribute="top" secondItem="tAB-zS-1iu" secondAttribute="bottom" constant="8" type="user" id="eSG-rq-kqv"/>
                             <constraint firstItem="jCT-eM-iGf" firstAttribute="trailing" secondItem="cN7-bE-aqj" secondAttribute="trailing" type="default" id="gTM-qS-p4N"/>
                             <constraint firstAttribute="trailing" secondItem="paV-b5-aPm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iNX-SL-dMi"/>
+                            <constraint firstItem="hxj-6L-kO3" firstAttribute="trailing" secondItem="cN7-bE-aqj" secondAttribute="trailing" type="default" id="mLb-08-Mmm"/>
                             <constraint firstItem="30c-iz-cIo" firstAttribute="bottom" secondItem="cN7-bE-aqj" secondAttribute="bottom" type="default" id="zU8-cV-QBH"/>
                         </constraints>
                     </view>
@@ -1431,7 +1512,6 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                             <constraint firstItem="GQ3-hH-2jV" firstAttribute="trailing" secondItem="YmU-fi-tPB" secondAttribute="trailing" type="default" id="4Ew-ZW-8bz"/>
                             <constraint firstItem="YmU-fi-tPB" firstAttribute="top" secondItem="2zG-3f-tP5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4KL-bz-Qx9"/>
                             <constraint firstItem="eNH-fw-oAM" firstAttribute="trailing" secondItem="K9J-ff-Gqn" secondAttribute="trailing" type="default" id="5Ym-JS-DYr"/>
-                            <constraint firstItem="ttE-wN-vAF" firstAttribute="baseline" secondItem="GQ3-hH-2jV" secondAttribute="baseline" type="default" id="7LG-qi-Y6G"/>
                             <constraint firstItem="ttE-wN-vAF" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7kb-NY-ZLg"/>
                             <constraint firstItem="lmv-yH-pJT" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" type="default" id="B6I-zl-qhc"/>
                             <constraint firstItem="lmv-yH-pJT" firstAttribute="top" secondItem="K9J-ff-Gqn" secondAttribute="top" type="default" id="Gc1-Sc-6xV"/>
@@ -1480,6 +1560,9 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOg-n9-DaA">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uKp-lu-SV7" id="6c8-JY-eGk"/>
+                                </connections>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6p-Yf-hrP">
                                 <items/>
@@ -1493,26 +1576,35 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Li-eV-IRY">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhN-vn-mPt">
                                 <items>
-                                    <barButtonItem width="200" style="plain" systemItem="fixedSpace" id="7nh-TE-oOw"/>
-                                    <barButtonItem title="Back" id="orW-4y-4Y9"/>
-                                    <barButtonItem systemItem="refresh" id="7QN-F5-w81"/>
+                                    <navigationItem title="Add Recipe" id="rI4-SU-Lla">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="dCX-5u-i0Z">
+                                            <connections>
+                                                <action selector="refreshHandler:" destination="uKp-lu-SV7" id="84f-7K-TeQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
-                            </toolbar>
+                            </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zMH-GP-VwQ">
+                                <color key="color" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5Li-eV-IRY" firstAttribute="trailing" secondItem="bHe-i4-ly1" secondAttribute="trailing" type="default" id="Flo-rK-a3S"/>
+                            <constraint firstItem="IhN-vn-mPt" firstAttribute="leading" secondItem="bHe-i4-ly1" secondAttribute="leading" type="default" id="0jj-IP-7hQ"/>
+                            <constraint firstItem="zMH-GP-VwQ" firstAttribute="centerY" secondItem="iOg-n9-DaA" secondAttribute="centerY" type="default" id="HSH-EC-vRn"/>
                             <constraint firstItem="iOg-n9-DaA" firstAttribute="leading" secondItem="bHe-i4-ly1" secondAttribute="leading" type="default" id="Mgt-cO-RQh"/>
-                            <constraint firstItem="5Li-eV-IRY" firstAttribute="top" secondItem="bHe-i4-ly1" secondAttribute="top" type="default" id="RML-m4-eQd"/>
-                            <constraint firstItem="5Li-eV-IRY" firstAttribute="leading" secondItem="bHe-i4-ly1" secondAttribute="leading" type="default" id="RQp-ZL-azu"/>
                             <constraint firstItem="iOg-n9-DaA" firstAttribute="trailing" secondItem="S6p-Yf-hrP" secondAttribute="trailing" type="default" id="SAH-dH-8ty"/>
+                            <constraint firstItem="IhN-vn-mPt" firstAttribute="trailing" secondItem="bHe-i4-ly1" secondAttribute="trailing" type="default" id="TI7-HZ-nUY"/>
                             <constraint firstAttribute="bottom" secondItem="sJA-ph-kMY" secondAttribute="bottom" constant="12" id="Vrk-Dt-ZPW"/>
                             <constraint firstItem="S6p-Yf-hrP" firstAttribute="top" secondItem="iOg-n9-DaA" secondAttribute="bottom" type="default" id="XF2-Tc-l9z"/>
                             <constraint firstItem="iOg-n9-DaA" firstAttribute="trailing" secondItem="bHe-i4-ly1" secondAttribute="trailing" type="default" id="YSP-G9-RTC"/>
-                            <constraint firstItem="5Li-eV-IRY" firstAttribute="bottom" secondItem="iOg-n9-DaA" secondAttribute="top" type="default" id="eRj-bM-saL"/>
+                            <constraint firstItem="zMH-GP-VwQ" firstAttribute="centerX" secondItem="sJA-ph-kMY" secondAttribute="centerX" type="default" id="blB-FQ-XSO"/>
+                            <constraint firstItem="IhN-vn-mPt" firstAttribute="top" secondItem="bHe-i4-ly1" secondAttribute="top" type="default" id="dSx-7B-KKH"/>
                             <constraint firstItem="S6p-Yf-hrP" firstAttribute="leading" secondItem="bHe-i4-ly1" secondAttribute="leading" type="default" id="i3d-vy-q40"/>
+                            <constraint firstItem="IhN-vn-mPt" firstAttribute="bottom" secondItem="iOg-n9-DaA" secondAttribute="top" type="default" id="iii-Z2-ETb"/>
                             <constraint firstItem="sJA-ph-kMY" firstAttribute="centerX" secondItem="S6p-Yf-hrP" secondAttribute="centerX" type="default" id="imm-Ai-Om7"/>
                             <constraint firstItem="S6p-Yf-hrP" firstAttribute="bottom" secondItem="bHe-i4-ly1" secondAttribute="bottom" type="default" id="nOY-3l-JNz"/>
                         </constraints>
@@ -1525,6 +1617,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loadSpinning" destination="zMH-GP-VwQ" id="XWh-GN-5E5"/>
                         <outlet property="webView" destination="iOg-n9-DaA" id="87X-F4-iuc"/>
                     </connections>
                 </viewController>
@@ -1548,6 +1641,8 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="AddRecipeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRecipeViewController.h"/>
             <relationships>
+                <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -1557,7 +1652,12 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="EnterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EnterViewController.h"/>
             <relationships>
+                <relationship kind="action" name="checkCategorySelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkCountrySelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkSortSelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="submitTap:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="outlet" name="categoryView1" candidateClass="UIView"/>
                 <relationship kind="outlet" name="categoryView2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="countryView" candidateClass="UIView"/>
@@ -1575,12 +1675,18 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         </class>
         <class className="HavingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HavingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
         <class className="MenuViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
         </class>
         <class className="MissingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MissingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -1588,6 +1694,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="Precipe" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Precipe.h"/>
             <relationships>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="imageview" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
             </relationships>
@@ -1606,6 +1713,7 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="RatingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RatingViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="starRatingView" candidateClass="RatingView"/>
             </relationships>
@@ -1613,12 +1721,16 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <class className="VideoEmbed" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoEmbed.h"/>
             <relationships>
+                <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="thumbnailView" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backHandle:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -1632,6 +1744,6 @@ Read more at: http://www.foodnetwork.com/recipes/melissa-darabian/grilled-chicke
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9gs-bQ-JUX"/>
+        <segue reference="g64-Ln-QWR"/>
     </inferredMetricsTieBreakers>
 </document>

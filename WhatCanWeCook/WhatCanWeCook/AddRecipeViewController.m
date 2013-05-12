@@ -21,12 +21,14 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     NSURL *url =[NSURL URLWithString:@"http://serv11.divms.uiowa.edu/~ios5/webform/"];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
     
     
-    [super viewDidLoad];
+    
     
     self.view.layer.shadowOpacity = 0.75f;
     self.view.layer.shadowRadius = 10.0f;
@@ -51,4 +53,25 @@
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
+- (IBAction)refreshHandler:(UIBarButtonItem *)sender {
+    [self.webView reload];
+}
+
+#pragma mark -
+#pragma mark Web View Delegate Method
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.loadSpinning stopAnimating];
+}
+
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [self.loadSpinning startAnimating];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Load add recipe error = %@",error);
+    [self.loadSpinning stopAnimating];
+}
 @end

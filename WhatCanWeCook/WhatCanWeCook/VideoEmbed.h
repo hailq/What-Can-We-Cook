@@ -11,4 +11,8 @@
 @interface VideoEmbed : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIWebView * thumbnailView;
+
+- (IBAction)backHandler:(UIBarButtonItem *)sender;
+
+
 @end

@@ -15,4 +15,5 @@
 
 @property (weak, nonatomic) IBOutlet RatingView *starRatingView;
 
+- (IBAction)backHandler:(UIBarButtonItem *)sender;
 @end
