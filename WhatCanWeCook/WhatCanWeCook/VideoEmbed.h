@@ -12,6 +12,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWebView * thumbnailView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadSpinning;
+@property (strong, nonatomic) NSString *videoLink;
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 

@@ -14,6 +14,7 @@
 
 @implementation VideoEmbed
 @synthesize thumbnailView;
+@synthesize videoLink;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,9 +38,9 @@
     }\
     </style>\
     </head><body>\
-    <iframe height=\"400\" src=\"http://www.youtube.com/embed/%@\" frameborder=\"0\"></iframe>\
+    <iframe height=\"400\" src=\"%@\" frameborder=\"0\"></iframe>\
     </body></html>";
-    NSString* html = [NSString stringWithFormat:embedHTML, @"2xtqVECh0Js"];
+    NSString* html = [NSString stringWithFormat:embedHTML,videoLink];
     
     [thumbnailView loadHTMLString:html baseURL:nil];
 
@@ -80,7 +81,7 @@
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"Load add recipe error = %@",error);
+    NSLog(@"Load video recipe error = %@",error);
     [self.loadSpinning stopAnimating];
 }
 

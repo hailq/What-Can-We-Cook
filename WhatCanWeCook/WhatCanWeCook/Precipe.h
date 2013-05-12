@@ -11,7 +11,13 @@
 @interface Precipe : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageview;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
 @property (weak, nonatomic) UIImage *img;
 @property (weak, nonatomic) NSString *introString;
 @property (strong, nonatomic) UIButton *menuBT;
+@property (strong, nonatomic) NSString *direction;
+@property (strong, nonatomic) NSString *webLink;
+@property (strong, nonatomic) NSString *videoLink;
+
+
 @end

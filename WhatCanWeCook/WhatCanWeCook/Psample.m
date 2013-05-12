@@ -16,6 +16,7 @@
 @synthesize recipeList = recipeList_;
 @synthesize menuBT;
 @synthesize loadSpinning;
+@synthesize panGesture = panGesture_;
 
 - (void)viewDidLoad
 {
@@ -30,6 +31,7 @@
     }
     
     /* Sliding Menu */
+    
     self.view.layer.shadowOpacity = 0.75f;
     self.view.layer.shadowRadius = 10.0f;
     self.view.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -38,14 +40,19 @@
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    if (self.slidingViewController.panGesture != nil) {
+        [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    }
     
     self.menuBT = [UIButton buttonWithType:UIButtonTypeCustom];
     menuBT.frame = CGRectMake(8, 10, 34, 24);
     [menuBT setBackgroundImage:[UIImage imageNamed:@"menuButton.png"] forState:UIControlStateNormal];
     [menuBT addTarget:self action:@selector(revealMenu:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:self.menuBT];
+    if (self.slidingViewController.panGesture != nil) {
+        [self.view addSubview:self.menuBT];
+    }
+     
     //End sliding menu
     
     [loadSpinning setHidesWhenStopped:YES];
@@ -126,6 +133,24 @@
     
     
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"ResultToListSegue"])
+    {
+        Precipe *recipeDetail = segue.destinationViewController;
+        
+        NSInteger cellRow = [recipeTableView indexPathForSelectedRow].row;
+        
+        Recipe *recipe = (Recipe*) [recipeList_ objectAtIndex:cellRow];
+        
+        recipeDetail.img = [UIImage imageWithData:recipe.recipeImage];
+        recipeDetail.label.text = recipe.recipeName;
+        recipeDetail.webLink = recipe.webLink;
+        recipeDetail.videoLink = recipe.videoLink;
+        recipeDetail.direction = recipe.directions;
+    }
 }
 
 #pragma mark -

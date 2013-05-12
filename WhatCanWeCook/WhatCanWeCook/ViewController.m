@@ -13,15 +13,19 @@
 @end
 
 @implementation ViewController
+@synthesize webLink;
 @synthesize webView;
+@synthesize textView;
+@synthesize direction;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    NSURL *url =[NSURL URLWithString:@"http://m.foodnetwork.com/recipes/recipe/644745"];
+    NSURL *url =[NSURL URLWithString:webLink];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [webView loadRequest:req];
+    textView.text = direction;
     
 }
 
@@ -51,4 +55,5 @@
     NSLog(@"Load add recipe error = %@",error);
     [self.loadSpinning stopAnimating];
 }
+
 @end

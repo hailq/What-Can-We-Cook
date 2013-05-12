@@ -129,7 +129,7 @@
                                             <outlet property="cellImageView" destination="5Gv-1h-T51" id="okQ-I2-MVE"/>
                                             <outlet property="cellRecipeName" destination="IjA-eP-ajb" id="hd2-gY-bbk"/>
                                             <outlet property="cellRecipeRating" destination="B2O-3k-zx2" id="h5p-lB-8g2"/>
-                                            <segue destination="ZEL-9g-xGF" kind="push" id="TMg-wd-Edj"/>
+                                            <segue destination="ZEL-9g-xGF" kind="push" identifier="ResultToListSegue" id="pvh-nc-XIK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -241,7 +241,6 @@
                         <outlet property="buttonView" destination="1iU-Gg-LCg" id="lAk-dN-yQi"/>
                         <outlet property="loadSpinning" destination="QCk-aH-pWS" id="YxD-Fz-jtu"/>
                         <outlet property="recipeTableView" destination="NQF-NC-2OH" id="VMN-BC-p6T"/>
-                        <segue destination="P2b-bC-zaB" kind="push" id="Sho-1D-KQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-GE-apZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,6 +250,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CvB-JI-I0d">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fG6-GN-Xbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="4bc-ca-tnv" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W2p-7n-ddM">
                         <autoresizingMask key="autoresizingMask"/>
@@ -259,7 +259,6 @@
                         <segue destination="Oue-c2-Pvb" kind="relationship" relationship="rootViewController" id="pKj-SI-Aae"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fG6-GN-Xbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1384" y="-2195"/>
         </scene>
@@ -296,7 +295,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitTap:" destination="P2b-bC-zaB" eventType="touchUpInside" id="XBV-sQ-uUm"/>
+                                    <segue destination="lBs-Us-ZQy" kind="push" identifier="EnterToResultSegue" id="jta-pm-G8c"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBb-U2-y3l">
@@ -1071,8 +1070,12 @@
                                     <constraint firstAttribute="width" constant="280" type="user" id="Gds-yv-Y4Y"/>
                                     <constraint firstAttribute="height" constant="371" type="user" id="mbM-xX-VHl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="umb-Lo-Ggr" id="tBH-Ac-BLw"/>
+                                </connections>
                             </textView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZH-O6-J7A">
                                 <items>
@@ -1113,6 +1116,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="mwF-QB-yfH" id="Dug-yo-mXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8D-Et-CpM" sceneMemberID="firstResponder"/>
             </objects>
@@ -1465,7 +1471,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="umb-Lo-Ggr" kind="push" id="2HU-mv-GfT"/>
+                                    <segue destination="umb-Lo-Ggr" kind="push" identifier="DetailToDirectionSegue" id="2HU-mv-GfT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zG-3f-tP5">
@@ -1489,7 +1495,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ingredients:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF6-Jf-60T">
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" type="user" id="Hgk-tO-Il9"/>
+                                    <constraint firstAttribute="width" constant="98" id="b5N-bK-RfA"/>
                                     <constraint firstAttribute="height" constant="21" type="user" id="iyk-Cf-qin"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1510,7 +1516,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jm1-yi-a3d" kind="push" id="KmS-CR-P3b"/>
+                                    <segue destination="jm1-yi-a3d" kind="push" identifier="DetailToWebSegue" id="KmS-CR-P3b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmU-fi-tPB">
@@ -1526,7 +1532,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sYZ-Su-ucG" kind="push" id="RiB-4p-hIR"/>
+                                    <segue destination="sYZ-Su-ucG" kind="push" identifier="DetailToVideoSegue" id="RiB-4p-hIR"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNH-fw-oAM">
@@ -1540,31 +1546,47 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmv-yH-pJT">
-                                <items/>
-                            </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQe-i2-7gI">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="2ja-k6-0tH"/>
                                     <constraint firstAttribute="height" constant="200" id="GrS-X7-A7F"/>
                                 </constraints>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-k5-D2k">
+                                <items>
+                                    <navigationItem title="Recipe Detail" id="a1q-h0-Yhz">
+                                        <barButtonItem key="rightBarButtonItem" title="Back" id="lnH-bI-FPR">
+                                            <connections>
+                                                <action selector="backHandler:" destination="ZEL-9g-xGF" id="XVa-rh-we7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="184" translatesAutoresizingMaskIntoConstraints="NO" id="VCy-Ui-SVF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="3y6-0N-Ud7"/>
+                                    <constraint firstAttribute="height" constant="44" id="fve-PB-3YJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1X3-IE-c5D" firstAttribute="top" secondItem="GQ3-hH-2jV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="16Y-7N-hNt"/>
-                            <constraint firstAttribute="bottom" secondItem="ttE-wN-vAF" secondAttribute="bottom" constant="203" id="3dF-fp-YDB"/>
                             <constraint firstItem="YmU-fi-tPB" firstAttribute="bottom" secondItem="sz1-B6-ZLL" secondAttribute="bottom" type="default" id="4Bw-LR-lGY"/>
-                            <constraint firstItem="GQ3-hH-2jV" firstAttribute="trailing" secondItem="YmU-fi-tPB" secondAttribute="trailing" type="default" id="4Ew-ZW-8bz"/>
                             <constraint firstItem="YmU-fi-tPB" firstAttribute="top" secondItem="2zG-3f-tP5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4KL-bz-Qx9"/>
                             <constraint firstItem="eNH-fw-oAM" firstAttribute="trailing" secondItem="K9J-ff-Gqn" secondAttribute="trailing" type="default" id="5Ym-JS-DYr"/>
                             <constraint firstItem="ttE-wN-vAF" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7kb-NY-ZLg"/>
-                            <constraint firstItem="lmv-yH-pJT" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" type="default" id="B6I-zl-qhc"/>
-                            <constraint firstItem="lmv-yH-pJT" firstAttribute="top" secondItem="K9J-ff-Gqn" secondAttribute="top" type="default" id="Gc1-Sc-6xV"/>
-                            <constraint firstItem="JQe-i2-7gI" firstAttribute="centerX" secondItem="lmv-yH-pJT" secondAttribute="centerX" type="default" id="Kz9-bQ-aZg"/>
+                            <constraint firstAttribute="trailing" secondItem="YmU-fi-tPB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Zx-rj-Hic"/>
+                            <constraint firstItem="pNC-k5-D2k" firstAttribute="top" secondItem="K9J-ff-Gqn" secondAttribute="top" type="default" id="BDj-Bf-86l"/>
+                            <constraint firstItem="VCy-Ui-SVF" firstAttribute="leading" secondItem="hF6-Jf-60T" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EEc-ZR-tbz"/>
                             <constraint firstItem="JQe-i2-7gI" firstAttribute="top" secondItem="K9J-ff-Gqn" secondAttribute="top" constant="50" id="LPD-Ua-FxA"/>
+                            <constraint firstItem="pNC-k5-D2k" firstAttribute="trailing" secondItem="K9J-ff-Gqn" secondAttribute="trailing" type="default" id="Leo-5U-Lna"/>
                             <constraint firstItem="2zG-3f-tP5" firstAttribute="top" secondItem="1X3-IE-c5D" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MSD-b7-IEn"/>
                             <constraint firstItem="sz1-B6-ZLL" firstAttribute="top" secondItem="2zG-3f-tP5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tus-Ki-kV6"/>
+                            <constraint firstAttribute="bottom" secondItem="sz1-B6-ZLL" secondAttribute="bottom" constant="51" id="VUc-EG-bC6"/>
                             <constraint firstAttribute="trailing" secondItem="GQ3-hH-2jV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YZT-hj-DlN"/>
                             <constraint firstItem="2zG-3f-tP5" firstAttribute="centerX" secondItem="1X3-IE-c5D" secondAttribute="centerX" type="user" id="aEB-yR-4Ga"/>
                             <constraint firstItem="hF6-Jf-60T" firstAttribute="top" secondItem="K9J-ff-Gqn" secondAttribute="top" constant="263" id="ae9-3O-PLP"/>
@@ -1572,13 +1594,16 @@
                             <constraint firstAttribute="bottom" secondItem="uPC-bk-imS" secondAttribute="bottom" constant="12" id="b9v-HL-thI"/>
                             <constraint firstItem="sz1-B6-ZLL" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bbN-y7-W4S"/>
                             <constraint firstItem="uPC-bk-imS" firstAttribute="trailing" secondItem="K9J-ff-Gqn" secondAttribute="trailing" type="default" id="btB-U9-iD2"/>
+                            <constraint firstItem="pNC-k5-D2k" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" type="default" id="dyH-4d-Hma"/>
                             <constraint firstItem="1X3-IE-c5D" firstAttribute="top" secondItem="ttE-wN-vAF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eL4-n7-qWh"/>
                             <constraint firstItem="ttE-wN-vAF" firstAttribute="top" secondItem="GQ3-hH-2jV" secondAttribute="top" type="default" id="fZV-7h-9YL"/>
+                            <constraint firstItem="JQe-i2-7gI" firstAttribute="trailing" secondItem="VCy-Ui-SVF" secondAttribute="trailing" type="default" id="jZO-8y-RBV"/>
                             <constraint firstItem="1X3-IE-c5D" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" constant="68" id="jiS-TE-0s1"/>
-                            <constraint firstItem="lmv-yH-pJT" firstAttribute="trailing" secondItem="K9J-ff-Gqn" secondAttribute="trailing" type="default" id="mQd-SM-rHb"/>
+                            <constraint firstItem="VCy-Ui-SVF" firstAttribute="centerY" secondItem="K9J-ff-Gqn" secondAttribute="centerY" type="default" id="mIX-rd-KLD"/>
                             <constraint firstItem="hF6-Jf-60T" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yAV-V8-Xsh"/>
                             <constraint firstItem="eNH-fw-oAM" firstAttribute="bottom" secondItem="K9J-ff-Gqn" secondAttribute="bottom" type="default" id="zI5-7g-qsH"/>
                             <constraint firstItem="eNH-fw-oAM" firstAttribute="leading" secondItem="K9J-ff-Gqn" secondAttribute="leading" type="default" id="zSO-GS-mCV"/>
+                            <constraint firstItem="pNC-k5-D2k" firstAttribute="centerX" secondItem="JQe-i2-7gI" secondAttribute="centerX" type="default" id="zp5-l9-URq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="1nu-yr-cVK">
@@ -1590,6 +1615,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageview" destination="JQe-i2-7gI" id="V43-XF-GE9"/>
+                        <outlet property="label" destination="VCy-Ui-SVF" id="uq3-O4-giY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8s-bU-i2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1688,7 +1714,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRecipeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
@@ -1699,12 +1724,7 @@
         <class className="EnterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EnterViewController.h"/>
             <relationships>
-                <relationship kind="action" name="checkCategorySelected:" candidateClass="UIButton"/>
-                <relationship kind="action" name="checkCountrySelected:" candidateClass="UIButton"/>
-                <relationship kind="action" name="checkSortSelected:" candidateClass="UIButton"/>
-                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="submitTap:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="outlet" name="categoryView1" candidateClass="UIView"/>
                 <relationship kind="outlet" name="categoryView2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="countryView" candidateClass="UIView"/>
@@ -1741,6 +1761,7 @@
         <class className="Precipe" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Precipe.h"/>
             <relationships>
+                <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="imageview" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
@@ -1750,8 +1771,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Psample.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="setChecked:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="recipeTableView" candidateClass="UITableView"/>
@@ -1764,7 +1783,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RatingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="tapHideKeyBoard:"/>
                 <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="starRatingView" candidateClass="RatingView"/>
             </relationships>
@@ -1792,6 +1810,7 @@
                 <relationship kind="action" name="backHandle:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -1805,6 +1824,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9gs-bQ-JUX"/>
+        <segue reference="8Yh-47-8rh"/>
     </inferredMetricsTieBreakers>
 </document>

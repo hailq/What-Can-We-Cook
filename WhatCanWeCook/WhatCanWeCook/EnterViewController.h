@@ -32,6 +32,7 @@
 @property (strong, nonatomic) NSMutableArray *country;
 @property (strong, nonatomic) NSMutableArray *category;
 @property (strong, nonatomic) UIButton *menuBT;
+@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 
 - (IBAction)submitTap:(id)sender;
 

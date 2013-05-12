@@ -9,6 +9,7 @@
 #import "EnterViewController.h"
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
+#import "Psample.h"
 
 @interface EnterViewController ()
 @end
@@ -19,6 +20,7 @@
 @synthesize country = country_;
 @synthesize category = category_;
 @synthesize menuBT;
+@synthesize panGesture = panGesture_;
 
 - (void)viewDidLoad
 {
@@ -50,6 +52,7 @@
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
+    panGesture_ = self.slidingViewController.panGesture;
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
     
     self.menuBT = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -129,7 +132,20 @@
     [rps startParser:@"<?xml version='1.0' encoding='utf-8' ?><recipes><recipe id='1'><name>test1</name><rating>2</rating><time>30min</time><web>http://test.com</web><video>http://test_video.com</video><ingredients><ingredient><amount></amount><measure></measure><type></type></ingredient></ingredients> <directions><step></step><instruction></instruction></directions></recipe><recipe id='2'><name>test2</name><rating>2</rating><time>32min</time><web>http://test2.com</web><video>http://test_video2.com</video><ingredients><ingredient><amount></amount><measure></measure><type></type></ingredient></ingredients><directions><step></step><instruction></instruction></directions></recipe><recipes>"];
      */
 
-    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Result"];
+//    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Result"];
+ //   [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark -
+#pragma Navigation Method
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [[segue identifier] isEqualToString:@"EnterToResultSegue"])
+    {
+        Psample *resultViewController = segue.destinationViewController;
+
+        resultViewController.panGesture = panGesture_;
+    }
 }
 
 @end

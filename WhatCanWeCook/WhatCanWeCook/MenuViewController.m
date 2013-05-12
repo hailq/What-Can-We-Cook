@@ -39,7 +39,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    self.menu = [NSArray arrayWithObjects:@"Ingredient",@"Recipe",@"Result",@"Add Recipe", nil];
+    self.menu = [NSArray arrayWithObjects:@"Ingredient",@"Add Recipe", nil];
     
     [self.slidingViewController setAnchorRightRevealAmount:200.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;

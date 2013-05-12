@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UIWebViewDelegate>
+@interface ViewController : UIViewController<UIWebViewDelegate, UITextViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadSpinning;
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+
+@property (strong, nonatomic) NSString *webLink;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (strong, nonatomic) NSString *direction;
 
 - (IBAction)backHandle:(UIBarButtonItem *)sender;
 

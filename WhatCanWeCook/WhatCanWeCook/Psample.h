@@ -20,6 +20,8 @@
 
 @property (strong, nonatomic) NSMutableArray *recipeList;
 @property (strong, nonatomic) UIButton *menuBT;
+@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadSpinning;
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 
