@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VideoEmbed : UIViewController
+@interface VideoEmbed : UIViewController<UIWebViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWebView * thumbnailView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadSpinning;
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 
+- (IBAction)refreshHandler:(UIBarButtonItem *)sender;
 
 @end

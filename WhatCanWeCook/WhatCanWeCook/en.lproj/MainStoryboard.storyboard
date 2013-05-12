@@ -46,7 +46,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lf-bh-gJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-584" y="-2195"/>
+            <point key="canvasLocation" x="-546" y="-2195"/>
         </scene>
         <!--Psample - Title-->
         <scene sceneID="IPn-ZE-4Mz">
@@ -59,7 +59,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-Pi-7a3">
                                 <items>
                                     <barButtonItem width="250" style="plain" systemItem="fixedSpace" id="RKb-s1-rz2"/>
-                                    <barButtonItem title="Back" id="HoV-cG-K0T"/>
+                                    <barButtonItem title="Back" id="HoV-cG-K0T">
+                                        <connections>
+                                            <action selector="backHandler:" destination="lBs-Us-ZQy" id="hr4-Ea-eSY"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sort:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-2a-IPf">
@@ -78,29 +82,55 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-NC-2OH">
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="znL-cO-jcG"/>
+                                    <constraint firstAttribute="width" constant="320" id="97Y-w8-cIB"/>
+                                    <constraint firstAttribute="height" constant="350" id="wcG-mD-3TN"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecipeCellIdentifier" textLabel="hbE-BI-Hx1" detailTextLabel="N0x-au-8ae" style="IBUITableViewCellStyleSubtitle" id="rf8-Qa-RDQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecipeCellIdentifier" id="rf8-Qa-RDQ" customClass="RecipeCustomCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="hbE-BI-Hx1">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-1h-T51">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="adm-qs-iSW"/>
+                                                        <constraint firstAttribute="height" constant="108" id="zTq-uS-Jw0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recipe Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="IjA-eP-ajb">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="HcC-bR-YDb"/>
+                                                        <constraint firstAttribute="height" constant="42" id="qcP-EM-0Yq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-au-8ae">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-3k-zx2">
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="B2O-3k-zx2" firstAttribute="leading" secondItem="5Gv-1h-T51" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1wt-Ki-yGv"/>
+                                            <constraint firstItem="5Gv-1h-T51" firstAttribute="leading" secondItem="rf8-Qa-RDQ" secondAttribute="leading" type="default" id="5Z5-Wu-OiN"/>
+                                            <constraint firstItem="IjA-eP-ajb" firstAttribute="top" secondItem="rf8-Qa-RDQ" secondAttribute="top" constant="20" type="default" id="J1B-w2-BhX"/>
+                                            <constraint firstItem="B2O-3k-zx2" firstAttribute="trailing" secondItem="IjA-eP-ajb" secondAttribute="trailing" type="default" id="Jnn-s5-sDC"/>
+                                            <constraint firstItem="5Gv-1h-T51" firstAttribute="centerY" secondItem="rf8-Qa-RDQ" secondAttribute="centerY" type="default" id="KbD-OU-jeT"/>
+                                            <constraint firstItem="B2O-3k-zx2" firstAttribute="top" secondItem="IjA-eP-ajb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VhT-tE-dqS"/>
+                                            <constraint firstItem="IjA-eP-ajb" firstAttribute="leading" secondItem="5Gv-1h-T51" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sJT-kk-Rpk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="5Gv-1h-T51" id="okQ-I2-MVE"/>
+                                            <outlet property="cellRecipeName" destination="IjA-eP-ajb" id="hd2-gY-bbk"/>
+                                            <outlet property="cellRecipeRating" destination="B2O-3k-zx2" id="h5p-lB-8g2"/>
+                                            <segue destination="ZEL-9g-xGF" kind="push" id="TMg-wd-Edj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -163,11 +193,14 @@
                                     <constraint firstItem="gmO-ng-Sc9" firstAttribute="trailing" secondItem="1iU-Gg-LCg" secondAttribute="trailing" type="default" id="3jn-qW-SMd"/>
                                     <constraint firstItem="qI1-nR-eqi" firstAttribute="leading" secondItem="1iU-Gg-LCg" secondAttribute="leading" type="default" id="697-29-jTY"/>
                                     <constraint firstItem="gmO-ng-Sc9" firstAttribute="bottom" secondItem="1tq-Oa-Xj3" secondAttribute="bottom" type="default" id="9SR-7U-uyW"/>
+                                    <constraint firstItem="1tq-Oa-Xj3" firstAttribute="baseline" secondItem="gmO-ng-Sc9" secondAttribute="baseline" type="user" id="HY8-8G-0N5"/>
                                     <constraint firstItem="gmO-ng-Sc9" firstAttribute="centerY" secondItem="1iU-Gg-LCg" secondAttribute="centerY" type="default" id="Icq-ZK-Cow"/>
                                     <constraint firstItem="1tq-Oa-Xj3" firstAttribute="bottom" secondItem="qI1-nR-eqi" secondAttribute="bottom" type="default" id="TD9-gR-CKY"/>
+                                    <constraint firstItem="gmO-ng-Sc9" firstAttribute="baseline" secondItem="qI1-nR-eqi" secondAttribute="baseline" type="user" id="UaU-ky-2Bh"/>
                                     <constraint firstItem="1tq-Oa-Xj3" firstAttribute="leading" secondItem="qI1-nR-eqi" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="X0y-y9-X7l"/>
                                     <constraint firstItem="1tq-Oa-Xj3" firstAttribute="centerX" secondItem="1iU-Gg-LCg" secondAttribute="centerX" type="default" id="Z61-jQ-dcw"/>
                                     <constraint firstItem="gmO-ng-Sc9" firstAttribute="leading" secondItem="1tq-Oa-Xj3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ZJV-Bf-yKo"/>
+                                    <constraint firstItem="1tq-Oa-Xj3" firstAttribute="baseline" secondItem="qI1-nR-eqi" secondAttribute="baseline" type="user" id="o2a-hI-hJu"/>
                                     <constraint firstItem="1tq-Oa-Xj3" firstAttribute="top" secondItem="qI1-nR-eqi" secondAttribute="top" type="default" id="wAi-cX-r9b"/>
                                     <constraint firstItem="gmO-ng-Sc9" firstAttribute="top" secondItem="1tq-Oa-Xj3" secondAttribute="top" type="default" id="wYj-j8-YE0"/>
                                 </constraints>
@@ -180,25 +213,24 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NQF-NC-2OH" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="2hJ-Bn-wUQ"/>
-                            <constraint firstItem="qvo-Lv-feR" firstAttribute="top" secondItem="1iU-Gg-LCg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4lg-mc-M1R"/>
-                            <constraint firstItem="QCk-aH-pWS" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="4pH-Id-ZzW"/>
-                            <constraint firstItem="veF-aP-k6J" firstAttribute="trailing" secondItem="D1v-yo-8lw" secondAttribute="trailing" type="default" id="75E-Hu-mDz"/>
-                            <constraint firstItem="1iU-Gg-LCg" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="56" id="Ccg-eW-T4A"/>
-                            <constraint firstItem="XMg-Pi-7a3" firstAttribute="trailing" secondItem="D1v-yo-8lw" secondAttribute="trailing" type="default" id="IA6-ph-hyq"/>
-                            <constraint firstItem="NQF-NC-2OH" firstAttribute="top" secondItem="qvo-Lv-feR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IqL-nA-zkH"/>
-                            <constraint firstItem="NQF-NC-2OH" firstAttribute="trailing" secondItem="D1v-yo-8lw" secondAttribute="trailing" type="default" id="NfQ-zY-x6C"/>
+                            <constraint firstItem="qvo-Lv-feR" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="114" id="1Hm-cg-uWY"/>
+                            <constraint firstItem="NQF-NC-2OH" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="156" id="3EW-9z-eTp"/>
+                            <constraint firstAttribute="trailing" secondItem="1iU-Gg-LCg" secondAttribute="trailing" constant="18" id="5FP-wj-lZV"/>
+                            <constraint firstItem="QCk-aH-pWS" firstAttribute="centerX" secondItem="NQF-NC-2OH" secondAttribute="centerX" type="default" id="5Ge-CQ-IGM"/>
+                            <constraint firstItem="NQF-NC-2OH" firstAttribute="trailing" secondItem="veF-aP-k6J" secondAttribute="trailing" type="default" id="GF8-Ka-n7e"/>
                             <constraint firstItem="MfP-Rv-2WD" firstAttribute="centerX" secondItem="veF-aP-k6J" secondAttribute="centerX" type="default" id="QUT-c4-cmN"/>
                             <constraint firstItem="veF-aP-k6J" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="505" id="RRA-x3-nrv"/>
                             <constraint firstAttribute="centerY" secondItem="QCk-aH-pWS" secondAttribute="centerY" type="user" id="U4q-kJ-hXx"/>
+                            <constraint firstItem="NQF-NC-2OH" firstAttribute="trailing" secondItem="XMg-Pi-7a3" secondAttribute="trailing" type="default" id="awq-De-65q"/>
+                            <constraint firstItem="1iU-Gg-LCg" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="55" id="dju-9m-gzL"/>
                             <constraint firstItem="veF-aP-k6J" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="fLo-2p-5y5"/>
-                            <constraint firstItem="qvo-Lv-feR" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="114" id="imy-Zg-Nmh"/>
-                            <constraint firstItem="QCk-aH-pWS" firstAttribute="trailing" secondItem="D1v-yo-8lw" secondAttribute="trailing" type="default" id="mYn-Bj-cqv"/>
+                            <constraint firstItem="MfP-Rv-2WD" firstAttribute="centerX" secondItem="D1v-yo-8lw" secondAttribute="centerX" type="default" id="iWQ-rV-ld9"/>
+                            <constraint firstItem="QCk-aH-pWS" firstAttribute="leading" secondItem="NQF-NC-2OH" secondAttribute="leading" type="default" id="jGY-cN-CjO"/>
+                            <constraint firstItem="1iU-Gg-LCg" firstAttribute="centerY" secondItem="4zz-2a-IPf" secondAttribute="centerY" type="default" id="jaL-Ia-ZAI"/>
+                            <constraint firstItem="MfP-Rv-2WD" firstAttribute="top" secondItem="NQF-NC-2OH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kYM-Zb-5PU"/>
                             <constraint firstItem="4zz-2a-IPf" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="70" id="nIc-cw-myU"/>
                             <constraint firstItem="XMg-Pi-7a3" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" type="default" id="qWp-hj-19u"/>
-                            <constraint firstAttribute="trailing" secondItem="1iU-Gg-LCg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tdO-ak-l3R"/>
                             <constraint firstItem="4zz-2a-IPf" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tmT-Hk-O5f"/>
-                            <constraint firstAttribute="bottom" secondItem="MfP-Rv-2WD" secondAttribute="bottom" constant="11" id="uAY-ep-B8Q"/>
                             <constraint firstItem="1iU-Gg-LCg" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" constant="74" id="vdA-5s-ER6"/>
                             <constraint firstItem="XMg-Pi-7a3" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="xAH-8x-Sbm"/>
                             <constraint firstItem="qvo-Lv-feR" firstAttribute="centerX" secondItem="XMg-Pi-7a3" secondAttribute="centerX" type="default" id="z2z-UT-Zjb"/>
@@ -207,13 +239,14 @@
                     <navigationItem key="navigationItem" title="Title" id="dIK-sd-L0r"/>
                     <connections>
                         <outlet property="buttonView" destination="1iU-Gg-LCg" id="lAk-dN-yQi"/>
-                        <outlet property="loadSpinning" destination="QCk-aH-pWS" id="X96-is-IFv"/>
+                        <outlet property="loadSpinning" destination="QCk-aH-pWS" id="YxD-Fz-jtu"/>
                         <outlet property="recipeTableView" destination="NQF-NC-2OH" id="VMN-BC-p6T"/>
+                        <segue destination="P2b-bC-zaB" kind="push" id="Sho-1D-KQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-GE-apZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163" y="-2301"/>
+            <point key="canvasLocation" x="179" y="-2293"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CvB-JI-I0d">
@@ -785,24 +818,24 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="bottom" secondItem="XOi-ce-WX9" secondAttribute="bottom" type="default" id="64e-fY-340"/>
+                            <constraint firstAttribute="trailing" secondItem="y74-23-4UP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="G7g-hT-jKu"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="GMW-9f-c8o"/>
                             <constraint firstItem="ffv-m5-8FH" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Lzs-7M-CJq"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="ffv-m5-8FH" secondAttribute="centerX" type="default" id="Nvd-si-oGi"/>
+                            <constraint firstItem="n2p-fT-g31" firstAttribute="centerX" secondItem="y74-23-4UP" secondAttribute="centerX" type="default" id="R5W-ZL-Nfr"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Sag-aq-ywl"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="10" id="VwO-yV-xe3"/>
-                            <constraint firstItem="y74-23-4UP" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="WEC-pB-PJg"/>
                             <constraint firstItem="ffv-m5-8FH" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" type="default" id="bnW-ZL-Xge"/>
                             <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="xRi-wy-OWF" secondAttribute="centerX" type="default" id="bqF-Xf-hxR"/>
+                            <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="73" id="cEO-mK-sl1"/>
                             <constraint firstItem="n2p-fT-g31" firstAttribute="top" secondItem="y74-23-4UP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="djB-mt-2bq"/>
-                            <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="ffv-m5-8FH" secondAttribute="bottom" type="default" id="el9-72-r9s"/>
-                            <constraint firstItem="n2p-fT-g31" firstAttribute="centerX" secondItem="wMj-8Y-6dt" secondAttribute="centerX" type="default" id="fjU-7n-5ci"/>
                             <constraint firstAttribute="bottom" secondItem="wMj-8Y-6dt" secondAttribute="bottom" constant="12" id="gdh-nH-mEI"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="jd0-d9-hgZ"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="130" id="lFX-ug-yFa"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="mW2-WA-dkK"/>
                             <constraint firstItem="ffv-m5-8FH" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="pPA-U3-7Ao"/>
-                            <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="338" id="reT-H6-agj"/>
-                            <constraint firstItem="xRi-wy-OWF" firstAttribute="centerX" secondItem="ffv-m5-8FH" secondAttribute="centerX" type="default" id="sZM-zK-XRN"/>
-                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="245" id="xxc-bM-CQD"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="151" id="tRO-RD-AoW"/>
+                            <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="317" id="vdF-XF-nVd"/>
+                            <constraint firstItem="2y3-MX-GTy" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="9" id="xu5-Pv-xGN"/>
+                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="266" id="zrW-01-yoD"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="H0Q-or-mqy" appends="YES" id="X3B-3h-xhb"/>
@@ -907,7 +940,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ol2-ms-dGP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203" y="-1348"/>
+            <point key="canvasLocation" x="219" y="-1348"/>
         </scene>
         <!--Video Embed - Video Link-->
         <scene sceneID="SLG-F4-jfb">
@@ -934,19 +967,29 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="464" id="kp4-H3-ejf"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="sYZ-Su-ucG" id="PAA-bh-aU3"/>
+                                </connections>
                             </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWh-Uy-oc8">
                                 <items>
-                                    <navigationItem title="Title" id="Kfr-gP-MnB">
+                                    <navigationItem title="Recipe Video" id="Kfr-gP-MnB">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Oth-I0-289">
                                             <connections>
                                                 <action selector="backHandler:" destination="sYZ-Su-ucG" id="ThS-Rf-PAF"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="XsT-MA-DIi"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="XsT-MA-DIi">
+                                            <connections>
+                                                <action selector="refreshHandler:" destination="sYZ-Su-ucG" id="EXJ-dK-lPQ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="toW-g8-4xY">
+                                <color key="color" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
@@ -957,8 +1000,10 @@
                             <constraint firstItem="gKh-sn-UVr" firstAttribute="trailing" secondItem="NYf-eb-thV" secondAttribute="trailing" type="default" id="Caf-iM-QCk"/>
                             <constraint firstItem="ish-cp-zS4" firstAttribute="centerX" secondItem="gKh-sn-UVr" secondAttribute="centerX" type="default" id="Hdk-0o-zuz"/>
                             <constraint firstItem="OWh-Uy-oc8" firstAttribute="trailing" secondItem="NYf-eb-thV" secondAttribute="trailing" type="default" id="fEr-NR-PIK"/>
+                            <constraint firstItem="toW-g8-4xY" firstAttribute="centerX" secondItem="ish-cp-zS4" secondAttribute="centerX" type="default" id="fN4-tP-1KH"/>
                             <constraint firstItem="Rr0-2p-LAk" firstAttribute="trailing" secondItem="NYf-eb-thV" secondAttribute="trailing" type="default" id="p94-i7-wGW"/>
                             <constraint firstAttribute="bottom" secondItem="ish-cp-zS4" secondAttribute="bottom" constant="12" id="s1r-uQ-b2s"/>
+                            <constraint firstItem="toW-g8-4xY" firstAttribute="top" secondItem="NYf-eb-thV" secondAttribute="top" constant="257" id="v0m-RL-pRT"/>
                             <constraint firstItem="Rr0-2p-LAk" firstAttribute="top" secondItem="OWh-Uy-oc8" secondAttribute="bottom" type="default" id="vHp-sv-wr1"/>
                             <constraint firstItem="OWh-Uy-oc8" firstAttribute="leading" secondItem="NYf-eb-thV" secondAttribute="leading" type="default" id="xXI-w6-QqT"/>
                         </constraints>
@@ -971,7 +1016,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="thumbnailView" destination="Rr0-2p-LAk" id="Mjt-DD-n02"/>
+                        <outlet property="loadSpinning" destination="toW-g8-4xY" id="7o9-Tr-qIf"/>
+                        <outlet property="thumbnailView" destination="Rr0-2p-LAk" id="VZ5-eS-YEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhE-gD-YAG" sceneMemberID="firstResponder"/>
@@ -1070,7 +1116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8D-Et-CpM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="-1348"/>
+            <point key="canvasLocation" x="1027" y="-1340"/>
         </scene>
         <!--Having View Controller - Have-->
         <scene sceneID="QRl-TC-8TX">
@@ -1548,7 +1594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8s-bU-i2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="-2301"/>
+            <point key="canvasLocation" x="763" y="-2301"/>
         </scene>
         <!--Add Recipe View Controller - Web Screen-->
         <scene sceneID="9wy-dM-a9Y">
@@ -1642,6 +1688,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRecipeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
@@ -1702,6 +1749,9 @@
         <class className="Psample" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Psample.h"/>
             <relationships>
+                <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="setChecked:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="recipeTableView" candidateClass="UITableView"/>
@@ -1714,14 +1764,25 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RatingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="tapHideKeyBoard:"/>
                 <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="starRatingView" candidateClass="RatingView"/>
+            </relationships>
+        </class>
+        <class className="RecipeCustomCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecipeCustomCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cellImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cellRecipeName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cellRecipeRating" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="VideoEmbed" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoEmbed.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="thumbnailView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -1744,6 +1805,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="g64-Ln-QWR"/>
+        <segue reference="9gs-bQ-JUX"/>
     </inferredMetricsTieBreakers>
 </document>

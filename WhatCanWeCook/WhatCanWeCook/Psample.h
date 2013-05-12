@@ -10,15 +10,17 @@
 #import "Common.h"
 #import "RecipeParser.h"
 #import "Recipe.h"
+#import "RecipeCustomCell.h"
 
 @interface Psample : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     
     __weak IBOutlet UIView *buttonView;
     __weak IBOutlet UITableView *recipeTableView;
-    __weak IBOutlet UIActivityIndicatorView *loadSpinning;
 }
 
 @property (strong, nonatomic) NSMutableArray *recipeList;
 @property (strong, nonatomic) UIButton *menuBT;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadSpinning;
+- (IBAction)backHandler:(UIBarButtonItem *)sender;
 
 @end

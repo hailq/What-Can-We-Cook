@@ -29,6 +29,7 @@
     [super viewDidLoad];
 	
     NSString *embedHTML = @"<html><head>\
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1 \">\
     <style type=\"text/css\">\
     body {\
     background-color:rgb(255,254,236);\
@@ -36,7 +37,7 @@
     }\
     </style>\
     </head><body>\
-    <iframe type=\"text/html\" width=\"100%\" src=\"http://www.youtube.com/embed/%@\" frameborder=\"0\"></iframe>\
+    <iframe height=\"400\" src=\"http://www.youtube.com/embed/%@\" frameborder=\"0\"></iframe>\
     </body></html>";
     NSString* html = [NSString stringWithFormat:embedHTML, @"2xtqVECh0Js"];
     
@@ -59,4 +60,28 @@
 - (IBAction)backHandler:(UIBarButtonItem *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)refreshHandler:(UIBarButtonItem *)sender {
+    [thumbnailView stopLoading];
+    [thumbnailView reload];
+}
+
+#pragma mark -
+#pragma mark Web View Delegate Method
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.loadSpinning stopAnimating];
+}
+
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [self.loadSpinning startAnimating];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Load add recipe error = %@",error);
+    [self.loadSpinning stopAnimating];
+}
+
 @end

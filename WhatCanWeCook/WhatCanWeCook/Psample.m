@@ -15,6 +15,7 @@
 
 @synthesize recipeList = recipeList_;
 @synthesize menuBT;
+@synthesize loadSpinning;
 
 - (void)viewDidLoad
 {
@@ -47,7 +48,8 @@
     [self.view addSubview:self.menuBT];
     //End sliding menu
     
-    [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(requestDataFromServer) userInfo:nil repeats:NO];
+    [loadSpinning setHidesWhenStopped:YES];
+    [self requestDataFromServer];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -59,7 +61,6 @@
 -(void)requestDataFromServer
 {
     [self.view setUserInteractionEnabled:NO];
-    
     /* Parameters */
 //    NSDictionary *params =
     
@@ -67,15 +68,18 @@
     NSURL *url = [NSURL URLWithString:requestString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+
     
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response,
                             NSData *data,
                             NSError *error){
+        
         if ([data length] > 0 && error == nil) {
             
             NSString *xml = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             
             RecipeParser *parser = [[RecipeParser alloc] init];
+            
             [parser startParser:xml];
         
             if ([[parser recipeArray] count] > 0) {
@@ -91,17 +95,36 @@
         {
             NSLog(@"Error happend = %@",error);
         }
+     dispatch_async(dispatch_get_main_queue(), ^{
         [self finishedLoadingData];
-        ;
+    });
+        
     }];
 }
 
 - (void)finishedLoadingData
 {
-    [recipeTableView reloadData];
-    [recipeTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    
     [self.view setUserInteractionEnabled:YES];
+    
+    /*
+    int numberOfRows = [recipeTableView numberOfRowsInSection:0];
+
+    for (int i = 0; i < [recipeList_ count]; i++) {
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(numberOfRows + i ) inSection:0];
+        
+        NSArray *indexArray = [NSArray arrayWithObject:indexPath];
+        
+        [recipeTableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationTop];
+    }
+    */
+    
+    [recipeTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    [recipeTableView reloadData];
     [loadSpinning stopAnimating];
+    
+    
     
 }
 
@@ -117,6 +140,10 @@
     } else {
         [sender setSelected:NO];
     }
+}
+
+- (IBAction)backHandler:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)revealMenu:(id)sender
@@ -139,16 +166,16 @@
 {
     static NSString *CellIdentifier = @"RecipeCellIdentifier";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    RecipeCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+        cell = [[RecipeCustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [recipeList_[indexPath.row] recipeName];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %.1f",[recipeList_[indexPath.row] recipeRanking]];
-    cell.imageView.image = [UIImage imageWithData:[recipeList_[indexPath.row]recipeImage]];
+    cell.cellRecipeName.text = [recipeList_[indexPath.row] recipeName];
+    cell.cellRecipeRating.text = [NSString stringWithFormat:@"Rating: %.1f",[recipeList_[indexPath.row] recipeRanking]];
+    cell.cellImageView.image = [UIImage imageWithData:[recipeList_[indexPath.row]recipeImage]];
     return cell;
 }
 

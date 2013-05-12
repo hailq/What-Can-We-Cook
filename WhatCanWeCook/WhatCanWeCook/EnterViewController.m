@@ -57,7 +57,6 @@
     [menuBT setBackgroundImage:[UIImage imageNamed:@"menuButton.png"] forState:UIControlStateNormal];
     [menuBT addTarget:self action:@selector(revealMenu:) forControlEvents:UIControlEventTouchUpInside];
     
-    
     [self.view addSubview:self.menuBT];
     // End sliding menu
 
@@ -131,8 +130,6 @@
      */
 
     UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Result"];
-    
-  //  [self.slidingViewController pushViewController:viewController animated:YES];
 }
 
 @end

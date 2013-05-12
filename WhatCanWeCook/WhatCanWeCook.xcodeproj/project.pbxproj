@@ -43,6 +43,9 @@
 		A559D115173E3468002983AA /* greyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A559D109173E3468002983AA /* greyButton@2x.png */; };
 		A559D116173E3468002983AA /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A559D10A173E3468002983AA /* orangeButton.png */; };
 		A559D117173E3468002983AA /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A559D10B173E3468002983AA /* orangeButton@2x.png */; };
+		A559D11D173FA4B1002983AA /* RecipeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A559D11C173FA4B1002983AA /* RecipeCustomCell.m */; };
+		A559D121173FEF54002983AA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A559D120173FEF54002983AA /* icon.png */; };
+		A559D123173FEFB1002983AA /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A559D122173FEFB1002983AA /* icon2x.png */; };
 		A58707CA172F3A4100EA8681 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707C7172F3A4100EA8681 /* ECSlidingViewController.m */; };
 		A58707CB172F3A4100EA8681 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707C9172F3A4100EA8681 /* UIImage+ImageWithUIView.m */; };
 		A58707D1172F3B4400EA8681 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707D0172F3B4400EA8681 /* MenuViewController.m */; };
@@ -118,6 +121,10 @@
 		A559D109173E3468002983AA /* greyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greyButton@2x.png"; sourceTree = "<group>"; };
 		A559D10A173E3468002983AA /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
 		A559D10B173E3468002983AA /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
+		A559D11B173FA4B1002983AA /* RecipeCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCustomCell.h; sourceTree = "<group>"; };
+		A559D11C173FA4B1002983AA /* RecipeCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCustomCell.m; sourceTree = "<group>"; };
+		A559D120173FEF54002983AA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A559D122173FEFB1002983AA /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
 		A58707C6172F3A4100EA8681 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
 		A58707C7172F3A4100EA8681 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
 		A58707C8172F3A4100EA8681 /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
@@ -232,6 +239,8 @@
 		87F99088171023C0002F38C2 = {
 			isa = PBXGroup;
 			children = (
+				A559D122173FEFB1002983AA /* icon2x.png */,
+				A559D120173FEF54002983AA /* icon.png */,
 				87AE7E39173173740027DD69 /* Common.h */,
 				87AE7E3A173173740027DD69 /* Common.m */,
 				870224B4171098CF005818C4 /* Images */,
@@ -334,6 +343,8 @@
 				D5903B35171F88CB00ABC4B3 /* Precipe.m */,
 				D5903B36171F88CB00ABC4B3 /* Psample.h */,
 				D5903B37171F88CB00ABC4B3 /* Psample.m */,
+				A559D11B173FA4B1002983AA /* RecipeCustomCell.h */,
+				A559D11C173FA4B1002983AA /* RecipeCustomCell.m */,
 			);
 			name = Result;
 			sourceTree = "<group>";
@@ -454,6 +465,8 @@
 				A559D115173E3468002983AA /* greyButton@2x.png in Resources */,
 				A559D116173E3468002983AA /* orangeButton.png in Resources */,
 				A559D117173E3468002983AA /* orangeButton@2x.png in Resources */,
+				A559D121173FEF54002983AA /* icon.png in Resources */,
+				A559D123173FEFB1002983AA /* icon2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +502,7 @@
 				87AE7E35173166440027DD69 /* XMLElement.m in Sources */,
 				87AE7E3817316C060027DD69 /* XMLParser.m in Sources */,
 				87AE7E3B173173750027DD69 /* Common.m in Sources */,
+				A559D11D173FA4B1002983AA /* RecipeCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
