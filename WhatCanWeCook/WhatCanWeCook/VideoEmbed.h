@@ -16,6 +16,4 @@
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 
-- (IBAction)refreshHandler:(UIBarButtonItem *)sender;
-
 @end

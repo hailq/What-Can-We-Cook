@@ -62,11 +62,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)refreshHandler:(UIBarButtonItem *)sender {
-    [thumbnailView stopLoading];
-    [thumbnailView reload];
-}
-
 #pragma mark -
 #pragma mark Web View Delegate Method
 - (void)webViewDidFinishLoad:(UIWebView *)webView

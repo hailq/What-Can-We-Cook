@@ -307,6 +307,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitTap:" destination="P2b-bC-zaB" eventType="touchUpInside" id="7ST-wO-E7L"/>
                                     <segue destination="lBs-Us-ZQy" kind="push" identifier="EnterToResultSegue" id="jta-pm-G8c"/>
                                 </connections>
                             </button>
@@ -970,11 +971,6 @@
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Oth-I0-289">
                                             <connections>
                                                 <action selector="backHandler:" destination="sYZ-Su-ucG" id="ThS-Rf-PAF"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="XsT-MA-DIi">
-                                            <connections>
-                                                <action selector="refreshHandler:" destination="sYZ-Su-ucG" id="EXJ-dK-lPQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1698,7 +1694,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRecipeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
@@ -1709,7 +1704,12 @@
         <class className="EnterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EnterViewController.h"/>
             <relationships>
+                <relationship kind="action" name="checkCategorySelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkCountrySelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkSortSelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="submitTap:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="outlet" name="categoryView1" candidateClass="UIView"/>
                 <relationship kind="outlet" name="categoryView2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="countryView" candidateClass="UIView"/>
@@ -1747,7 +1747,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Precipe.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="imageview" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
             </relationships>
@@ -1756,9 +1755,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Psample.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="sortRating:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sortTime:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnRating" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnTime" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
@@ -1775,7 +1771,6 @@
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="submitRating:"/>
-                <relationship kind="action" name="tapHideKeyBoard:"/>
                 <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="starRatingView" candidateClass="RatingView"/>
                 <relationship kind="outlet" name="submitSpinning" candidateClass="UIActivityIndicatorView"/>
@@ -1794,7 +1789,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoEmbed.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="thumbnailView" candidateClass="UIWebView"/>
             </relationships>
@@ -1819,6 +1813,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9gs-bQ-JUX"/>
+        <segue reference="g64-Ln-QWR"/>
     </inferredMetricsTieBreakers>
 </document>
