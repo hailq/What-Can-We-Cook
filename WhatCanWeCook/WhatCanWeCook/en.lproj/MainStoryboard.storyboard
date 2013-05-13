@@ -1705,7 +1705,12 @@
         <class className="EnterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EnterViewController.h"/>
             <relationships>
+                <relationship kind="action" name="checkCategorySelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkCountrySelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="checkSortSelected:" candidateClass="UIButton"/>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="submitTap:"/>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="outlet" name="categoryView1" candidateClass="UIView"/>
                 <relationship kind="outlet" name="categoryView2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="countryView" candidateClass="UIView"/>
@@ -1752,9 +1757,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Psample.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="sortRating:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sortTime:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnRating" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnTime" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
@@ -1812,6 +1814,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Yy4-Tj-6za"/>
+        <segue reference="9gs-bQ-JUX"/>
     </inferredMetricsTieBreakers>
 </document>

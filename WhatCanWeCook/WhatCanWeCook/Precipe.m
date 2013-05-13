@@ -85,6 +85,11 @@
             having.ingredientsArray = [[NSMutableArray alloc] init];
         }
         [having.ingredientsArray addObjectsFromArray:self.ingredientsArray];
+        
+        if (having.userIngredients == nil) {
+            having.userIngredients = [[NSMutableArray alloc] init];
+        }
+        [having.userIngredients addObjectsFromArray:self.userIngredients];
     }
     
     else if ([[segue identifier] isEqualToString:@"DetailToMissingSegue"])
@@ -95,6 +100,11 @@
             missing.ingredientsArray = [[NSMutableArray alloc] init];
         }
         [missing.ingredientsArray addObjectsFromArray:self.ingredientsArray];
+        
+        if (missing.userIngredients == nil) {
+            missing.userIngredients = [[NSMutableArray alloc] init];
+        }
+        [missing.userIngredients addObjectsFromArray:self.userIngredients];
     }
 }
 

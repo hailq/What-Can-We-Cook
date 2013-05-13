@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface MissingViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *missingArray;
+}
 
+@property (strong, nonatomic) NSMutableArray *userIngredients;
 @property (strong, nonatomic) NSMutableArray *ingredientsArray;
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender;

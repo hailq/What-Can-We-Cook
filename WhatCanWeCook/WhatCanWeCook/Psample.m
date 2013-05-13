@@ -212,6 +212,12 @@
             recipeDetail.ingredientsArray = [[NSMutableArray alloc] init];
         }
         [recipeDetail.ingredientsArray addObjectsFromArray:recipe.ingredients];
+        
+        if (recipeDetail.userIngredients == nil) {
+            recipeDetail.userIngredients = [[NSMutableArray alloc] init];
+        }
+        [recipeDetail.userIngredients addObjectsFromArray:[self.ingredientsRequest componentsSeparatedByString:@","]];
+        
     }
 }
 

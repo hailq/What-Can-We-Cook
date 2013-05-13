@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSArray *havingArray;
 @property (strong, nonatomic) NSMutableArray *ingredientsArray;
+@property (strong, nonatomic) NSMutableArray *userIngredients;
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 
