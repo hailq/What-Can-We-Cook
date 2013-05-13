@@ -14,11 +14,13 @@
 
 @property (weak, nonatomic) UIImage *img;
 @property (weak, nonatomic) NSString *introString;
+
 @property (strong, nonatomic) UIButton *menuBT;
 @property (strong, nonatomic) NSString *recipeName;
 @property (strong, nonatomic) NSString *direction;
 @property (strong, nonatomic) NSString *webLink;
 @property (strong, nonatomic) NSString *videoLink;
+@property (strong, nonatomic) NSMutableArray *ingredientsArray;
 
 
 @end

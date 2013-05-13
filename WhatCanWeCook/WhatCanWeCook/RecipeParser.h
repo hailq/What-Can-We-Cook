@@ -10,11 +10,13 @@
 #import "Common.h"
 #import "XMLParser.h"
 #import "Recipe.h"
+#import "Ingredient.h"
 
 @interface RecipeParser : NSObject
 {
     @private XMLParser *parser;
     Recipe *recipe;
+    Ingredient *ingredient;
 }
 
 @property (strong,nonatomic) NSString *xmlString;

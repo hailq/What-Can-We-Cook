@@ -10,6 +10,9 @@
 
 @interface HavingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) NSArray *havingArray;
+@property (strong, nonatomic) NSMutableArray *ingredientsArray;
+
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 
 @end

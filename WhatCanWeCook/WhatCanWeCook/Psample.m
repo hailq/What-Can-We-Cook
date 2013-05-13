@@ -77,7 +77,7 @@
 
 -(void)requestDataFromServer
 {
-    [self.view setUserInteractionEnabled:NO];
+//    [self.view setUserInteractionEnabled:NO];
     /* Parameters */
 //    NSDictionary *params =
     
@@ -105,6 +105,7 @@
     requestString = [requestString stringByAppendingFormat:@"&countries=%@",countryString];
     //
     
+    NSLog(@"Request string: %@", requestString);
     
     NSURL *url = [NSURL URLWithString:requestString];
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
@@ -207,6 +208,10 @@
         recipeDetail.webLink = recipe.webLink;
         recipeDetail.videoLink = recipe.videoLink;
         recipeDetail.direction = recipe.directions;
+        if (recipeDetail.ingredientsArray == nil) {
+            recipeDetail.ingredientsArray = [[NSMutableArray alloc] init];
+        }
+        [recipeDetail.ingredientsArray addObjectsFromArray:recipe.ingredients];
     }
 }
 

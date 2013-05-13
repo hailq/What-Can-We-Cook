@@ -29,6 +29,7 @@
         
         /* Init value */
         recipe = nil;
+        ingredient = nil;
         [self recipeArray];
         XMLElement *currentElemt = parser.rootElement;
         
@@ -66,6 +67,39 @@
                         } else if ([tagName isEqualToString:kRecipeImage]) {
                             NSURL *imageUrl = [NSURL URLWithString:e.text];
                             recipe.recipeImage = [NSData dataWithContentsOfURL:imageUrl];
+                        }
+                        /* Handle ingredint object */
+                        else if ([tagName isEqualToString:kIngredientRootTag])
+                        {
+                            recipe.ingredients = [[NSMutableArray alloc] init];
+                            for (XMLElement *ingredientElement in e.subElements) {
+                                if ([ingredientElement.name isEqualToString:kIngredientTag]) {
+                                    if (ingredient != nil) {
+                                        [recipe.ingredients addObject:ingredient];
+                                    }
+                                    
+                                    ingredient = [Ingredient new];
+                                    
+                                    for (XMLElement *ingredientAttr in ingredientElement.subElements) {
+                                        NSString *attrName = ingredientAttr.name;
+                                        
+                                        if ([attrName isEqualToString:kIngredientAmount]) {
+                                            ingredient.ingredientAmount = [ingredientAttr.text floatValue];
+                                        } else if ([attrName isEqualToString:kIngredientMeasure])
+                                        {
+                                            ingredient.ingredientMeasure = ingredientAttr.text;
+                                            
+                                        } else if ([attrName isEqualToString:kIngredientType]){
+                                            
+                                            ingredient.ingredientType = ingredientAttr.text;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            if (ingredient != nil) {
+                                [recipe.ingredients addObject:ingredient];
+                            }
                         }
                     }
                 }

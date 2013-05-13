@@ -18,7 +18,7 @@
     @property(copy) NSString *webLink;
     @property(copy) NSString *videoLink;
     @property(copy) NSString *directions;
-    @property(copy) NSArray  *ingredients;
+    @property(retain, nonatomic) NSMutableArray  *ingredients;
     @property(copy) NSData   *recipeImage;
 
 @end

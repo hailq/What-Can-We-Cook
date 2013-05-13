@@ -10,5 +10,7 @@
 
 @interface MissingViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) NSMutableArray *ingredientsArray;
+
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
 @end

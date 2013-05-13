@@ -8,12 +8,16 @@
 
 #import "HavingViewController.h"
 #import "HavingTableViewCell.h"
+#import "Recipe.h"
 
 @interface HavingViewController ()
 
 @end
 
+
 @implementation HavingViewController
+
+@synthesize havingArray = havingArray_;
 
 - (void)viewDidLoad
 {
@@ -32,7 +36,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return [havingArray_ count];
 }
 
 #pragma mark Table View Delegate Methods
@@ -45,6 +49,8 @@
     if (cell == nil) {
         cell = [[HavingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
+    
+    //Recipe *recipe = (Recipe*)[havingArray_ objectAtIndex:[indexPath.row]];
     
     switch (indexPath.row) {
         case 0:

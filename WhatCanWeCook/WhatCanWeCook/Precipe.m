@@ -11,6 +11,8 @@
 #import "MenuViewController.h"
 #import "VideoEmbed.h"
 #import "ViewController.h"
+#import "HavingViewController.h"
+#import "MissingViewController.h"
 
 @implementation Precipe
 
@@ -73,6 +75,26 @@
     {
         ViewController *directionView = segue.destinationViewController;
             directionView.direction = self.direction;
+    }
+    
+    else if ([[segue identifier] isEqualToString:@"DetailToHavingSegue"])
+    {
+        HavingViewController *having = segue.destinationViewController;
+        
+        if (having.ingredientsArray == nil) {
+            having.ingredientsArray = [[NSMutableArray alloc] init];
+        }
+        [having.ingredientsArray addObjectsFromArray:self.ingredientsArray];
+    }
+    
+    else if ([[segue identifier] isEqualToString:@"DetailToMissingSegue"])
+    {
+        MissingViewController *missing = segue.destinationViewController;
+        
+        if (missing.ingredientsArray == nil) {
+            missing.ingredientsArray = [[NSMutableArray alloc] init];
+        }
+        [missing.ingredientsArray addObjectsFromArray:self.ingredientsArray];
     }
 }
 

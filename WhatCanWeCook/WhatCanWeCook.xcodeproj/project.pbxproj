@@ -50,6 +50,7 @@
 		A58707CB172F3A4100EA8681 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707C9172F3A4100EA8681 /* UIImage+ImageWithUIView.m */; };
 		A58707D1172F3B4400EA8681 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707D0172F3B4400EA8681 /* MenuViewController.m */; };
 		A58707D4172F435E00EA8681 /* initViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58707D3172F435E00EA8681 /* initViewController.m */; };
+		A5D5E9CF1740C84A001E4AC1 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D5E9CE1740C84A001E4AC1 /* Ingredient.m */; };
 		A5F4812F171FF4890004264E /* HavingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F48128171FF4890004264E /* HavingTableViewCell.m */; };
 		A5F48130171FF4890004264E /* HavingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812A171FF4890004264E /* HavingViewController.m */; };
 		A5F48132171FF4890004264E /* MissingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F4812E171FF4890004264E /* MissingViewController.m */; };
@@ -133,6 +134,8 @@
 		A58707D0172F3B4400EA8681 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		A58707D2172F435E00EA8681 /* initViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initViewController.h; sourceTree = "<group>"; };
 		A58707D3172F435E00EA8681 /* initViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initViewController.m; sourceTree = "<group>"; };
+		A5D5E9CD1740C84A001E4AC1 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
+		A5D5E9CE1740C84A001E4AC1 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
 		A5F48127171FF4890004264E /* HavingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavingTableViewCell.h; sourceTree = "<group>"; };
 		A5F48128171FF4890004264E /* HavingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavingTableViewCell.m; sourceTree = "<group>"; };
 		A5F48129171FF4890004264E /* HavingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavingViewController.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				87B2178D1730D3BE008778CE /* Recipe.m */,
 				87AE7E33173166440027DD69 /* XMLElement.h */,
 				87AE7E34173166440027DD69 /* XMLElement.m */,
+				A5D5E9CD1740C84A001E4AC1 /* Ingredient.h */,
+				A5D5E9CE1740C84A001E4AC1 /* Ingredient.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 				87AE7E3817316C060027DD69 /* XMLParser.m in Sources */,
 				87AE7E3B173173750027DD69 /* Common.m in Sources */,
 				A559D11D173FA4B1002983AA /* RecipeCustomCell.m in Sources */,
+				A5D5E9CF1740C84A001E4AC1 /* Ingredient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
