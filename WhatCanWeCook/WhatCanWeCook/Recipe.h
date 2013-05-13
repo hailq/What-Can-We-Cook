@@ -11,12 +11,12 @@
 @interface Recipe : NSObject
 
     @property int recipeId;
+    @property int cookTime;
     @property float recipeRanking;
 
     @property(copy) NSString *recipeName;
     @property(copy) NSString *webLink;
     @property(copy) NSString *videoLink;
-    @property(copy) NSString *cookTime;
     @property(copy) NSString *directions;
     @property(copy) NSArray  *ingredients;
     @property(copy) NSData   *recipeImage;

@@ -10,9 +10,14 @@
 
 @interface RecipeCustomCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
-@property (weak, nonatomic) IBOutlet UILabel *cellRecipeName;
-@property (weak, nonatomic) IBOutlet UILabel *cellRecipeRating;
+@property (retain, nonatomic) IBOutlet UIImageView *cellImageView;
+@property (retain, nonatomic) IBOutlet UILabel *cellRecipeName;
+@property (retain, nonatomic) IBOutlet UILabel *cellRecipeRating;
+@property (retain, nonatomic) IBOutlet UILabel *cellRecipeTime;
+
+@property (strong, nonatomic) NSString *recipeName;
+@property int cookTime;
+@property float rating;
 
 
 @end

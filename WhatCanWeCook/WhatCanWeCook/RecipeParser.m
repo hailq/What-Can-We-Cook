@@ -56,7 +56,7 @@
                         } else if ([tagName isEqualToString:kRecipeRatingTag]){
                             recipe.recipeRanking = [e.text floatValue];
                         } else if ([tagName isEqualToString:kRecipeTimeTag]) {
-                            recipe.cookTime = e.text;
+                            recipe.cookTime = [e.text intValue];
                         } else if ([tagName isEqualToString:kRecipeWebTag]) {
                             recipe.webLink = e.text;
                         } else if ([tagName isEqualToString:kRecipeVideoTag]) {

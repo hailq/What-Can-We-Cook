@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad
 {
-    [label setText:introString];
+    [label setText:self.recipeName];
     [imageview setImage:img];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

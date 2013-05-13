@@ -16,7 +16,6 @@
 
 @implementation EnterViewController
 
-@synthesize sort = sort_;
 @synthesize country = country_;
 @synthesize category = category_;
 @synthesize menuBT;
@@ -33,15 +32,9 @@
     categoryArray = [[NSArray alloc] initWithObjects:@"Appetizers",@"Beverages",@"Breakfast",@"Desserts",@"Dinner",@"Lunch", nil];
     
     /* Initialize array */
-    sort_ = [[NSMutableArray alloc] init];
+    self.sortKind = 0;
     country_ = [[NSMutableArray alloc] init];
     category_ = [[NSMutableArray alloc] init];
-    
-    filterArray = [NSMutableArray new];
-    
-    for (int i = 1; i <= 11; i++) {
-        [filterArray addObject: [self.view viewWithTag:i]];
-    }
     
     /* Sliding Menu */
     self.view.layer.shadowOpacity = 0.75f;
@@ -84,17 +77,18 @@
                 UIButton *button = (UIButton *)view;
                 [button setSelected:NO];
             }
-        }   
-        
+        }
         [sender setSelected:YES];//Set sender checked
-
-        [sort_ removeAllObjects];
-        [sort_ addObject:[sender titleForState:UIControlStateSelected]];
     }
     else
     {
         [sender setSelected:NO];
-        [sort_ removeObject:[sender titleForState:UIControlStateSelected]];
+    }
+    
+    if ([[sender titleForState:UIControlStateSelected] isEqualToString:@"Rating"]) {
+        self.sortKind = 0;
+    } else {
+        self.sortKind = 1;
     }
 }
 
@@ -142,9 +136,25 @@
 {
     if ( [[segue identifier] isEqualToString:@"EnterToResultSegue"])
     {
-        Psample *resultViewController = segue.destinationViewController;
-
-        resultViewController.panGesture = panGesture_;
+        Psample *resultView = segue.destinationViewController;
+        
+        if ([country_ count ] > 0)
+        {
+            if (resultView.countriesRequest == nil) {
+                resultView.countriesRequest = [[NSMutableArray alloc] init];
+            }
+            [resultView.countriesRequest addObjectsFromArray:country_];
+        }
+        
+        if ([category_ count] > 0) {
+            if (resultView.categoriesRequest == nil) {
+                resultView.categoriesRequest = [[NSMutableArray alloc] init];
+            }
+            [resultView.categoriesRequest addObjectsFromArray:category_];
+        }
+        
+        resultView.ingredientsRequest = self.txtIngredients.text;
+        resultView.sortKind = self.sortKind;
     }
 }
 

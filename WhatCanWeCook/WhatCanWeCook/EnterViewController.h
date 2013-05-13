@@ -28,9 +28,9 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *txtIngredients;
-@property (strong, nonatomic) NSMutableArray *sort;
 @property (strong, nonatomic) NSMutableArray *country;
 @property (strong, nonatomic) NSMutableArray *category;
+@property int sortKind;
 @property (strong, nonatomic) UIButton *menuBT;
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 

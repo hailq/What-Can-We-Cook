@@ -17,6 +17,7 @@
 @synthesize menuBT;
 @synthesize loadSpinning;
 @synthesize panGesture = panGesture_;
+@synthesize noRecipe = lblNoRecipe;
 
 - (void)viewDidLoad
 {
@@ -55,6 +56,15 @@
      
     //End sliding menu
     
+    if (self.sortKind != 1) {
+        [self.btnRating setSelected:YES];
+        [self.btnTime setSelected:NO];
+    } else {
+        [self.btnRating setSelected:NO];
+        [self.btnTime setSelected:YES];
+    }
+    
+    [lblNoRecipe setHidden:YES];
     [loadSpinning setHidesWhenStopped:YES];
     [self requestDataFromServer];
 }
@@ -72,8 +82,35 @@
 //    NSDictionary *params =
     
     NSString *requestString = kBaseUrl;
+    /* Appeding parameter */
+    NSString *categoryString = @"";
+    if ([self.categoriesRequest count] > 0) {
+        categoryString = [self.categoriesRequest objectAtIndex:0];
+        for (int i = 1; i < [self.categoriesRequest count]; i++) {
+           categoryString = [categoryString stringByAppendingFormat:@",%@",[self.categoriesRequest objectAtIndex:i]];
+        }
+    }
+    
+    NSString *countryString = @"";
+    if ([self.countriesRequest count] > 0) {
+        countryString = [self.countriesRequest objectAtIndex:0];
+        for (int i = 1; i < [self.countriesRequest count]; i++) {
+           countryString = [countryString stringByAppendingFormat:@",%@",[self.countriesRequest objectAtIndex:i]];
+        }
+    }
+    
+    
+    requestString = [requestString stringByAppendingFormat:@"?ingredients=%@",self.ingredientsRequest];
+    requestString = [requestString stringByAppendingFormat:@"&categories=%@",categoryString];
+    requestString = [requestString stringByAppendingFormat:@"&countries=%@",countryString];
+    //
+    
+    
     NSURL *url = [NSURL URLWithString:requestString];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    [urlRequest setTimeoutInterval:30.0f];
+    [urlRequest setHTTPMethod:@"GET"];
+    
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 
     
@@ -113,7 +150,6 @@
 {
     
     [self.view setUserInteractionEnabled:YES];
-    
     /*
     int numberOfRows = [recipeTableView numberOfRowsInSection:0];
 
@@ -126,13 +162,34 @@
         [recipeTableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationTop];
     }
     */
-    
-    [recipeTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    [self sortRecipe];
+    if ([recipeList_ count] > 0) {
+        [recipeTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    } else {
+        [lblNoRecipe setHidden:NO];
+    }
     [recipeTableView reloadData];
     [loadSpinning stopAnimating];
+
+}
+
+-(void)sortRecipe
+{
+    if (self.sortKind == 1) {
+        [recipeList_ sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            int first = [(Recipe*)obj1 cookTime];
+            int second = [(Recipe*)obj2 cookTime];
+            return first > second;
+        }];
+    }//Sort cook time
     
-    
-    
+    else {
+        [recipeList_ sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            int first = [(Recipe*)obj1 recipeRanking];
+            int second = [(Recipe*)obj2 recipeRanking];
+            return first < second;
+        }];
+    }// Sort ranking
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -146,7 +203,7 @@
         Recipe *recipe = (Recipe*) [recipeList_ objectAtIndex:cellRow];
         
         recipeDetail.img = [UIImage imageWithData:recipe.recipeImage];
-        recipeDetail.label.text = recipe.recipeName;
+        recipeDetail.recipeName = recipe.recipeName;
         recipeDetail.webLink = recipe.webLink;
         recipeDetail.videoLink = recipe.videoLink;
         recipeDetail.direction = recipe.directions;
@@ -156,15 +213,20 @@
 #pragma mark -
 #pragma Button Event Handler
 
-- (IBAction)setChecked:(UIButton *)sender {
-    if (!sender.selected) {
-        for (UIButton *button in [buttonView subviews]) {
-            [button setSelected:NO];
-        }
-        [sender setSelected:YES];
-    } else {
-        [sender setSelected:NO];
-    }
+- (IBAction)sortRating:(UIButton *)sender {
+
+    [sender setSelected:YES];
+    [self.btnTime setSelected:NO];
+    self.sortKind = 0;
+    [self finishedLoadingData];
+}
+
+- (IBAction)sortTime:(UIButton *)sender {
+    
+    [self.btnRating setSelected:NO];
+    [sender setSelected:YES];
+    self.sortKind = 1;
+    [self finishedLoadingData];
 }
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender {
@@ -199,7 +261,11 @@
     }
     
     cell.cellRecipeName.text = [recipeList_[indexPath.row] recipeName];
-    cell.cellRecipeRating.text = [NSString stringWithFormat:@"Rating: %.1f",[recipeList_[indexPath.row] recipeRanking]];
+    
+    [cell.cellRecipeRating setText:[NSString stringWithFormat:@"Rating: %.1f",[recipeList_[indexPath.row] recipeRanking]]];
+    
+    [cell.cellRecipeTime setText: [NSString stringWithFormat:@"%d mins",[recipeList_[indexPath.row] cookTime]]];
+    
     cell.cellImageView.image = [UIImage imageWithData:[recipeList_[indexPath.row]recipeImage]];
     return cell;
 }
