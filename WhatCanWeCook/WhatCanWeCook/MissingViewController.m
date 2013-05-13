@@ -8,6 +8,7 @@
 
 #import "MissingViewController.h"
 #import "HavingTableViewCell.h"
+#import "Ingredient.h"
 
 @interface MissingViewController ()
 
@@ -28,6 +29,26 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    missingArray = [[NSMutableArray alloc] init];
+    
+    if (self.userIngredients != nil && self.ingredientsArray != nil) {
+        
+        for (Ingredient *ingredient in self.ingredientsArray) {
+            int isMissing = 1;
+            NSString *type = ingredient.ingredientType;
+            
+            for (NSString *user in self.userIngredients) {
+                
+                //Checking each ingredient of user in the ingredient array
+                if ([type rangeOfString:user].location != NSNotFound) {
+                    isMissing = 0;  //have user ingredient
+                }
+            }
+            if (isMissing) {
+                [missingArray addObject:ingredient]; //Add missing ingredient;
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +66,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [missingArray count];
 }
 
 #pragma mark Table View Delegate Methods
@@ -59,18 +80,12 @@
         cell = [[HavingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableIdentifier];
     }
     
-    switch (indexPath.row) {
-        case 0:
-            cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-            cell.amount.text = @"0.2";
-            cell.unit.text = @"kg";
-            cell.ingredient.text = @"beef";
-            break;
-        
-            
-        default:
-            break;
-    }
+    Ingredient *ingredient = [missingArray objectAtIndex:[indexPath row]];
+    
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+    cell.amount.text = [NSString stringWithFormat:@"%.1f", ingredient.ingredientAmount];
+    cell.unit.text = ingredient.ingredientMeasure;
+    cell.ingredient.text = ingredient.ingredientType;
     
     return cell;
 }

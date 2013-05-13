@@ -13,6 +13,7 @@
 #import "ViewController.h"
 #import "HavingViewController.h"
 #import "MissingViewController.h"
+#import "RatingViewController.h"
 
 @implementation Precipe
 
@@ -105,6 +106,11 @@
             missing.userIngredients = [[NSMutableArray alloc] init];
         }
         [missing.userIngredients addObjectsFromArray:self.userIngredients];
+    }
+    else if ([[segue identifier] isEqualToString:@"DetailToRateSegue"])
+    {
+        RatingViewController *rating = segue.destinationViewController;
+        rating.recipeId = self.recipeId;
     }
 }
 

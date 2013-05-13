@@ -9,6 +9,7 @@
 #import "HavingViewController.h"
 #import "HavingTableViewCell.h"
 #import "Recipe.h"
+#import "Ingredient.h"
 
 @interface HavingViewController ()
 
@@ -17,12 +18,27 @@
 
 @implementation HavingViewController
 
-@synthesize havingArray = havingArray_;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    havingArray = [[NSMutableArray alloc] init];
+    
+    if (self.userIngredients != nil && self.ingredientsArray != nil) {
+        
+        for (Ingredient *ingredient in self.ingredientsArray) {
+            NSString *type = ingredient.ingredientType;
+            
+            for (NSString *user in self.userIngredients) {
+                
+                //Checking each ingredient of user in the ingredient array
+                if ([type rangeOfString:user].location != NSNotFound) {
+                    [havingArray addObject:ingredient]; //have ingredient
+                }
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +52,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [havingArray_ count];
+    return [havingArray count];
 }
 
 #pragma mark Table View Delegate Methods
@@ -52,21 +68,12 @@
     
     //Recipe *recipe = (Recipe*)[havingArray_ objectAtIndex:[indexPath.row]];
     
-    switch (indexPath.row) {
-        case 0:
-            cell.amount.text = @"0.3";
-            cell.unit.text = @"kg";
-            cell.ingredient.text = @"rice";
-            break;
-        case 1:
-            cell.amount.text = @"2";
-            cell.unit.text = @" ";
-            cell.ingredient.text = @"eggs";
-            break;
-            
-        default:
-            break;
-    }
+    Ingredient *ingredient = [havingArray objectAtIndex:[indexPath row]];
+    
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+    cell.amount.text = [NSString stringWithFormat:@"%.1f", ingredient.ingredientAmount];
+    cell.unit.text = ingredient.ingredientMeasure;
+    cell.ingredient.text = ingredient.ingredientType;
     
     return cell;
 }

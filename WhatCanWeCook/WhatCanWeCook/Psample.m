@@ -186,8 +186,8 @@
     
     else {
         [recipeList_ sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            int first = [(Recipe*)obj1 recipeRanking];
-            int second = [(Recipe*)obj2 recipeRanking];
+            float first = [(Recipe*)obj1 recipeRanking];
+            float second = [(Recipe*)obj2 recipeRanking];
             return first < second;
         }];
     }// Sort ranking
@@ -217,6 +217,8 @@
             recipeDetail.userIngredients = [[NSMutableArray alloc] init];
         }
         [recipeDetail.userIngredients addObjectsFromArray:[self.ingredientsRequest componentsSeparatedByString:@","]];
+        
+        recipeDetail.recipeId = recipe.recipeId;
         
     }
 }

@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HavingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSMutableArray *havingArray;
+}
 
-@property (strong, nonatomic) NSArray *havingArray;
 @property (strong, nonatomic) NSMutableArray *ingredientsArray;
 @property (strong, nonatomic) NSMutableArray *userIngredients;
 

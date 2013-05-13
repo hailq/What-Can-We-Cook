@@ -11,9 +11,15 @@
 
 @interface RatingViewController : UIViewController <UITextViewDelegate, RatingViewDelegate>
 
+@property int recipeId;
+
 @property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 
 @property (weak, nonatomic) IBOutlet RatingView *starRatingView;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *submitSpinning;
+
 - (IBAction)backHandler:(UIBarButtonItem *)sender;
+
+- (IBAction)submitRating:(id)sender;
 @end

@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSString *videoLink;
 @property (strong, nonatomic) NSMutableArray *ingredientsArray;
 @property (strong, nonatomic) NSMutableArray *userIngredients;
+@property int recipeId;
 
 
 @end

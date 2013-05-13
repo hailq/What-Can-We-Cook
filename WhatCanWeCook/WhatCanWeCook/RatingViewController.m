@@ -8,6 +8,7 @@
 
 #import "RatingViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Common.h"
 
 #define kOFFSET_FOR_KEYBOARD 110
 
@@ -82,6 +83,47 @@
 
 - (IBAction)backHandler:(UIBarButtonItem *)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)submitRating:(id)sender {
+    [self.submitSpinning startAnimating];
+    
+    NSString *requestString = kCommenUrl;
+    /* Appeding parameter */
+    requestString = [requestString stringByAppendingFormat:@"id=%d",self.recipeId];
+    
+    requestString = [requestString stringByAppendingFormat:@"&rating=%d",(int)self.starRatingView.rating];
+    
+    requestString = [requestString stringByAppendingFormat:@"&comment=%@",self.commentTextView.text];
+    
+    NSLog(@"Comment request string: %@", requestString);
+    
+    NSURL *url = [NSURL URLWithString:requestString];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    [urlRequest setTimeoutInterval:30.0f];
+    [urlRequest setHTTPMethod:@"GET"];
+    
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+
+    
+    if ([data length] > 0 && error == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Review has submited successfully" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else if ([data length] == 0 && error == nil){
+        NSLog(@"Nothing was downloaded");
+    }
+    
+    else if (error != nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Error occur! Please try again!" delegate:nil
+            cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+        [alert show];
+        NSLog(@"Error happend = %@",error);
+    }
+[self.submitSpinning stopAnimating];
 }
 
 #pragma mark -

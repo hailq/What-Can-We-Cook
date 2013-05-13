@@ -56,16 +56,6 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-Pi-7a3">
-                                <items>
-                                    <barButtonItem width="250" style="plain" systemItem="fixedSpace" id="RKb-s1-rz2"/>
-                                    <barButtonItem title="Back" id="HoV-cG-K0T">
-                                        <connections>
-                                            <action selector="backHandler:" destination="lBs-Us-ZQy" id="hr4-Ea-eSY"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sort:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-2a-IPf">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,7 +72,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NQF-NC-2OH">
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="97Y-w8-cIB"/>
                                     <constraint firstAttribute="height" constant="350" id="wcG-mD-3TN"/>
                                 </constraints>
                                 <prototypes>
@@ -104,8 +93,8 @@
                                                         <constraint firstAttribute="width" constant="160" id="HcC-bR-YDb"/>
                                                         <constraint firstAttribute="height" constant="42" id="qcP-EM-0Yq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2O-3k-zx2">
@@ -151,7 +140,11 @@
                                     <outlet property="delegate" destination="lBs-Us-ZQy" id="NAA-xt-Wrh"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QCk-aH-pWS"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QCk-aH-pWS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="QBa-Mt-OC2"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-Gg-LCg">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI1-nR-eqi">
@@ -213,32 +206,43 @@
                                 <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1G-7z-wvQ">
+                                <items>
+                                    <navigationItem title="Recipe List" id="6JW-eP-8G1">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="8bN-g2-QC1">
+                                            <connections>
+                                                <action selector="backHandler:" destination="lBs-Us-ZQy" id="ws8-iY-31x"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NQF-NC-2OH" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="156" id="3EW-9z-eTp"/>
                             <constraint firstAttribute="trailing" secondItem="1iU-Gg-LCg" secondAttribute="trailing" constant="18" id="5FP-wj-lZV"/>
-                            <constraint firstItem="QCk-aH-pWS" firstAttribute="centerX" secondItem="NQF-NC-2OH" secondAttribute="centerX" type="default" id="5Ge-CQ-IGM"/>
-                            <constraint firstItem="NQF-NC-2OH" firstAttribute="trailing" secondItem="veF-aP-k6J" secondAttribute="trailing" type="default" id="GF8-Ka-n7e"/>
+                            <constraint firstItem="v1G-7z-wvQ" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="6a8-Ms-LZ4"/>
+                            <constraint firstItem="QCk-aH-pWS" firstAttribute="trailing" secondItem="NQF-NC-2OH" secondAttribute="trailing" type="default" id="8H5-8a-KlF"/>
+                            <constraint firstItem="QCk-aH-pWS" firstAttribute="trailing" secondItem="veF-aP-k6J" secondAttribute="trailing" type="default" id="H01-sN-q9d"/>
                             <constraint firstItem="MfP-Rv-2WD" firstAttribute="centerX" secondItem="veF-aP-k6J" secondAttribute="centerX" type="default" id="QUT-c4-cmN"/>
                             <constraint firstItem="veF-aP-k6J" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="505" id="RRA-x3-nrv"/>
+                            <constraint firstItem="v1G-7z-wvQ" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" type="default" id="Tdq-QF-T1l"/>
                             <constraint firstAttribute="centerY" secondItem="QCk-aH-pWS" secondAttribute="centerY" type="user" id="U4q-kJ-hXx"/>
                             <constraint firstAttribute="centerY" secondItem="jJc-dB-KVt" secondAttribute="centerY" type="user" id="Uno-zT-rIf"/>
                             <constraint firstItem="jJc-dB-KVt" firstAttribute="centerX" secondItem="qvo-Lv-feR" secondAttribute="centerX" type="default" id="ZV5-qg-bSf"/>
-                            <constraint firstItem="jJc-dB-KVt" firstAttribute="centerX" secondItem="D1v-yo-8lw" secondAttribute="centerX" type="default" id="aXL-1D-avS"/>
-                            <constraint firstItem="NQF-NC-2OH" firstAttribute="trailing" secondItem="XMg-Pi-7a3" secondAttribute="trailing" type="default" id="awq-De-65q"/>
                             <constraint firstItem="1iU-Gg-LCg" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="55" id="dju-9m-gzL"/>
                             <constraint firstItem="veF-aP-k6J" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="fLo-2p-5y5"/>
                             <constraint firstItem="qvo-Lv-feR" firstAttribute="top" secondItem="1iU-Gg-LCg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gFh-Ca-7qb"/>
                             <constraint firstItem="QCk-aH-pWS" firstAttribute="leading" secondItem="NQF-NC-2OH" secondAttribute="leading" type="default" id="jGY-cN-CjO"/>
                             <constraint firstItem="1iU-Gg-LCg" firstAttribute="centerY" secondItem="4zz-2a-IPf" secondAttribute="centerY" type="default" id="jaL-Ia-ZAI"/>
                             <constraint firstItem="MfP-Rv-2WD" firstAttribute="top" secondItem="NQF-NC-2OH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kYM-Zb-5PU"/>
+                            <constraint firstItem="v1G-7z-wvQ" firstAttribute="trailing" secondItem="D1v-yo-8lw" secondAttribute="trailing" type="default" id="mgH-Ql-bRt"/>
                             <constraint firstItem="4zz-2a-IPf" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" constant="70" id="nIc-cw-myU"/>
-                            <constraint firstItem="XMg-Pi-7a3" firstAttribute="top" secondItem="D1v-yo-8lw" secondAttribute="top" type="default" id="qWp-hj-19u"/>
                             <constraint firstItem="4zz-2a-IPf" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tmT-Hk-O5f"/>
                             <constraint firstItem="1iU-Gg-LCg" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" constant="74" id="vdA-5s-ER6"/>
-                            <constraint firstItem="XMg-Pi-7a3" firstAttribute="leading" secondItem="D1v-yo-8lw" secondAttribute="leading" type="default" id="xAH-8x-Sbm"/>
-                            <constraint firstItem="qvo-Lv-feR" firstAttribute="centerX" secondItem="XMg-Pi-7a3" secondAttribute="centerX" type="default" id="z2z-UT-Zjb"/>
+                            <constraint firstItem="v1G-7z-wvQ" firstAttribute="centerX" secondItem="qvo-Lv-feR" secondAttribute="centerX" type="default" id="xvi-HW-3bG"/>
+                            <constraint firstItem="MfP-Rv-2WD" firstAttribute="centerX" secondItem="jJc-dB-KVt" secondAttribute="centerX" type="default" id="zsM-MU-ffM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="dIK-sd-L0r"/>
@@ -745,6 +749,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitRating:" destination="Mi6-tF-cKG" eventType="touchUpInside" id="Tdu-gy-OWQ"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your comment here" translatesAutoresizingMaskIntoConstraints="NO" id="y74-23-4UP">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -793,17 +800,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WA4-M2-ouy">
+                                <color key="color" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="bottom" secondItem="XOi-ce-WX9" secondAttribute="bottom" type="default" id="64e-fY-340"/>
+                            <constraint firstItem="WA4-M2-ouy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="223" id="Cfw-Yw-4vC"/>
                             <constraint firstAttribute="trailing" secondItem="y74-23-4UP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="G7g-hT-jKu"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="GMW-9f-c8o"/>
                             <constraint firstItem="ffv-m5-8FH" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Lzs-7M-CJq"/>
-                            <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="ffv-m5-8FH" secondAttribute="centerX" type="default" id="Nvd-si-oGi"/>
                             <constraint firstItem="n2p-fT-g31" firstAttribute="centerX" secondItem="y74-23-4UP" secondAttribute="centerX" type="default" id="R5W-ZL-Nfr"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="Sag-aq-ywl"/>
+                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="266" id="XNL-3o-o0t"/>
                             <constraint firstItem="ffv-m5-8FH" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" type="default" id="bnW-ZL-Xge"/>
                             <constraint firstItem="2y3-MX-GTy" firstAttribute="centerX" secondItem="xRi-wy-OWF" secondAttribute="centerX" type="default" id="bqF-Xf-hxR"/>
                             <constraint firstItem="xRi-wy-OWF" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="73" id="cEO-mK-sl1"/>
@@ -811,11 +822,12 @@
                             <constraint firstAttribute="bottom" secondItem="wMj-8Y-6dt" secondAttribute="bottom" constant="12" id="gdh-nH-mEI"/>
                             <constraint firstItem="wMj-8Y-6dt" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="jd0-d9-hgZ"/>
                             <constraint firstItem="Yzc-wq-4XB" firstAttribute="trailing" secondItem="XOi-ce-WX9" secondAttribute="trailing" type="default" id="mW2-WA-dkK"/>
+                            <constraint firstItem="WA4-M2-ouy" firstAttribute="centerX" secondItem="y74-23-4UP" secondAttribute="centerX" type="default" id="nyK-LF-jV0"/>
                             <constraint firstItem="ffv-m5-8FH" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" type="default" id="pPA-U3-7Ao"/>
                             <constraint firstItem="2y3-MX-GTy" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="151" id="tRO-RD-AoW"/>
+                            <constraint firstItem="WA4-M2-ouy" firstAttribute="centerX" secondItem="xRi-wy-OWF" secondAttribute="centerX" type="default" id="unK-7K-LUj"/>
                             <constraint firstAttribute="bottom" secondItem="2y3-MX-GTy" secondAttribute="bottom" constant="317" id="vdF-XF-nVd"/>
                             <constraint firstItem="2y3-MX-GTy" firstAttribute="leading" secondItem="XOi-ce-WX9" secondAttribute="leading" constant="9" id="xu5-Pv-xGN"/>
-                            <constraint firstItem="y74-23-4UP" firstAttribute="top" secondItem="XOi-ce-WX9" secondAttribute="top" constant="266" id="zrW-01-yoD"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="H0Q-or-mqy" appends="YES" id="X3B-3h-xhb"/>
@@ -831,6 +843,7 @@
                     <connections>
                         <outlet property="commentTextView" destination="y74-23-4UP" id="5hS-5A-Ipf"/>
                         <outlet property="starRatingView" destination="2y3-MX-GTy" id="z2v-eR-u5I"/>
+                        <outlet property="submitSpinning" destination="WA4-M2-ouy" id="Psg-UP-hLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lp-Jc-xL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1123,66 +1136,62 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ayo-vw-Yge">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ayo-vw-Yge">
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" type="user" id="P7D-lQ-Acc"/>
+                                    <constraint firstAttribute="width" constant="300" id="fvn-VY-8OM"/>
                                     <constraint firstAttribute="height" constant="400" id="hDB-bg-VQg"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="tableIdentifier" id="8NI-ia-Bp4" customClass="HavingTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="300" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-mV-K1M">
                                                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" type="user" id="4dN-GL-TMA"/>
-                                                        <constraint firstAttribute="width" constant="42" type="user" id="v12-wN-QZf"/>
+                                                        <constraint firstAttribute="width" constant="52" id="9vE-hp-KZv"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" type="user" id="wHt-Fc-e7R"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqe-S0-IEg">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="Iqe-S0-IEg">
                                                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" type="user" id="3F6-XZ-23C"/>
-                                                        <constraint firstAttribute="height" constant="21" type="user" id="CgP-tY-wRb"/>
-                                                        <constraint firstAttribute="width" constant="42" type="user" id="Ltb-bq-qcx"/>
+                                                        <constraint firstAttribute="width" constant="60" id="BiH-C1-cq0"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE9-C6-dxN">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="IE9-C6-dxN">
                                                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" type="user" id="U9U-tp-56g"/>
-                                                        <constraint firstAttribute="width" constant="140" type="user" id="lz1-AS-ntv"/>
+                                                        <constraint firstAttribute="height" constant="46" id="4fi-mV-hbF"/>
+                                                        <constraint firstAttribute="width" constant="170" id="lnL-RQ-LKQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="gxK-mV-K1M" firstAttribute="leading" secondItem="8NI-ia-Bp4" secondAttribute="leading" constant="20" type="user" id="F0A-Oj-uaK"/>
-                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="baseline" secondItem="Iqe-S0-IEg" secondAttribute="baseline" type="default" id="MMA-uG-hwn"/>
-                                            <constraint firstItem="Iqe-S0-IEg" firstAttribute="baseline" secondItem="gxK-mV-K1M" secondAttribute="baseline" type="default" id="OFL-Ae-wgY"/>
-                                            <constraint firstItem="Iqe-S0-IEg" firstAttribute="leading" secondItem="gxK-mV-K1M" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="QkU-b8-jrd"/>
-                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="leading" secondItem="Iqe-S0-IEg" secondAttribute="trailing" constant="8" type="user" id="ShF-a1-iBj"/>
-                                            <constraint firstItem="gxK-mV-K1M" firstAttribute="top" secondItem="8NI-ia-Bp4" secondAttribute="top" constant="11" id="Ub6-9G-ooq"/>
-                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="leading" secondItem="Iqe-S0-IEg" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="W5i-cI-bcK"/>
-                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="leading" secondItem="8NI-ia-Bp4" secondAttribute="leading" constant="120" type="user" id="jD2-f9-qNA"/>
-                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="leading" secondItem="gxK-mV-K1M" secondAttribute="trailing" constant="58" type="user" id="mEb-dK-1Wf"/>
-                                            <constraint firstAttribute="trailing" secondItem="IE9-C6-dxN" secondAttribute="trailing" constant="20" type="user" id="uma-RP-45H"/>
+                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="top" secondItem="Iqe-S0-IEg" secondAttribute="top" type="default" id="8GL-zt-sOb"/>
+                                            <constraint firstItem="Iqe-S0-IEg" firstAttribute="leading" secondItem="gxK-mV-K1M" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Adf-1b-fSm"/>
+                                            <constraint firstItem="gxK-mV-K1M" firstAttribute="leading" secondItem="8NI-ia-Bp4" secondAttribute="leading" type="default" id="IeD-Gi-id4"/>
+                                            <constraint firstAttribute="bottom" secondItem="gxK-mV-K1M" secondAttribute="bottom" constant="20" type="default" id="WDo-Od-rEd"/>
+                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="baseline" secondItem="Iqe-S0-IEg" secondAttribute="baseline" type="default" id="i14-KU-Em3"/>
+                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="trailing" secondItem="8NI-ia-Bp4" secondAttribute="trailing" type="default" id="luA-Lv-Mlz"/>
+                                            <constraint firstItem="IE9-C6-dxN" firstAttribute="centerY" secondItem="8NI-ia-Bp4" secondAttribute="centerY" type="default" id="vgV-EB-E1e"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="amount" destination="gxK-mV-K1M" id="1vw-dv-uW8"/>
@@ -1222,21 +1231,19 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Roq-RT-hPF" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" type="default" id="0EE-3G-yo7"/>
-                            <constraint firstAttribute="trailing" secondItem="JNh-aT-AdZ" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="55z-J2-q7M"/>
                             <constraint firstItem="1F3-NG-WI4" firstAttribute="trailing" secondItem="ePI-lk-0BP" secondAttribute="trailing" type="default" id="8Ga-v6-3dr"/>
                             <constraint firstItem="qJU-et-tPp" firstAttribute="centerY" secondItem="1F3-NG-WI4" secondAttribute="centerY" type="default" id="E6B-BH-quA"/>
                             <constraint firstItem="JNh-aT-AdZ" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="EYg-RA-cQs"/>
                             <constraint firstItem="qJU-et-tPp" firstAttribute="trailing" secondItem="ePI-lk-0BP" secondAttribute="trailing" type="default" id="MTu-uM-HYz"/>
-                            <constraint firstItem="Ayo-vw-Yge" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="QA1-VE-Fiq"/>
                             <constraint firstItem="Ayo-vw-Yge" firstAttribute="top" secondItem="JNh-aT-AdZ" secondAttribute="bottom" constant="8" type="user" id="VOr-XF-pMy"/>
                             <constraint firstItem="Roq-RT-hPF" firstAttribute="trailing" secondItem="ePI-lk-0BP" secondAttribute="trailing" type="default" id="XRC-qV-qKN"/>
                             <constraint firstItem="JNh-aT-AdZ" firstAttribute="top" secondItem="Roq-RT-hPF" secondAttribute="bottom" type="default" id="a2P-Ut-F3s"/>
+                            <constraint firstItem="Ayo-vw-Yge" firstAttribute="centerX" secondItem="JNh-aT-AdZ" secondAttribute="centerX" type="default" id="bH3-uu-Fiy"/>
                             <constraint firstItem="1F3-NG-WI4" firstAttribute="bottom" secondItem="ePI-lk-0BP" secondAttribute="bottom" type="default" id="bvP-uB-srh"/>
                             <constraint firstItem="Ayo-vw-Yge" firstAttribute="top" secondItem="JNh-aT-AdZ" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="dhG-t8-Klq"/>
                             <constraint firstItem="1F3-NG-WI4" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" type="default" id="hAF-xR-qUX"/>
                             <constraint firstItem="qJU-et-tPp" firstAttribute="leading" secondItem="ePI-lk-0BP" secondAttribute="leading" type="default" id="nNd-KS-d9k"/>
                             <constraint firstItem="Roq-RT-hPF" firstAttribute="top" secondItem="ePI-lk-0BP" secondAttribute="top" type="default" id="oBc-zO-bRg"/>
-                            <constraint firstAttribute="trailing" secondItem="Ayo-vw-Yge" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="oIe-IW-p5l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Have" id="vQC-Qm-xCG">
@@ -1267,49 +1274,47 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="paV-b5-aPm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="paV-b5-aPm">
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="QAU-mb-rRB"/>
                                     <constraint firstAttribute="height" constant="400" id="XmA-Dc-2Ot"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="tableIdentifier" id="UY7-SX-NmZ" customClass="HavingTableViewCell">
-                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="300" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoH-ye-Q1I">
                                                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" type="user" id="0Qh-kk-Kw3"/>
+                                                        <constraint firstAttribute="width" constant="52" id="0pZ-Rk-u7e"/>
                                                         <constraint firstAttribute="height" constant="21" type="user" id="0tq-kw-xal"/>
-                                                        <constraint firstAttribute="width" constant="42" type="user" id="hZ6-0h-d1E"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGE-FV-88h">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Line 1 Line2" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="SGE-FV-88h">
                                                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="42" type="user" id="3Nh-Us-O49"/>
-                                                        <constraint firstAttribute="height" constant="21" type="user" id="e0v-vw-Xa7"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" type="user" id="oYD-bg-wor"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-h3-owC">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-h3-owC">
                                                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="140" type="user" id="Uog-eU-v73"/>
-                                                        <constraint firstAttribute="height" constant="21" type="user" id="r2m-CH-SpO"/>
+                                                        <constraint firstAttribute="width" constant="170" id="lfb-cb-rho"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -1317,15 +1322,14 @@
                                         </view>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="leading" secondItem="UY7-SX-NmZ" secondAttribute="leading" constant="120" type="user" id="0Ga-2E-YRL"/>
-                                            <constraint firstAttribute="trailing" secondItem="Xt8-h3-owC" secondAttribute="trailing" constant="20" type="user" id="0JE-iW-Huk"/>
-                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="leading" secondItem="SGE-FV-88h" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="7M7-br-jAd"/>
-                                            <constraint firstItem="SGE-FV-88h" firstAttribute="baseline" secondItem="FoH-ye-Q1I" secondAttribute="baseline" type="default" id="UU4-bT-Pc6"/>
-                                            <constraint firstItem="FoH-ye-Q1I" firstAttribute="leading" secondItem="UY7-SX-NmZ" secondAttribute="leading" constant="20" type="user" id="Z25-Jf-R0p"/>
-                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="baseline" secondItem="SGE-FV-88h" secondAttribute="baseline" type="default" id="aTh-tM-zc7"/>
-                                            <constraint firstItem="SGE-FV-88h" firstAttribute="leading" secondItem="FoH-ye-Q1I" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="dTG-EA-6Nq"/>
-                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="leading" secondItem="FoH-ye-Q1I" secondAttribute="trailing" constant="58" type="user" id="lzW-ar-MiB"/>
-                                            <constraint firstItem="FoH-ye-Q1I" firstAttribute="top" secondItem="UY7-SX-NmZ" secondAttribute="top" constant="11" id="vXg-8m-WFJ"/>
+                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="baseline" secondItem="SGE-FV-88h" secondAttribute="baseline" type="default" id="FHn-gt-Nd3"/>
+                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="leading" secondItem="UY7-SX-NmZ" secondAttribute="leading" constant="128" id="Qu9-jY-PwC"/>
+                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="top" secondItem="SGE-FV-88h" secondAttribute="top" type="default" id="SSN-4p-HPC"/>
+                                            <constraint firstAttribute="bottom" secondItem="FoH-ye-Q1I" secondAttribute="bottom" constant="20" type="default" id="dbG-gs-lJR"/>
+                                            <constraint firstItem="SGE-FV-88h" firstAttribute="leading" secondItem="FoH-ye-Q1I" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gmS-q9-ukD"/>
+                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="leading" secondItem="SGE-FV-88h" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pN3-7X-Cs9"/>
+                                            <constraint firstItem="Xt8-h3-owC" firstAttribute="centerY" secondItem="UY7-SX-NmZ" secondAttribute="centerY" type="default" id="qe6-00-PYa"/>
+                                            <constraint firstItem="FoH-ye-Q1I" firstAttribute="leading" secondItem="UY7-SX-NmZ" secondAttribute="leading" type="default" id="woa-ot-YC3"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="amount" destination="FoH-ye-Q1I" id="NOO-JU-TAJ"/>
@@ -1365,20 +1369,19 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="30c-iz-cIo" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" type="default" id="457-C6-MI4"/>
+                            <constraint firstItem="paV-b5-aPm" firstAttribute="centerX" secondItem="30c-iz-cIo" secondAttribute="centerX" type="default" id="5rO-jE-lPp"/>
                             <constraint firstItem="hxj-6L-kO3" firstAttribute="top" secondItem="cN7-bE-aqj" secondAttribute="top" type="default" id="8Jk-PA-hIw"/>
-                            <constraint firstAttribute="trailing" secondItem="tAB-zS-1iu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9FY-tc-GIW"/>
                             <constraint firstItem="hxj-6L-kO3" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" type="default" id="CAu-gm-sDP"/>
                             <constraint firstItem="tAB-zS-1iu" firstAttribute="top" secondItem="hxj-6L-kO3" secondAttribute="bottom" type="default" id="E1W-Nw-t0g"/>
                             <constraint firstAttribute="bottom" secondItem="jCT-eM-iGf" secondAttribute="bottom" constant="6" id="LWV-8q-PP0"/>
                             <constraint firstItem="paV-b5-aPm" firstAttribute="top" secondItem="tAB-zS-1iu" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="OKp-ob-nwZ"/>
-                            <constraint firstItem="30c-iz-cIo" firstAttribute="trailing" secondItem="cN7-bE-aqj" secondAttribute="trailing" type="default" id="OZ2-aF-jvr"/>
                             <constraint firstItem="tAB-zS-1iu" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="T8c-0y-FmG"/>
                             <constraint firstItem="jCT-eM-iGf" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" type="default" id="aXw-pE-jxt"/>
-                            <constraint firstItem="paV-b5-aPm" firstAttribute="leading" secondItem="cN7-bE-aqj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dum-1c-jcv"/>
+                            <constraint firstItem="paV-b5-aPm" firstAttribute="centerX" secondItem="hxj-6L-kO3" secondAttribute="centerX" type="default" id="cpG-YT-ox3"/>
                             <constraint firstItem="paV-b5-aPm" firstAttribute="top" secondItem="tAB-zS-1iu" secondAttribute="bottom" constant="8" type="user" id="eSG-rq-kqv"/>
-                            <constraint firstItem="jCT-eM-iGf" firstAttribute="trailing" secondItem="cN7-bE-aqj" secondAttribute="trailing" type="default" id="gTM-qS-p4N"/>
-                            <constraint firstAttribute="trailing" secondItem="paV-b5-aPm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iNX-SL-dMi"/>
-                            <constraint firstItem="hxj-6L-kO3" firstAttribute="trailing" secondItem="cN7-bE-aqj" secondAttribute="trailing" type="default" id="mLb-08-Mmm"/>
+                            <constraint firstItem="paV-b5-aPm" firstAttribute="centerX" secondItem="tAB-zS-1iu" secondAttribute="centerX" type="default" id="fJn-LD-ZMd"/>
+                            <constraint firstItem="paV-b5-aPm" firstAttribute="centerX" secondItem="jCT-eM-iGf" secondAttribute="centerX" type="default" id="iDG-Uf-Cck"/>
+                            <constraint firstItem="paV-b5-aPm" firstAttribute="centerX" secondItem="cN7-bE-aqj" secondAttribute="centerX" type="default" id="oGM-9q-j6A"/>
                             <constraint firstItem="30c-iz-cIo" firstAttribute="bottom" secondItem="cN7-bE-aqj" secondAttribute="bottom" type="default" id="zU8-cV-QBH"/>
                         </constraints>
                     </view>
@@ -1471,7 +1474,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mi6-tF-cKG" kind="push" id="UpN-le-lqM"/>
+                                    <segue destination="Mi6-tF-cKG" kind="push" identifier="DetailToRatingSegue" id="UpN-le-lqM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ingredients:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF6-Jf-60T">
@@ -1535,7 +1538,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-k5-D2k">
                                 <items>
                                     <navigationItem title="Recipe Detail" id="a1q-h0-Yhz">
-                                        <barButtonItem key="rightBarButtonItem" title="Back" id="lnH-bI-FPR">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="lnH-bI-FPR">
                                             <connections>
                                                 <action selector="backHandler:" destination="ZEL-9g-xGF" id="XVa-rh-we7"/>
                                             </connections>
@@ -1548,8 +1551,8 @@
                                     <constraint firstAttribute="width" constant="184" id="3y6-0N-Ud7"/>
                                     <constraint firstAttribute="height" constant="44" id="fve-PB-3YJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1695,6 +1698,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddRecipeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refreshHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="loadSpinning" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
@@ -1705,12 +1709,7 @@
         <class className="EnterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EnterViewController.h"/>
             <relationships>
-                <relationship kind="action" name="checkCategorySelected:" candidateClass="UIButton"/>
-                <relationship kind="action" name="checkCountrySelected:" candidateClass="UIButton"/>
-                <relationship kind="action" name="checkSortSelected:" candidateClass="UIButton"/>
-                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="action" name="submitTap:"/>
-                <relationship kind="action" name="textFieldDoneEditing:"/>
                 <relationship kind="outlet" name="categoryView1" candidateClass="UIView"/>
                 <relationship kind="outlet" name="categoryView2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="countryView" candidateClass="UIView"/>
@@ -1757,6 +1756,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Psample.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="sortRating:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sortTime:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnRating" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnTime" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="buttonView" candidateClass="UIView"/>
@@ -1772,8 +1774,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RatingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="backHandler:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="submitRating:"/>
+                <relationship kind="action" name="tapHideKeyBoard:"/>
                 <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="starRatingView" candidateClass="RatingView"/>
+                <relationship kind="outlet" name="submitSpinning" candidateClass="UIActivityIndicatorView"/>
             </relationships>
         </class>
         <class className="RecipeCustomCell" superclassName="UITableViewCell">
