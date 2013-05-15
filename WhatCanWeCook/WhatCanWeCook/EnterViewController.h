@@ -32,7 +32,6 @@
 @property (strong, nonatomic) NSMutableArray *category;
 @property int sortKind;
 @property (strong, nonatomic) UIButton *menuBT;
-@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 
 - (IBAction)submitTap:(id)sender;
 

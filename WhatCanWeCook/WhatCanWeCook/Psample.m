@@ -16,7 +16,6 @@
 @synthesize recipeList = recipeList_;
 @synthesize menuBT;
 @synthesize loadSpinning;
-@synthesize panGesture = panGesture_;
 @synthesize noRecipe = lblNoRecipe;
 
 - (void)viewDidLoad

@@ -22,7 +22,6 @@
 
 @property (strong, nonatomic) NSMutableArray *recipeList;
 @property (strong, nonatomic) UIButton *menuBT;
-@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 @property (strong, nonatomic) NSString *ingredientsRequest;
 @property (strong, nonatomic) NSMutableArray *countriesRequest;
 @property (strong, nonatomic) NSMutableArray *categoriesRequest;

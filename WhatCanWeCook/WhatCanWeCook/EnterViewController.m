@@ -19,7 +19,6 @@
 @synthesize country = country_;
 @synthesize category = category_;
 @synthesize menuBT;
-@synthesize panGesture = panGesture_;
 
 - (void)viewDidLoad
 {
@@ -45,7 +44,6 @@
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
-    panGesture_ = self.slidingViewController.panGesture;
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
     
     self.menuBT = [UIButton buttonWithType:UIButtonTypeCustom];

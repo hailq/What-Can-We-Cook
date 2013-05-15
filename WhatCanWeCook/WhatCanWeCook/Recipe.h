@@ -14,11 +14,11 @@
     @property int cookTime;
     @property float recipeRanking;
 
-    @property(copy) NSString *recipeName;
-    @property(copy) NSString *webLink;
-    @property(copy) NSString *videoLink;
+    @property(strong) NSString *recipeName;
+    @property(strong) NSString *webLink;
+    @property(strong) NSString *videoLink;
     @property(copy) NSString *directions;
     @property(retain, nonatomic) NSMutableArray  *ingredients;
-    @property(copy) NSData   *recipeImage;
+    @property(strong) NSData   *recipeImage;
 
 @end
