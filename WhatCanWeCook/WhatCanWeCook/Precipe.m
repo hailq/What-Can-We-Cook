@@ -107,7 +107,7 @@
         }
         [missing.userIngredients addObjectsFromArray:self.userIngredients];
     }
-    else if ([[segue identifier] isEqualToString:@"DetailToRateSegue"])
+    else if ([[segue identifier] isEqualToString:@"DetailToRatingSegue"])
     {
         RatingViewController *rating = segue.destinationViewController;
         rating.recipeId = self.recipeId;

@@ -90,11 +90,12 @@
     
     NSString *requestString = kCommenUrl;
     /* Appeding parameter */
-    requestString = [requestString stringByAppendingFormat:@"id=%d",self.recipeId];
+    requestString = [requestString stringByAppendingFormat:@"?id=%d",self.recipeId];
     
     requestString = [requestString stringByAppendingFormat:@"&rating=%d",(int)self.starRatingView.rating];
     
     requestString = [requestString stringByAppendingFormat:@"&comment=%@",self.commentTextView.text];
+    requestString = [requestString stringByAddingPercentEscapesUsingEncoding:kCFStringEncodingUTF8];
     
     NSLog(@"Comment request string: %@", requestString);
     

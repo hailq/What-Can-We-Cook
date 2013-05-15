@@ -46,7 +46,7 @@
                     }
                     
                     recipe = [Recipe new];
-                    recipe.recipeId = [[element.attributes valueForKey:@"id"] intValue];
+                    recipe.recipeId = [[element.attributes valueForKey:@"recipe_id"] intValue];
                     
                     for (XMLElement *e in element.subElements) {
                         NSString *tagName = e.name;
